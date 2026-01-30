@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d6bd13fb24e1248be6f5b99c990677, type: 3}
+  m_Name: "2. Adventurers\u2019 Guild"
+  m_EditorClassIdentifier: 
+  areaId: "Adventurers\u2019 Guild"
+  areaName:
+    m_TableReference:
+      m_TableCollectionName: GUID:4a88df30e19e16c43a9af25bcf999dd5
+    m_TableEntryReference:
+      m_KeyId: 138239258624
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  backgroundText: []
+  backgroundSpriteRef:
+    m_AssetGUID: 99aea010875e1f94193a833a87c0145f
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  createObjectRefs:
+  - m_AssetGUID: e0bca0a772d3fd842ba05784ad422b22
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  references:
+    version: 2
+    RefIds: []

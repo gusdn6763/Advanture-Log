@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Area Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Area
+  m_TableCollectionNameGuidString: 4a88df30e19e16c43a9af25bcf999dd5
+  m_Entries:
+  - m_Id: 14226272256
+    m_Key: Area_Town
+    m_Metadata:
+      m_Items: []
+  - m_Id: 138239258624
+    m_Key: "Area_Adventurers\u2019 Guild"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 198335246336
+    m_Key: Area_Market
+    m_Metadata:
+      m_Items: []
+  - m_Id: 219306766336
+    m_Key: Area_Mage Tower
+    m_Metadata:
+      m_Items: []
+  - m_Id: 231923232768
+    m_Key: Area_Town Street
+    m_Metadata:
+      m_Items: []
+  - m_Id: 260813598720
+    m_Key: Area_City Gate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289200648192
+    m_Key: Area_Weapon Shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 295106228224
+    m_Key: Area_Armor Shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 314974646272
+    m_Key: Area_General Store
+    m_Metadata:
+      m_Items: []
+  - m_Id: 327083601920
+    m_Key: Area_ Inn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 342820630528
+    m_Key: Area_Back Alley
+    m_Metadata:
+      m_Items: []
+  - m_Id: 354866671616
+    m_Key: Area_Sewers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367080484864
+    m_Key: Area_Road
+    m_Metadata:
+      m_Items: []
+  - m_Id: 379097165824
+    m_Key: Area_Inn Room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 390904131584
+    m_Key: Area_Forest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 402446856192
+    m_Key: Area_Cave
+    m_Metadata:
+      m_Items: []
+  - m_Id: 412513185792
+    m_Key: Area_Bandit Camp
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1747157626541047832
+  references:
+    version: 2
+    RefIds:
+    - rid: 1747157626541047832
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1769674802428

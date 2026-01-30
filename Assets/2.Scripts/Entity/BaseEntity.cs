@@ -4,7 +4,7 @@
 [RequireComponent(typeof(BoxCollider2D), typeof(SpriteRenderer))]
 public class BaseEntity : InitBase
 {
-    protected BaseEntitySO BaseData { get; private set; }
+    public BaseEntitySo BaseData { get; private set; }
 
     protected BoxCollider2D box;
     protected SpriteRenderer sp;

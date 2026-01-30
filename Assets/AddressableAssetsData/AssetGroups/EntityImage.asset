@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: EntityImage
+  m_EditorClassIdentifier: 
+  m_GroupName: EntityImage
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 9a3b7a03b343ada468b40d01d2731872
+  m_SerializeEntries:
+  - m_GUID: 2a00d10ea9e967d46934f0661e3d1a40
+    m_Address: Notice Board
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 51d63be32c9d5f24faef943eab6b5b2b
+    m_Address: Goblin
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cafc4e77afce97e4d93dc9c3f7a144c4
+    m_Address: Apple
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d13ac4d091df2ed469158b6d640c24b1
+    m_Address: Warrior
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 6c8464ea7717daf4a9ca9ef2eadad8f6, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 857161635eeea8d428ab0d256e1fe4fc, type: 2}
+    - {fileID: 11400000, guid: 4fd27da8d89a57641b2cb1aaeb14d214, type: 2}

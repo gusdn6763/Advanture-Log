@@ -11,12 +11,16 @@ public class Managers : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField] private SoundManager soundManager;
     [SerializeField] private ObjectManager objectManager;
-    private PoolManager poolManager = new PoolManager();
+    [SerializeField] private UiManager uiManager;
+    [SerializeField] private KeyManager keyManager;
 
+    private PoolManager poolManager = new PoolManager();
 
     public static GameManager Game => Instance?.gameManager;
     public static SoundManager Sound => Instance?.soundManager;
     public static ObjectManager Object => Instance?.objectManager;
+    public static UiManager UI => Instance?.uiManager;
+    public static KeyManager Key => Instance?.keyManager;
     public static PoolManager Pool => Instance?.poolManager;
 
     private void Awake()

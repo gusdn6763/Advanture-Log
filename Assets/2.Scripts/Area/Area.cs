@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -7,15 +9,14 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 public class Area : MonoBehaviour
 {
     public AreaSo AreaData { get; private set; }
+    public Sprite BackgroundSprite { get; private set; }
+    public List<BaseEntity> SpawnedEntities { get; private set; }
 
-    private SpriteRenderer spriteRenderer;
-
-    private List<AsyncOperationHandle> defaultInstanceHandles = new List<AsyncOperationHandle>();
-
+    private List<AsyncOperationHandle<GameObject>> defaultInstanceHandles = new List<AsyncOperationHandle<GameObject>>();
     public void Init(AreaSo data)
     {
         AreaData = data;
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        SpawnedEntities = new List<BaseEntity>();
     }
 
     public IEnumerator CreateDefaultObjects()
@@ -24,19 +25,21 @@ public class Area : MonoBehaviour
         AsyncOperationHandle<Sprite> bagkgroundHandle = AreaData.BackgroundSpriteRef.LoadAssetAsync<Sprite>();
         yield return bagkgroundHandle;
 
-        defaultInstanceHandles.Add(bagkgroundHandle);
-        spriteRenderer.sprite = bagkgroundHandle.Result;
+        BackgroundSprite = bagkgroundHandle.Result;
 
         // Default Objects
-        for (int i = 0; i < AreaData.CreateObjectRefs.Count; i++)
+        for (int i = 0; i < AreaData.FixedSpawnEntry.Count; i++)
         {
-            AssetReferenceGameObject aref = AreaData.CreateObjectRefs[i];
-
-            AsyncOperationHandle<GameObject> instHandle = aref.InstantiateAsync(transform.position, Quaternion.identity, transform);
+            FixedSpawnEntry entry = AreaData.FixedSpawnEntry[i];
+            AssetReferenceGameObject aref = entry.entitySo.EntityPrefab;
+  
+            AsyncOperationHandle<GameObject> instHandle = aref.InstantiateAsync(entry.localPos, Quaternion.identity, transform);
 
             yield return instHandle;
 
             defaultInstanceHandles.Add(instHandle);
+
+            SpawnedEntities.Add(instHandle.Result.GetOrAddComponent<BaseEntity>());
         }
     }
 
@@ -47,12 +50,12 @@ public class Area : MonoBehaviour
 
     public void Release()
     {
+        AreaData.BackgroundSpriteRef.ReleaseAsset();
+
         int count = defaultInstanceHandles.Count;
         for (int i = 0; i < count; i++)
             Addressables.ReleaseInstance(defaultInstanceHandles[i]);
 
         defaultInstanceHandles.Clear();
-
-        spriteRenderer.sprite = null;
     }
 }

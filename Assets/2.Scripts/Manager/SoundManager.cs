@@ -10,7 +10,7 @@ public class Sound
 
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource startBgm;
+    [SerializeField] private AudioClip startBgm;
 
     //모든 사운드
     private AudioSource[] audioSourceEffects;
@@ -42,7 +42,7 @@ public class SoundManager : MonoBehaviour
     {
         audioSourceEffects = GetComponentsInChildren<AudioSource>();
 
-        audioSourceBgm = startBgm;
+        audioSourceBgm.clip = startBgm;
         playSoundName = new string[audioSourceEffects.Length];
         currentPlayBgmName = audioSourceBgm.name;
 

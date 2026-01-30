@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c690d27efe08a5b498a60443ca260cf2, type: 3}
+  m_Name: 0. AreaGraph
+  m_EditorClassIdentifier: 
+  startArea: {fileID: 11400000, guid: e4f3a613b9897f044b0dd6b47a96c92c, type: 2}
+  vertices:
+  - area: {fileID: 11400000, guid: 6ddb8ddbe103c084b8e34c0d10b5d1a1, type: 2}
+    neighbors:
+    - to: {fileID: 11400000, guid: fa29863424885634eb8dbb81f9220472, type: 2}
+      cost: 2
+    - to: {fileID: 11400000, guid: c6112ab521ff1c444b7a54e3bef0e441, type: 2}
+      cost: 3
+    - to: {fileID: 11400000, guid: eeaa2762f9c02e6459edade4aac86150, type: 2}
+      cost: 4
+    - to: {fileID: 11400000, guid: f810a34772b8d6a468eb5e1e45dfca42, type: 2}
+      cost: 5
+    - to: {fileID: 11400000, guid: ab857c47b3eddcf4cb2a96c1a9a58d22, type: 2}
+      cost: 6
+  - area: {fileID: 11400000, guid: fa29863424885634eb8dbb81f9220472, type: 2}
+    neighbors:
+    - to: {fileID: 11400000, guid: 6ddb8ddbe103c084b8e34c0d10b5d1a1, type: 2}
+      cost: 2
+  - area: {fileID: 11400000, guid: c6112ab521ff1c444b7a54e3bef0e441, type: 2}
+    neighbors:
+    - to: {fileID: 11400000, guid: 6ddb8ddbe103c084b8e34c0d10b5d1a1, type: 2}
+      cost: 3
+    - to: {fileID: 11400000, guid: 4ec9640c5d5cf8d419ad7dcdd3c50db4, type: 2}
+      cost: 7
+    - to: {fileID: 11400000, guid: c1f1e8da03b403a41a0b83978f378db7, type: 2}
+      cost: 8
+    - to: {fileID: 11400000, guid: ce7db2007bbc51e4c8b3a47c344c118f, type: 2}
+      cost: 9
+  - area: {fileID: 11400000, guid: eeaa2762f9c02e6459edade4aac86150, type: 2}
+    neighbors:
+    - to: {fileID: 11400000, guid: 6ddb8ddbe103c084b8e34c0d10b5d1a1, type: 2}
+      cost: 4
+  - area: {fileID: 11400000, guid: f810a34772b8d6a468eb5e1e45dfca42, type: 2}
+    neighbors:
+    - to: {fileID: 11400000, guid: 6ddb8ddbe103c084b8e34c0d10b5d1a1, type: 2}
+      cost: 5
+    - to: {fileID: 11400000, guid: e4f3a613b9897f044b0dd6b47a96c92c, type: 2}
+      cost: 10
+    - to: {fileID: 11400000, guid: 7a92379ddb136e24393550be97a68a4a, type: 2}
+      cost: 11
+  - area: {fileID: 11400000, guid: ab857c47b3eddcf4cb2a96c1a9a58d22, type: 2}
+    neighbors:
+    - to: {fileID: 11400000, guid: 6ddb8ddbe103c084b8e34c0d10b5d1a1, type: 2}
+      cost: 6
+    - to: {fileID: 11400000, guid: ef418071a4dc6364baee87f0d05a54dd, type: 2}
+      cost: 12
+  - area: {fileID: 11400000, guid: 4ec9640c5d5cf8d419ad7dcdd3c50db4, type: 2}
+    neighbors:
+    - to: {fileID: 11400000, guid: c6112ab521ff1c444b7a54e3bef0e441, type: 2}
+      cost: 7
+  - area: {fileID: 11400000, guid: c1f1e8da03b403a41a0b83978f378db7, type: 2}
+    neighbors:
+    - to: {fileID: 11400000, guid: c6112ab521ff1c444b7a54e3bef0e441, type: 2}
+      cost: 8
+  - area: {fileID: 11400000, guid: ce7db2007bbc51e4c8b3a47c344c118f, type: 2}
+    neighbors:
+    - to: {fileID: 11400000, guid: c6112ab521ff1c444b7a54e3bef0e441, type: 2}
+      cost: 9
+  - area: {fileID: 11400000, guid: e4f3a613b9897f044b0dd6b47a96c92c, type: 2}
+    neighbors:
+    - to: {fileID: 11400000, guid: f810a34772b8d6a468eb5e1e45dfca42, type: 2}
+      cost: 10
+    - to: {fileID: 11400000, guid: ccbaecea7027fcd40888c7944eab552e, type: 2}
+      cost: 13
+  - area: {fileID: 11400000, guid: 7a92379ddb136e24393550be97a68a4a, type: 2}
+    neighbors:
+    - to: {fileID: 11400000, guid: 0132ff81f8e59fe4d87f47ddbc6eff77, type: 2}
+      cost: 14
+  - area: {fileID: 11400000, guid: ef418071a4dc6364baee87f0d05a54dd, type: 2}
+    neighbors:
+    - to: {fileID: 11400000, guid: 0132ff81f8e59fe4d87f47ddbc6eff77, type: 2}
+      cost: 14
+    - to: {fileID: 11400000, guid: e25a520c93bea1a49a1b9f5b0c32ebf9, type: 2}
+      cost: 15
+    - to: {fileID: 11400000, guid: 08259617e816cbf4dbc8828363b71ee4, type: 2}
+      cost: 16
+    - to: {fileID: 11400000, guid: 999cc67ffd81a404fb6bd63925b528b5, type: 2}
+      cost: 17
+  - area: {fileID: 11400000, guid: ccbaecea7027fcd40888c7944eab552e, type: 2}
+    neighbors:
+    - to: {fileID: 11400000, guid: e4f3a613b9897f044b0dd6b47a96c92c, type: 2}
+      cost: 14
+  - area: {fileID: 11400000, guid: 0132ff81f8e59fe4d87f47ddbc6eff77, type: 2}
+    neighbors:
+    - to: {fileID: 11400000, guid: 7a92379ddb136e24393550be97a68a4a, type: 2}
+      cost: 14
+  - area: {fileID: 11400000, guid: e25a520c93bea1a49a1b9f5b0c32ebf9, type: 2}
+    neighbors:
+    - to: {fileID: 11400000, guid: ef418071a4dc6364baee87f0d05a54dd, type: 2}
+      cost: 15
+  - area: {fileID: 11400000, guid: 08259617e816cbf4dbc8828363b71ee4, type: 2}
+    neighbors:
+    - to: {fileID: 11400000, guid: ef418071a4dc6364baee87f0d05a54dd, type: 2}
+      cost: 16
+  - area: {fileID: 11400000, guid: 999cc67ffd81a404fb6bd63925b528b5, type: 2}
+    neighbors:
+    - to: {fileID: 11400000, guid: ef418071a4dc6364baee87f0d05a54dd, type: 2}
+      cost: 17
