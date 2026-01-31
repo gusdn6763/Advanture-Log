@@ -9,7 +9,7 @@ using UnityEngine;
 public class AreaNeighbor
 {
     public AreaSo to;
-    [Min(0)] public int cost = 1;
+    public int cost = 1;
 }
 
 /// <summary>
@@ -22,7 +22,7 @@ public class AreaVertex
     public List<AreaNeighbor> neighbors = new List<AreaNeighbor>();
 }
 
-[CreateAssetMenu(menuName = "Game/AreaGraph", fileName = "AreaGraph")]
+[CreateAssetMenu(menuName = "Game/Area/AreaGraph", fileName = "AreaGraph")]
 public class AreaGraphSo : ScriptableObject
 {
     [SerializeField] private List<AreaVertex> vertices = new List<AreaVertex>();

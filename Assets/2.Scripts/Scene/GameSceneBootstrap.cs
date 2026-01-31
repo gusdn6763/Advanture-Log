@@ -18,7 +18,9 @@ public class GameSceneBootstrap : MonoBehaviour, IBootstraper
     public IEnumerator Initialize(ILoadProgress progress)
     {
         progress.UpdateMessage("Setting Data...");
-        uiController.Init(areaController, interactionController);
+        uiController.Init();
+        areaController.OnAreaChanged += uiController.ChangeBackground;
+        areaController.OnAreaChanged += interactionController.SelectBarReset;
 
         progress.UpdateMessage("Creating areas...");
         yield return areaController.CreateAreas(progress);

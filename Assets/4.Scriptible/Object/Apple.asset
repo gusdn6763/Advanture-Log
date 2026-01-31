@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   actionMenus:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 74d794f6c25af5449b3d93b5b37c1e1e, type: 2}
+  - {fileID: 11400000, guid: d5a86e563d9238b4fbe205ae42ad4b28, type: 2}
   objectName:
     m_TableReference:
       m_TableCollectionName: GUID:2b199c2e3398ff043ba095ba7559c6ad

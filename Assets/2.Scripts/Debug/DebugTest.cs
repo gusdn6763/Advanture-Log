@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class DebugTest : MonoBehaviour, ILoadProgress
 {
@@ -23,13 +24,16 @@ public class DebugTest : MonoBehaviour, ILoadProgress
     {
         yield return b.Initialize(this);
 
-        AssetReferenceGameObject aref = player.EntityPrefab;
+        AssetReferenceGameObject aref = player.EntityPrefabRef;
 
         AsyncOperationHandle<GameObject> instHandle = aref.InstantiateAsync(Vector3.zero, Quaternion.identity, transform);
 
         yield return instHandle;
 
         BaseEntity e = instHandle.Result.GetOrAddComponent<BaseEntity>();
+
+        e.Init();
+        e.SetInfo(player);
 
         Managers.Object.Player = e;
         Managers.Object.ActiveEntities.Add(e);
@@ -39,7 +43,7 @@ public class DebugTest : MonoBehaviour, ILoadProgress
 
     public void UpdateMessage(string message)
     {
-
+        Debug.Log(message);
     }
 
     public void UpdateProgress(float value01)

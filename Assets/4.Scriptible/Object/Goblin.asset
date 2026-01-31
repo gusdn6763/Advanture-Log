@@ -16,24 +16,24 @@ MonoBehaviour:
   actionMenus: []
   objectName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:2b199c2e3398ff043ba095ba7559c6ad
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 5728612352
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:d088b34d2d065084fb5f33ee3efd56e9
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 8526213120
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   spriteRef:
-    m_AssetGUID: 
+    m_AssetGUID: 51d63be32c9d5f24faef943eab6b5b2b
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 

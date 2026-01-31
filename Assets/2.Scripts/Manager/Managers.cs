@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Unity.VisualScripting;
 using UnityEditor.EditorTools;
 using UnityEngine;
 using static UnityEngine.UI.Image;
@@ -29,17 +30,19 @@ public class Managers : MonoBehaviour
     }
     private static void Init()
     {
-        if (instance == null)
-        {
-            GameObject go = GameObject.Find("Managers");
-            if (go == null)
-            {
-                go = new GameObject { name = "Managers" };
-                go.AddComponent<Managers>();
-            }
-            instance = go.GetComponent<Managers>();
-            DontDestroyOnLoad(instance);
-            Application.targetFrameRate = 60;
-        }
+        if (instance != null) 
+            return;
+
+        GameObject go = GameObject.Find("Managers");
+        if (go == null)
+            go = new GameObject("Managers");
+
+        if (!go.activeSelf) 
+            go.SetActive(true);
+
+        instance = go.GetOrAddComponent<Managers>();
+
+        DontDestroyOnLoad(go);
+        Application.targetFrameRate = 60;
     }
 }

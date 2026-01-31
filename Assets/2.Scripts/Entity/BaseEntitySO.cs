@@ -20,6 +20,6 @@ public class BaseEntitySo : ScriptableObject
     public List<ActionMenuSo> ActionMenus { get => actionMenus; }
     public LocalizedString ObjectName { get => objectName; }
     public LocalizedString Description { get => description; }
-    public AssetReferenceSprite Sprite { get => spriteRef; }
-    public AssetReferenceGameObject EntityPrefab { get => entityPrefabRef; }
+    public AssetReferenceSprite SpriteRef { get => spriteRef; }
+    public AssetReferenceGameObject EntityPrefabRef { get => entityPrefabRef; }
 }

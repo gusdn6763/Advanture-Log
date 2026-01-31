@@ -31,15 +31,19 @@ public class Area : MonoBehaviour
         for (int i = 0; i < AreaData.FixedSpawnEntry.Count; i++)
         {
             FixedSpawnEntry entry = AreaData.FixedSpawnEntry[i];
-            AssetReferenceGameObject aref = entry.entitySo.EntityPrefab;
+            AssetReferenceGameObject aref = entry.entitySo.EntityPrefabRef;
   
             AsyncOperationHandle<GameObject> instHandle = aref.InstantiateAsync(entry.localPos, Quaternion.identity, transform);
 
             yield return instHandle;
-
             defaultInstanceHandles.Add(instHandle);
 
-            SpawnedEntities.Add(instHandle.Result.GetOrAddComponent<BaseEntity>());
+            BaseEntity entity = instHandle.Result.GetOrAddComponent<BaseEntity>();
+
+            entity.Init();
+            entity.SetInfo(entry.entitySo);
+
+            SpawnedEntities.Add(entity);
         }
     }
 

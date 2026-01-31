@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c690d27efe08a5b498a60443ca260cf2, type: 3}
   m_Name: 0. AreaGraph
   m_EditorClassIdentifier: 
-  startArea: {fileID: 11400000, guid: e4f3a613b9897f044b0dd6b47a96c92c, type: 2}
   vertices:
   - area: {fileID: 11400000, guid: 6ddb8ddbe103c084b8e34c0d10b5d1a1, type: 2}
     neighbors:
@@ -94,6 +93,8 @@ MonoBehaviour:
     neighbors:
     - to: {fileID: 11400000, guid: e4f3a613b9897f044b0dd6b47a96c92c, type: 2}
       cost: 14
+    - to: {fileID: 11400000, guid: edc9fc74b9289ac4a986a64f45ad47a1, type: 2}
+      cost: 99
   - area: {fileID: 11400000, guid: 0132ff81f8e59fe4d87f47ddbc6eff77, type: 2}
     neighbors:
     - to: {fileID: 11400000, guid: 7a92379ddb136e24393550be97a68a4a, type: 2}
@@ -110,3 +111,7 @@ MonoBehaviour:
     neighbors:
     - to: {fileID: 11400000, guid: ef418071a4dc6364baee87f0d05a54dd, type: 2}
       cost: 17
+  - area: {fileID: 11400000, guid: edc9fc74b9289ac4a986a64f45ad47a1, type: 2}
+    neighbors:
+    - to: {fileID: 11400000, guid: ccbaecea7027fcd40888c7944eab552e, type: 2}
+      cost: 99

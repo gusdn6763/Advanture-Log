@@ -10,13 +10,22 @@ public class UiManager : MonoBehaviour
     private List<UI_PopupBase> popupList = new List<UI_PopupBase>();
     private int sortingOrder = 10;
 
-    public bool IsOpenUi { get { return popupList.Count > 0; } }
+    public UiController SceneUi { get; private set; }
 
-    public void Update()
+    public void BindSceneUi(UiController ui)
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            ClosePopupUI();
+        SceneUi = ui;
     }
+
+    public void OpenUi(UiType type, BaseEntity target = null)
+    {
+        if (SceneUi == null)
+            return;
+
+        SceneUi.OpenUi(type, target);
+    }
+
+    public bool IsOpenUi { get { return popupList.Count > 0; } }
 
     #region ÆË¾÷
     public void OpenPopupUI(UI_PopupBase popup)

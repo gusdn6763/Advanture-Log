@@ -20,7 +20,7 @@ public class ExploreSpawnEntry
 }
 
 
-[CreateAssetMenu(menuName = "Game/Area", fileName = "Area")]
+[CreateAssetMenu(menuName = "Game/Area/Area", fileName = "Area")]
 public class AreaSo : ScriptableObject
 {
     [SerializeField] private string areaId;

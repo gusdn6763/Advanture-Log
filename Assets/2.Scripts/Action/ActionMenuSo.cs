@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.Localization;
 
-[CreateAssetMenu(menuName = "Game/Action", fileName = "ActionMenu")]
 public abstract class ActionMenuSo : ScriptableObject
 {
     [SerializeField] private LocalizedString actionName;

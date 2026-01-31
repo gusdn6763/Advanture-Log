@@ -1,20 +1,33 @@
 using UnityEngine;
-using UnityEngine.Localization.SmartFormat.Core.Parsing;
 using UnityEngine.UI;
 
 public class UiController : MonoBehaviour
 {
     [SerializeField] private Image backgroundImage;
-    [SerializeField] private UI_ActionMenuBar actionMenuBar;
-    [SerializeField] private GameObject selectBar;
+    [SerializeField] private UI_ActionMenuOverlay actionMenuBar;
+    [SerializeField] private GameObject inventory;
+    [SerializeField] private GameObject quest;
 
-    public void Init(AreaController areaController, InteractionController interactionController)
+    public void Init()
     {
-        areaController.OnAreaChanged += ChangeBackground;
-        interactionController.OnTargetChanged += SetSelected;
-        interactionController.OnActionMenuChanged += NavigateMenu;
-        interactionController.OnTargetSelect += OpenMenu;
-        interactionController.OnCancle += CloseMenu;
+        actionMenuBar.Init();
+        Managers.UI.BindSceneUi(this);
+    }
+
+    public void OpenUi(UiType type, BaseEntity target)
+    {
+        switch (type)
+        {
+            case UiType.ActionMenu:
+                actionMenuBar.Open(target);
+                break;
+            case UiType.Inventory:
+                inventory.gameObject.SetActive(true);
+                break;
+            case UiType.Quest:
+                quest.gameObject.SetActive(true);
+                break;
+        }
     }
 
     public void ChangeBackground(Area currentArea)
@@ -23,28 +36,5 @@ public class UiController : MonoBehaviour
             backgroundImage.sprite = currentArea.BackgroundSprite;
         else
             backgroundImage.sprite = null;
-
-        SetSelected(Managers.Object.Player);
-    }
-
-    public void SetSelected(BaseEntity entity)
-    {
-        selectBar.gameObject.SetActive(true);
-        selectBar.transform.position = entity.Position;
-    }
-
-    public void OpenMenu(BaseEntity target)
-    {
-        actionMenuBar.OpenMenu(target);
-    }
-
-    public void NavigateMenu(bool up)
-    {
-        actionMenuBar.NavigateMenu(up);
-    }
-
-    public void CloseMenu()
-    {
-        actionMenuBar.CloseMenu();
     }
 }
