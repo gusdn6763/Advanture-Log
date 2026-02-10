@@ -10,8 +10,8 @@ public class StatRuleSo : ScriptableObject
     [SerializeField] private SerializedDictionary<MainStatType, MainStatRule> mainStatDic = new SerializedDictionary<MainStatType, MainStatRule>();
     [SerializeField] private SerializedDictionary<SubStatType, SubStatRule> subStatDic = new SerializedDictionary<SubStatType, SubStatRule>();
 
-    public SerializedDictionary<MainStatType, MainStatRule> MainStatDic { get => mainStatDic; }
-    public SerializedDictionary<SubStatType, SubStatRule> SubStatDic { get => subStatDic; }
+    public IReadOnlyDictionary<MainStatType, MainStatRule> MainStatDic { get => mainStatDic; }
+    public IReadOnlyDictionary<SubStatType, SubStatRule> SubStatDic { get => subStatDic; }
 
     public bool TryGet(MainStatType type, out MainStatRule mainStatRule)
     {

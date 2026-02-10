@@ -1,10 +1,11 @@
+using AYellowpaper.SerializedCollections.Editor;
 using UnityEngine;
 
 public static class StringUtil
 {
-    public static string FormatValueForDisplay(float value, string displayType)
+    public static string FormatValueForDisplay(float value, StatDisplayType displayType)
     {
-        bool isPercent = !string.IsNullOrEmpty(displayType) && displayType.Contains("%");
+        bool isPercent = displayType == StatDisplayType.Percent;
 
         // 정수처럼 보이면 정수로
         float r = Mathf.Round(value);

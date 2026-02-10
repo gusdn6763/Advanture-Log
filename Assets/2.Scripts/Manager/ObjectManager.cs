@@ -29,25 +29,11 @@ public class ObjectManager : MonoBehaviour
         entity.transform.position = position;
         entity.SetInfo(so);
 
-        if (so.ObjectType == ObjectType.Player)
-        {
-        }
-        else if (so.ObjectType == ObjectType.Monster)
-        {
-        }
-        else if (so.ObjectType == ObjectType.Furniture)
-        {
-        }
         return entity as T;
     }
 
     public void Despawn<T>(T obj) where T : BaseEntity
     {
-        ObjectType objectType = obj.BaseData.ObjectType;
-
-        if (objectType == ObjectType.Player)
-        {
-        }
 
         Destroy(obj.gameObject);
     }

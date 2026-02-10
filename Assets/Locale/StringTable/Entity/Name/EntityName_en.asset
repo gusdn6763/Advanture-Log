@@ -34,6 +34,14 @@ MonoBehaviour:
     m_Localized: Apple
     m_Metadata:
       m_Items: []
+  - m_Id: 4050813411635200
+    m_Localized: Mage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4050846630522880
+    m_Localized: Thief
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

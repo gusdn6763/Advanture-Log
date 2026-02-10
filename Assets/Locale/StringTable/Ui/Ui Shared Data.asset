@@ -139,18 +139,6 @@ MonoBehaviour:
     m_Key: UI_RemainingPoints
     m_Metadata:
       m_Items: []
-  - m_Id: 16779676159815694
-    m_Key: UI_Warrior
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676159815695
-    m_Key: UI_Thief
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676159815696
-    m_Key: UI_Mage
-    m_Metadata:
-      m_Items: []
   - m_Id: 16779676159815697
     m_Key: UI_SelectSleepDuration
     m_Metadata:

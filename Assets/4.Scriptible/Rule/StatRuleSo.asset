@@ -16,85 +16,233 @@ MonoBehaviour:
     _serializedList:
     - Key: 0
       Value:
-        subStatRules:
-        - subStat: 4
-          perPoint: 2
-          calcType: 0
-        - subStat: 5
-          perPoint: 0.5
-          calcType: 0
-        - subStat: 0
-          perPoint: 10
-          calcType: 0
+        subStatPerPointDic:
+          _serializedList:
+          - Key: 0
+            Value: 5
+        statName:
+          m_TableReference:
+            m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+          m_TableEntryReference:
+            m_KeyId: 20457077511270400
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
     - Key: 1
       Value:
-        subStatRules:
-        - subStat: 6
-          perPoint: 5
-          calcType: 1
-        - subStat: 7
-          perPoint: 2.5
-          calcType: 1
-        - subStat: 8
-          perPoint: 1
-          calcType: 1
-        - subStat: 9
-          perPoint: 0.3
-          calcType: 1
+        subStatPerPointDic:
+          _serializedList:
+          - Key: 0
+            Value: 3
+          - Key: 1
+            Value: 1
+        statName:
+          m_TableReference:
+            m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+          m_TableEntryReference:
+            m_KeyId: 20457088655536128
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
     - Key: 2
       Value:
-        subStatRules:
-        - subStat: 0
-          perPoint: 20
-          calcType: 0
-        - subStat: 1
-          perPoint: 1
-          calcType: 0
-        - subStat: 5
-          perPoint: 0.3
-          calcType: 0
-        - subStat: 8
-          perPoint: 0.2
-          calcType: 1
+        subStatPerPointDic:
+          _serializedList: []
+        statName:
+          m_TableReference:
+            m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+          m_TableEntryReference:
+            m_KeyId: 20457101771124736
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
     - Key: 3
       Value:
-        subStatRules:
-        - subStat: 2
-          perPoint: 15
-          calcType: 0
-        - subStat: 3
-          perPoint: 1
-          calcType: 0
-        - subStat: 10
-          perPoint: 2
-          calcType: 1
-        - subStat: 7
-          perPoint: 0.2
-          calcType: 1
+        subStatPerPointDic:
+          _serializedList: []
+        statName:
+          m_TableReference:
+            m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+          m_TableEntryReference:
+            m_KeyId: 20457111929729024
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
     - Key: 4
       Value:
-        subStatRules:
-        - subStat: 7
-          perPoint: 0.5
-          calcType: 1
-        - subStat: 9
-          perPoint: 0.7
-          calcType: 1
-        - subStat: 11
-          perPoint: 2
-          calcType: 0
-        - subStat: 8
-          perPoint: 0.2
-          calcType: 1
-  maxSubStatDic:
+        subStatPerPointDic:
+          _serializedList: []
+        statName:
+          m_TableReference:
+            m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+          m_TableEntryReference:
+            m_KeyId: 20466380108443648
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+  subStatDic:
     _serializedList:
+    - Key: 0
+      Value:
+        statName:
+          m_TableReference:
+            m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+          m_TableEntryReference:
+            m_KeyId: 822646840471552
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        displayType: 0
+        maxValue: 0
+    - Key: 1
+      Value:
+        statName:
+          m_TableReference:
+            m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+          m_TableEntryReference:
+            m_KeyId: 822659293360128
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        displayType: 0
+        maxValue: 0
+    - Key: 2
+      Value:
+        statName:
+          m_TableReference:
+            m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+          m_TableEntryReference:
+            m_KeyId: 822834648821760
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        displayType: 0
+        maxValue: 0
+    - Key: 3
+      Value:
+        statName:
+          m_TableReference:
+            m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+          m_TableEntryReference:
+            m_KeyId: 822836896968704
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        displayType: 0
+        maxValue: 0
+    - Key: 4
+      Value:
+        statName:
+          m_TableReference:
+            m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+          m_TableEntryReference:
+            m_KeyId: 823045165133824
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        displayType: 0
+        maxValue: 0
+    - Key: 5
+      Value:
+        statName:
+          m_TableReference:
+            m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+          m_TableEntryReference:
+            m_KeyId: 823048021454848
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        displayType: 0
+        maxValue: 0
     - Key: 6
-      Value: 500
+      Value:
+        statName:
+          m_TableReference:
+            m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+          m_TableEntryReference:
+            m_KeyId: 823050470928384
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        displayType: 1
+        maxValue: 500
     - Key: 7
-      Value: 100
+      Value:
+        statName:
+          m_TableReference:
+            m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+          m_TableEntryReference:
+            m_KeyId: 823052215758848
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        displayType: 1
+        maxValue: 99
     - Key: 8
-      Value: 90
+      Value:
+        statName:
+          m_TableReference:
+            m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+          m_TableEntryReference:
+            m_KeyId: 823053989949440
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        displayType: 1
+        maxValue: 80
     - Key: 9
-      Value: 100
+      Value:
+        statName:
+          m_TableReference:
+            m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+          m_TableEntryReference:
+            m_KeyId: 823139457282048
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        displayType: 1
+        maxValue: 100
+    - Key: 10
+      Value:
+        statName:
+          m_TableReference:
+            m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+          m_TableEntryReference:
+            m_KeyId: 823155395637248
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        displayType: 0
+        maxValue: 0
     - Key: 11
-      Value: 999
+      Value:
+        statName:
+          m_TableReference:
+            m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+          m_TableEntryReference:
+            m_KeyId: 823176497180672
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        displayType: 0
+        maxValue: 0
+  references:
+    version: 2
+    RefIds: []

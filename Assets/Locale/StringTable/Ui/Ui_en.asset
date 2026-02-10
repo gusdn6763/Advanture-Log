@@ -144,18 +144,6 @@ MonoBehaviour:
     m_Localized: 'RemainingPoints: '
     m_Metadata:
       m_Items: []
-  - m_Id: 16779676159815694
-    m_Localized: Warrior
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676159815695
-    m_Localized: Thief
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676159815696
-    m_Localized: Mage
-    m_Metadata:
-      m_Items: []
   - m_Id: 16779676159815697
     m_Localized: Select Sleep Duration
     m_Metadata:

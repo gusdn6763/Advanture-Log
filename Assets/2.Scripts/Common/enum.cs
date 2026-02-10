@@ -42,6 +42,14 @@ public enum StatCalculateType
     Absolute,       // 절대값 설정 (ex. HP = 50)
 }
 
+/// <summary>
+/// 스탯 보여주는 타입
+/// </summary>
+public enum StatDisplayType
+{
+    Flat, 
+    Percent
+}
 
 /// <summary>
 /// 플레이어 자원
@@ -102,18 +110,6 @@ public enum InputAction
     ItemQuickSlot7,
     ItemQuickSlot8,
     ItemQuickSlot9
-}
-
-/// <summary>
-/// Entity타입
-/// </summary>
-public enum ObjectType
-{
-    None,
-    Furniture,
-    Player,
-    Monster,
-    Item,
 }
 
 /// <summary>

@@ -35,6 +35,14 @@ MonoBehaviour:
     m_Key: UI_Quest_Description
     m_Metadata:
       m_Items: []
+  - m_Id: 4049741783740416
+    m_Key: Description_Mage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4049805394554880
+    m_Key: Description_Thief
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

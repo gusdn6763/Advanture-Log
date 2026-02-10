@@ -6,7 +6,6 @@ using UnityEngine.Localization;
 public abstract class BaseEntitySo : ScriptableObject
 {
     public string Id { get; private set; } = string.Empty;
-    public virtual ObjectType ObjectType { get; protected set; } = ObjectType.None;
 
     [Header("메뉴")][SerializeField] private List<ActionMenuSo> actionMenus = new List<ActionMenuSo>();
     [Header("이름")] [SerializeField] protected LocalizedString objectName;  //플레이어는 objectName을 사용하지 않음
@@ -24,8 +23,14 @@ public abstract class BaseEntitySo : ScriptableObject
     public void SetId(string id)
     {
         if (string.IsNullOrEmpty(Id))
+        {
             Id = id;
-        else
-            Debug.LogError($"Id 중복 할당:{Id} -> {id}");
+            return;
+        }
+
+        if (Id == id)
+            return;
+
+        Debug.LogError($"Id 재 할당:{Id} -> {id}");
     }
 }

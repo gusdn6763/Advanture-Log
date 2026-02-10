@@ -8,6 +8,7 @@ public class UI_Title : MonoBehaviour
     [SerializeField] private GameObject loadUi;
     [SerializeField] private GameObject diaryUi;
 
+    [Header("메뉴 버튼")]
     [SerializeField] private Button gameStartButton;
     [SerializeField] private Button gameContinueButton;
     [SerializeField] private Button diaryButton;
@@ -23,6 +24,10 @@ public class UI_Title : MonoBehaviour
         BindButton(diaryButton, OpenDiary);
         BindButton(settingButton, OpenSetting);
         BindButton(quitButton, GameEnd);
+
+        characterCreation.gameObject.SetActive(false);
+        loadUi.SetActive(false);
+        diaryUi.SetActive(false);
     }
 
     private static void BindButton(Button button, Action action)

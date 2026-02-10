@@ -208,13 +208,11 @@ public class UI_StatSelection : MonoBehaviour, ICharacterCreationSection
 
             totalSubStatDic.TryGetValue(type, out float value);
 
-            string name = rule.statName != null
-                ? rule.statName.GetLocalizedString()
-                : type.ToString();
+            string name = rule.StatName != null ? rule.StatName.GetLocalizedString() : type.ToString();
 
             sb.Append(name);
             sb.Append(": ");
-            sb.Append(StringUtil.FormatValueForDisplay(value, rule.displayType));
+            sb.Append(StringUtil.FormatValueForDisplay(value, rule.DisplayType));
 
             if (idx < subStatRule.Count - 1)
                 sb.Append('\n');

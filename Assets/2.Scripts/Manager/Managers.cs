@@ -24,39 +24,23 @@ public class Managers : MonoBehaviour
     public static ObjectManager Object => Instance?.objectManager;
     public static SaveManager Save => Instance?.saveManager;
 
-    private void Awake()
+    public static void Init()
     {
-        if (instance != null && instance != this)
+        if (instance != null)
+            return;
+
+        // 1) 씬에 이미 배치된 Managers를 찾음
+        instance = FindFirstObjectByType<Managers>();
+
+        if (instance == null)
         {
-            Destroy(gameObject);
+            Debug.LogError("Managers 없음");
             return;
         }
 
-        instance = this;
-        DontDestroyOnLoad(gameObject);
-
+        DontDestroyOnLoad(instance.gameObject);
         Application.targetFrameRate = 60;
-    }
 
-    public static void Init()
-    {
-        if (instance == null)
-        {
-            instance = FindFirstObjectByType<Managers>();
-
-            if (instance != null)
-                return;
-
-            Managers managerPrefab = Resources.Load<Managers>("Managers");
-
-            if (managerPrefab == null)
-            {
-                Debug.LogError("[Managers] Resources.Load failed. Assets/Resources/Managers.prefab");
-                return;
-            }
-
-            instance = Instantiate(managerPrefab);
-            instance.name = "Managers";
-        }
+        Data.Init();
     }
 }

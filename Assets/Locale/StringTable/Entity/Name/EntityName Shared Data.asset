@@ -31,6 +31,14 @@ MonoBehaviour:
     m_Key: Entity_Warrior
     m_Metadata:
       m_Items: []
+  - m_Id: 4050813411635200
+    m_Key: Entity_Mage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4050846630522880
+    m_Key: Entity_Thief
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

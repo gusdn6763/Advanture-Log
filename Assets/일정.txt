@@ -167,10 +167,11 @@ C안 = 포트폴리오용으로 제격, A안 = 한번 만들고 싶었던 게임을 구현하면서 포트폴리
 02-07~02-10
 1. MainScene UI 및 로직 구현. 
 - 구현 목록: UI_Title, UI_CharacterCreation, UI_GameModeSelection, UI_JobButton, UI_JobSelection, UI_PlayerNameSetting, UI_StatAllocation, UI_StatSelection
-아직 미 테스트
-2. 씬에 오브젝트 최소화 - UI 프리팹화. 만약 여러 사람끼리 프로젝트를 건들면 씬은 최소화 하는 것이 좋기 때문.
+- 아직 테스트X
+2. 씬에 오브젝트 최소화 
+- UI 프리팹화. 만약 여러 사람끼리 프로젝트를 건들면 씬은 최소화 하는 것이 좋기 때문.
 3. 다국어 테이블 추가
-
+4. StatRule 추가
 
 
 

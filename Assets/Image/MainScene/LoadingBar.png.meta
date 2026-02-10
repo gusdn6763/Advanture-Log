@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a573123fc28651442a2327b33b080715
+guid: 948b3cb024a04ce498095690f234f616
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,43 +110,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "ChatGPT Image 2026\uB144 2\uC6D4 9\uC77C \uC624\uD6C4 12_27_09_0"
+      name: LoadingBar_0
       rect:
         serializedVersion: 2
-        x: 207
-        y: 566
-        width: 496
-        height: 148
+        x: 204
+        y: 310
+        width: 1125
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 169, y: 153, z: 169, w: 153}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7df13bdebe1c53d48ba46900c73ab483
-      internalID: -913172316
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "ChatGPT Image 2026\uB144 2\uC6D4 9\uC77C \uC624\uD6C4 12_27_09_1"
-      rect:
-        serializedVersion: 2
-        x: 936
-        y: 460
-        width: 417
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d9a6462b21d2234281e92cef20990e4
-      internalID: 2137403961
+      spriteID: bd6ed5e5063bb4f48ba89fd49519d641
+      internalID: -1715676010
       vertices: []
       indices: 
       edges: []
@@ -162,8 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "ChatGPT Image 2026\uB144 2\uC6D4 9\uC77C \uC624\uD6C4 12_27_09_0": -913172316
-      "ChatGPT Image 2026\uB144 2\uC6D4 9\uC77C \uC624\uD6C4 12_27_09_1": 2137403961
+      LoadingBar_0: -1715676010
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

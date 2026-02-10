@@ -70,6 +70,14 @@ MonoBehaviour:
       gold, {8:N0} reputation</size>'
     m_Metadata:
       m_Items: []
+  - m_Id: 4049741783740416
+    m_Localized: This is Mage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4049805394554880
+    m_Localized: This is Thief.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
