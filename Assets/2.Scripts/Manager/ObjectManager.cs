@@ -1,20 +1,68 @@
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
-
-
 
 public class ObjectManager : MonoBehaviour
 {
-    public BaseEntity Player;
+    //HashSet = 중복 제거
+    public HashSet<Monster> Monsters { get; } = new HashSet<Monster>();
 
-    public List<BaseEntity> activeEntities;
-    public List<BaseEntity> ActiveEntities
+    public Player CurrentPlayer { get; private set; }
+
+    public T Spawn<T>(Vector2Int cellPos, string id) where T : BaseEntity
     {
-        get => activeEntities;
-        set
+        Vector2 spawnPos = Managers.Area.Cell2World(cellPos);
+        return Spawn<T>(spawnPos, id);
+    }
+
+    public T Spawn<T>(Vector2 position, string id) where T : BaseEntity
+    {
+        if (!Managers.Data.TryGetEntity(id, out BaseEntitySo so) || so == null)
         {
-            activeEntities = value;
-            activeEntities.Add(Player);
+            Debug.LogError($"[Spawner] Entity id not found: '{id}'");
+            return null;
         }
+
+        BaseEntity entity = Instantiate(so.EntityPrefab).GetOrAddComponent<BaseEntity>();
+        entity.name = entity.name + "_" + id;
+        entity.transform.position = position;
+        entity.SetInfo(so);
+
+        if (so.ObjectType == ObjectType.Player)
+        {
+        }
+        else if (so.ObjectType == ObjectType.Monster)
+        {
+        }
+        else if (so.ObjectType == ObjectType.Furniture)
+        {
+        }
+        return entity as T;
+    }
+
+    public void Despawn<T>(T obj) where T : BaseEntity
+    {
+        ObjectType objectType = obj.BaseData.ObjectType;
+
+        if (objectType == ObjectType.Player)
+        {
+        }
+
+        Destroy(obj.gameObject);
+    }
+
+    public Player SpawnPlayer(PlayerData data)
+    {
+        if (CurrentPlayer != null)
+            Despawn(CurrentPlayer);
+
+        Player player = Spawn<Player>(Vector2.zero, data.playerType);
+        if (player == null) 
+            return null;
+
+        player.SetUp(data);
+        CurrentPlayer = player;
+        return player;
     }
 }

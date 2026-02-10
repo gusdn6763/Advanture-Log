@@ -1,18 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 public class UI_ActionMenuBar : UI_PopupBase
 {
     [SerializeField] private UI_ActionMenuButton actionMenuButtonPrefab;
 
-    [SerializeField] private float defaultSize = 35f;
     [SerializeField] private int createCount = 5;
 
     private List<UI_ActionMenuButton> actionMenuButtons = new List<UI_ActionMenuButton>();
     private RectTransform rect;
-
-    private float buttonHeight;
 
     public override bool Init()
     {
@@ -36,22 +32,17 @@ public class UI_ActionMenuBar : UI_PopupBase
         return button;
     }
 
-    public void OpenMenu(BaseEntity target)
+    public void OpenMenu(BaseEntity target, List<ActionMenuSo> targetMenus)
     {
-        List<ActionMenuSo> targetMenus = target.ActionMenuList;
-
         //원래 메뉴보다 많으면 생성
         while (actionMenuButtons.Count < targetMenus.Count)
             actionMenuButtons.Add(CreateButton());
 
         // 앞에서부터 필요한 개수만 세팅 & 활성화
-        buttonHeight = 0;
         for (int i = 0; i < targetMenus.Count; i++)
         {
             UI_ActionMenuButton actionMenuButton = actionMenuButtons[i];
             ActionMenuSo targetMenu = targetMenus[i];
-
-            buttonHeight += actionMenuButton.Height;
 
             actionMenuButton.gameObject.SetActive(true);
             actionMenuButton.SetText(targetMenu.ActionName.GetLocalizedString());
@@ -61,9 +52,6 @@ public class UI_ActionMenuBar : UI_PopupBase
         // 남는 버튼은 그냥 끈다
         for (int i = actionMenuButtons.Count - 1; i >= targetMenus.Count; i--)
             actionMenuButtons[i].gameObject.SetActive(false);
-
-        // 메뉴 크기
-        rect.sizeDelta = new Vector2(rect.sizeDelta.x, defaultSize + targetMenus.Count * buttonHeight);
 
         SetMenuPosition(target.Position);
     }

@@ -1,65 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
-using TreeEditor;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
+
 
 public class Area : MonoBehaviour
 {
-    public AreaSo AreaData { get; private set; }
-    public Sprite BackgroundSprite { get; private set; }
-    public List<BaseEntity> SpawnedEntities { get; private set; }
+    private AreaSo areaSo;
 
-    private List<AsyncOperationHandle<GameObject>> defaultInstanceHandles = new List<AsyncOperationHandle<GameObject>>();
-    public void Init(AreaSo data)
+    public Sprite BackgroundSprite { get; private set; }
+    public List<BaseEntity> FixedEntities { get; private set; } = new List<BaseEntity>();
+    public List<BaseEntity> ExtraEntities { get; private set; } = new List<BaseEntity>();
+    public void SetInfo(AreaSo data)
     {
-        AreaData = data;
-        SpawnedEntities = new List<BaseEntity>();
+        areaSo = data;
     }
 
-    public IEnumerator CreateDefaultObjects()
+    public void SpawnFixedEntities()
     {
-        // Background
-        AsyncOperationHandle<Sprite> bagkgroundHandle = AreaData.BackgroundSpriteRef.LoadAssetAsync<Sprite>();
-        yield return bagkgroundHandle;
-
-        BackgroundSprite = bagkgroundHandle.Result;
-
-        // Default Objects
-        for (int i = 0; i < AreaData.FixedSpawnEntry.Count; i++)
+        for (int i = 0; i < areaSo.FixedSpawnEntry.Count; i++)
         {
-            FixedSpawnEntry entry = AreaData.FixedSpawnEntry[i];
-            AssetReferenceGameObject aref = entry.entitySo.EntityPrefabRef;
-  
-            AsyncOperationHandle<GameObject> instHandle = aref.InstantiateAsync(entry.localPos, Quaternion.identity, transform);
+            FixedSpawnEntry entry = areaSo.FixedSpawnEntry[i];
 
-            yield return instHandle;
-            defaultInstanceHandles.Add(instHandle);
+            BaseEntity entity = Managers.Object.Spawn<BaseEntity>(entry.localPos, entry.entitySo.Id);
 
-            BaseEntity entity = instHandle.Result.GetOrAddComponent<BaseEntity>();
-
-            entity.Init();
-            entity.SetInfo(entry.entitySo);
-
-            SpawnedEntities.Add(entity);
+            FixedEntities.Add(entity);
         }
+    }
+
+    public void SpawnEntities()
+    {
+    }
+
+    public void ExitArea()
+    {
+        for(int i = ExtraEntities.Count; i > 0; i--)
+        {
+            BaseEntity entity = ExtraEntities[i];
+
+            Destroy(entity.gameObject);
+            entity = null;
+        }
+
+        gameObject.SetActive(false);
     }
 
     private void OnDestroy()
     {
-        Release();
-    }
-
-    public void Release()
-    {
-        AreaData.BackgroundSpriteRef.ReleaseAsset();
-
-        int count = defaultInstanceHandles.Count;
-        for (int i = 0; i < count; i++)
-            Addressables.ReleaseInstance(defaultInstanceHandles[i]);
-
-        defaultInstanceHandles.Clear();
+        BackgroundSprite = null;
+        FixedEntities.Clear();
+        ExtraEntities.Clear();
     }
 }

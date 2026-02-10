@@ -1,36 +1,41 @@
-using Newtonsoft.Json;
-using System;
 using System.Collections;
-using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public interface IBootstraper
 {
-    public IEnumerator Initialize(ILoadProgress progress);
+    public IEnumerator Initialize(ILoadProgress progress, GameStartData data);
 }
 
 public class GameSceneBootstrap : MonoBehaviour, IBootstraper
 {
+    [SerializeField] private AreaGraphSo areaGraph;
+
     [SerializeField] private InteractionController interactionController;
-    [SerializeField] private AreaController areaController;
     [SerializeField] private UiController uiController;
 
-    public IEnumerator Initialize(ILoadProgress progress)
+    public IEnumerator Initialize(ILoadProgress progress, GameStartData data)
     {
-        progress.UpdateMessage("Setting Data...");
-        uiController.Init();
-        areaController.OnAreaChanged += uiController.ChangeBackground;
-        areaController.OnAreaChanged += interactionController.SelectBarReset;
-
         progress.UpdateMessage("Creating areas...");
-        yield return areaController.CreateAreas(progress);
+        yield return Managers.Area.CreateAreas(areaGraph, (key, count, totalCount) =>
+        {
+            progress.UpdateMessage($"Loading Area: {key} {count}/{totalCount}");
+        });
 
-        progress.UpdateMessage("Finalizing...");
-        LoadData();
-    }
+        progress.UpdateMessage("Create Player...");
+        Player player = null;
+        if (data.load)
+        {
+            //player = Managers.Object.SpawnPlayer(data);
+        }
+        else
+        {
+            //player = Managers.Object.SpawnPlayer(data);
+        }
+        progress.UpdateMessage("Init UI...");
+        uiController.Init(player);
 
-    private void LoadData()
-    {
+        progress.UpdateMessage("Complete");
     }
 }  
         

@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a796f59745500ea47830385ed1587724, type: 3}
+  m_Name: StatRuleSo
+  m_EditorClassIdentifier: 
+  mainStatDic:
+    _serializedList:
+    - Key: 0
+      Value:
+        subStatRules:
+        - subStat: 4
+          perPoint: 2
+          calcType: 0
+        - subStat: 5
+          perPoint: 0.5
+          calcType: 0
+        - subStat: 0
+          perPoint: 10
+          calcType: 0
+    - Key: 1
+      Value:
+        subStatRules:
+        - subStat: 6
+          perPoint: 5
+          calcType: 1
+        - subStat: 7
+          perPoint: 2.5
+          calcType: 1
+        - subStat: 8
+          perPoint: 1
+          calcType: 1
+        - subStat: 9
+          perPoint: 0.3
+          calcType: 1
+    - Key: 2
+      Value:
+        subStatRules:
+        - subStat: 0
+          perPoint: 20
+          calcType: 0
+        - subStat: 1
+          perPoint: 1
+          calcType: 0
+        - subStat: 5
+          perPoint: 0.3
+          calcType: 0
+        - subStat: 8
+          perPoint: 0.2
+          calcType: 1
+    - Key: 3
+      Value:
+        subStatRules:
+        - subStat: 2
+          perPoint: 15
+          calcType: 0
+        - subStat: 3
+          perPoint: 1
+          calcType: 0
+        - subStat: 10
+          perPoint: 2
+          calcType: 1
+        - subStat: 7
+          perPoint: 0.2
+          calcType: 1
+    - Key: 4
+      Value:
+        subStatRules:
+        - subStat: 7
+          perPoint: 0.5
+          calcType: 1
+        - subStat: 9
+          perPoint: 0.7
+          calcType: 1
+        - subStat: 11
+          perPoint: 2
+          calcType: 0
+        - subStat: 8
+          perPoint: 0.2
+          calcType: 1
+  maxSubStatDic:
+    _serializedList:
+    - Key: 6
+      Value: 500
+    - Key: 7
+      Value: 100
+    - Key: 8
+      Value: 90
+    - Key: 9
+      Value: 100
+    - Key: 11
+      Value: 999

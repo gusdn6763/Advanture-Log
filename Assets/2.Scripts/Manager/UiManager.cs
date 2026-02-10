@@ -7,10 +7,12 @@ using UnityEngine.Localization.Settings;
 
 public class UiManager : MonoBehaviour
 {
+    public bool IsOpenUi { get { return popupList.Count > 0; } }
+    public UiController SceneUi { get; private set; }
+
+
     private List<UI_PopupBase> popupList = new List<UI_PopupBase>();
     private int sortingOrder = 10;
-
-    public UiController SceneUi { get; private set; }
 
     public void BindSceneUi(UiController ui)
     {
@@ -24,8 +26,6 @@ public class UiManager : MonoBehaviour
 
         SceneUi.OpenUi(type, target);
     }
-
-    public bool IsOpenUi { get { return popupList.Count > 0; } }
 
     #region 팝업
     public void OpenPopupUI(UI_PopupBase popup)
@@ -69,4 +69,21 @@ public class UiManager : MonoBehaviour
     }
     #endregion
 
+    #region 로그창
+    public void ShowLog(string message)
+    {
+        if (SceneUi == null)
+            return;
+
+        SceneUi.CreateMessage(message);
+    }
+    #endregion
+
+    #region 설정창
+    [Header("설정창")][SerializeField] private UI_Setting settingUI;
+    public void OpenSettingUI()
+    {
+        settingUI.Open();
+    }
+    #endregion
 }

@@ -1,8 +1,7 @@
 using AYellowpaper.SerializedCollections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Game/KeyBinding")]
+[CreateAssetMenu(menuName = "Game/Rule/InputBinding", fileName = "InputBindingSo")]
 public class InputBindingSo : ScriptableObject
 {
     [SerializeField] private SerializedDictionary<InputAction, KeyCode> keyDic;

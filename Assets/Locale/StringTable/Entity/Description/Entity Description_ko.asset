@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Entity Description_ko
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: ko
+  m_SharedData: {fileID: 11400000, guid: d088b34d2d065084fb5f33ee3efd56e9, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 8526213120
+    m_Localized: "\uACE0\uBE14\uB9B0\uC774\uB2E4."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71742763008
+    m_Localized: "\uC0AC\uACFC\uB2E4."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 317357010944
+    m_Localized: "\uC804\uC0AC\uB2E4"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 147173126144
+    m_Localized: "\uAC8C\uC2DC\uD310\uC774\uB2E4."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3520877739356160
+    m_Localized: "<b>{0}</b>\r\n\r\n<size=20><b>\uB0B4\uC6A9</b>\r\n{1}\r\n\r\n<b>\uBAA9\uD45C</b>\r\n{2}\r\n<b>\uB7AD\uD06C</b>\r\n{3}\r\n\r\n<b>\uB0A8\uC740
+      \uC2DC\uAC04</b>\r\n{4:plural:zero(){}{#\uC77C}}{5:plural:zero(){}{ {#}\uC2DC\uAC04}}{6:plural:zero(){}{
+      {#}\uBD84}}\r\n\r\n<b>\uBCF4\uC0C1</b>\r\n\uB3C8 {7:N0}, \uACF5\uC801\uCE58
+      {8:N0}</size>"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

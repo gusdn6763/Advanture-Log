@@ -1,8 +1,15 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+    #region GameSaveData
+    GameSaveData saveData = new GameSaveData();
+    public GameSaveData SaveData { get { return saveData; } set { saveData = value; } }
+    #endregion
+
     #region 시간
     public event Action<int> OnTimeAdvanced;           // 지나간 시간
     public event Action<int> OnDayChanged;            // 날짜 변경시

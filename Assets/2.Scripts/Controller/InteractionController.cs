@@ -16,6 +16,16 @@ public class InteractionController : MonoBehaviour
         HandleInput();
     }
 
+    private void OnEnable()
+    {
+        Managers.Area.OnAreaChanged += SelectBarReset;
+    }
+
+    private void OnDisable()
+    {
+        Managers.Area.OnAreaChanged -= SelectBarReset;
+    }
+
     private void UpdateSelectBar()
     {
         if (currentSelectEntity == null)

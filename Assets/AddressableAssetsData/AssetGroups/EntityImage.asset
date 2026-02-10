@@ -16,27 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 9a3b7a03b343ada468b40d01d2731872
-  m_SerializeEntries:
-  - m_GUID: 2a00d10ea9e967d46934f0661e3d1a40
-    m_Address: Notice Board
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 51d63be32c9d5f24faef943eab6b5b2b
-    m_Address: Goblin
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cafc4e77afce97e4d93dc9c3f7a144c4
-    m_Address: Apple
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d13ac4d091df2ed469158b6d640c24b1
-    m_Address: Warrior
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6c8464ea7717daf4a9ca9ef2eadad8f6, type: 2}
   m_SchemaSet:

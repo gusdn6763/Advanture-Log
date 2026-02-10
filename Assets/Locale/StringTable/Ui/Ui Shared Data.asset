@@ -1,0 +1,272 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Ui Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Ui
+  m_TableCollectionNameGuidString: 4ff06e9b9fe26ae47b1442d447868869
+  m_Entries:
+  - m_Id: 16779676155621376
+    m_Key: UI_Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621377
+    m_Key: UI_MainName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621378
+    m_Key: UI_SFX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621379
+    m_Key: UI_Setting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621380
+    m_Key: UI_Diary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621381
+    m_Key: UI_Graphics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621382
+    m_Key: UI_Gameplay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621383
+    m_Key: UI_Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621384
+    m_Key: UI_Controls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621385
+    m_Key: UI_Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621386
+    m_Key: UI_BGM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621387
+    m_Key: UI_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621388
+    m_Key: UI_Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621389
+    m_Key: UI_Mute
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621390
+    m_Key: UI_Window Mode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621391
+    m_Key: UI_keyBindings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621392
+    m_Key: UI_Slot1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621393
+    m_Key: UI_Slot2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621394
+    m_Key: UI_Slot3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621395
+    m_Key: UI_Slot4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676155621396
+    m_Key: UI_FullScreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676159815680
+    m_Key: UI_Windowd
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676159815681
+    m_Key: UI_Ok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676159815682
+    m_Key: UI_JobSelect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676159815683
+    m_Key: UI_AdvantureName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676159815684
+    m_Key: UI_NameEmpty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676159815685
+    m_Key: UI_NameTooShort
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676159815686
+    m_Key: UI_InvalidCharacters
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676159815689
+    m_Key: UI_Cancle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676159815690
+    m_Key: UI_Reset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676159815692
+    m_Key: UI_RemainingPoints
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676159815694
+    m_Key: UI_Warrior
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676159815695
+    m_Key: UI_Thief
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676159815696
+    m_Key: UI_Mage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16779676159815697
+    m_Key: UI_SelectSleepDuration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16842099931721728
+    m_Key: UI_EnterName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18601952081588224
+    m_Key: UI_Stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20456919516033024
+    m_Key: UI_Difficulty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20457077511270400
+    m_Key: UI_Strength
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20457088655536128
+    m_Key: UI_Dexterity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20457101771124736
+    m_Key: UI_Constitution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20457111929729024
+    m_Key: UI_Intelligence
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20466380108443648
+    m_Key: UI_Perception
+    m_Metadata:
+      m_Items: []
+  - m_Id: 602586523873280
+    m_Key: UI_GameMode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 751943420194816
+    m_Key: UI_Strength_Introduce
+    m_Metadata:
+      m_Items: []
+  - m_Id: 822120568565760
+    m_Key: UI_Dexterity_Introduce
+    m_Metadata:
+      m_Items: []
+  - m_Id: 822229624664064
+    m_Key: UI_Constitution_Introduce
+    m_Metadata:
+      m_Items: []
+  - m_Id: 822258552778752
+    m_Key: UI_Intelligence_Introduce
+    m_Metadata:
+      m_Items: []
+  - m_Id: 822300898471936
+    m_Key: UI_Perception_Introduce
+    m_Metadata:
+      m_Items: []
+  - m_Id: 822646840471552
+    m_Key: UI_MaxHealth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 822659293360128
+    m_Key: UI_HealthRecovery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 822834648821760
+    m_Key: UI_MaxMana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 822836896968704
+    m_Key: UI_ManaRecovery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 823045165133824
+    m_Key: UI_AttackPower
+    m_Metadata:
+      m_Items: []
+  - m_Id: 823048021454848
+    m_Key: UI_Defense
+    m_Metadata:
+      m_Items: []
+  - m_Id: 823050470928384
+    m_Key: UI_AttackSpeed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 823052215758848
+    m_Key: UI_Accuracy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 823053989949440
+    m_Key: UI_Evasion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 823139457282048
+    m_Key: UI_CriticalRate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 823155395637248
+    m_Key: UI_CriticalDamage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 823176497180672
+    m_Key: UI_Detection
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3427041570047655938
+  references:
+    version: 2
+    RefIds:
+    - rid: 3427041570047655938
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1770457680766

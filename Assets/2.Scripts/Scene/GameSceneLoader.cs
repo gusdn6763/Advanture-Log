@@ -21,13 +21,13 @@ public class GameSceneLoader : MonoBehaviour, ILoadProgress
     private const float sceneWeight = 0.5f;
     private const float bootstrapWeight = 0.5f;
 
-    public void LoadScene(bool load = false)
+    public void LoadScene(GameStartData data)
     {
         progressBar.fillAmount = 0f;
-        StartCoroutine(LoadingScene(load));
+        StartCoroutine(LoadingScene(data));
     }
 
-    private IEnumerator LoadingScene(bool load = false)
+    private IEnumerator LoadingScene(GameStartData data)
     {
         UpdateMessage("게임 화면 로딩중");
 
@@ -46,7 +46,6 @@ public class GameSceneLoader : MonoBehaviour, ILoadProgress
         while (!op.isDone) 
             yield return null;
 
-
         // 이제 씬이 로드됨
         Scene gameScene = SceneManager.GetSceneByName(nextScene);
         if (!gameScene.IsValid() || !gameScene.isLoaded)
@@ -54,7 +53,6 @@ public class GameSceneLoader : MonoBehaviour, ILoadProgress
             Debug.LogError("GameScene not loaded/activated yet");
             yield break;
         }
-
 
         // 씬 담당 찾기
         IBootstraper bootstraper = null;
@@ -67,11 +65,10 @@ public class GameSceneLoader : MonoBehaviour, ILoadProgress
 
         if (bootstraper != null)
         {
-            yield return bootstraper.Initialize(this);
+            yield return bootstraper.Initialize(this, data);
 
             progressBar.fillAmount = 1f;
         }
-
         SceneManager.SetActiveScene(gameScene);
         yield return SceneManager.UnloadSceneAsync(gameObject.scene);
     }
