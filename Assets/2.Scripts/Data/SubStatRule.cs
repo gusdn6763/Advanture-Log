@@ -1,6 +1,4 @@
-using AYellowpaper.SerializedCollections;
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization;
 
@@ -8,7 +6,7 @@ using UnityEngine.Localization;
 public class SubStatRule
 {
     [SerializeField] private LocalizedString statName;    //이름
-    [SerializeField] private StatDisplayType displayType;          //% 유무
+    [SerializeField] private StatDisplayType displayType; //% 유무
     [SerializeField] private float maxValue;              //서브 스탯 최대치
 
     public LocalizedString StatName { get => statName; }

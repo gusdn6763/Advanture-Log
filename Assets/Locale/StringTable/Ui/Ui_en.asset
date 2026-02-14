@@ -185,11 +185,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 751943420194816
-    m_Localized: 'Represents raw physical power and the ability to exert force. A
+    m_Localized: Represents raw physical power and the ability to exert force. A
       fundamental attribute for physical actions.
-
-
-      ---'
     m_Metadata:
       m_Items: []
   - m_Id: 822120568565760
@@ -220,8 +217,8 @@ MonoBehaviour:
     m_Localized: Detection
     m_Metadata:
       m_Items: []
-  - m_Id: 823155395637248
-    m_Localized: CriticalDamage
+  - m_Id: 1382524910809088
+    m_Localized: MagicPower
     m_Metadata:
       m_Items: []
   - m_Id: 823139457282048
@@ -258,6 +255,46 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 822659293360128
     m_Localized: HealthRecovery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1512974039887872
+    m_Localized: This is Warrior.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1513123243864064
+    m_Localized: This is Mage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1513317859569664
+    m_Localized: This is Thief.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1714587434201088
+    m_Localized: Job Information
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1724886929354752
+    m_Localized: 'Per +1 {0}:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1732331479216128
+    m_Localized: Current Stats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1733997960081408
+    m_Localized: 'Base Stat:
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1734556540710912
+    m_Localized: 'Skills:
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1752094062391296
+    m_Localized: Job Description
     m_Metadata:
       m_Items: []
   references:

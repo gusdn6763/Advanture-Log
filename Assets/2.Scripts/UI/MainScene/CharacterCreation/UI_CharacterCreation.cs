@@ -15,9 +15,9 @@ public class GameStartData
 
 public class UI_CharacterCreation : MonoBehaviour
 {
-    [SerializeField] private UI_PlayerNameSetting playerNameSetting;
     [SerializeField] private UI_JobSelection jobSelection;
     [SerializeField] private UI_StatSelection statSelection;
+    [SerializeField] private UI_PlayerNameSetting playerNameSetting;
     [SerializeField] private UI_GameModeSelection gameModeSelection;
 
     [Header("버튼")]
@@ -32,16 +32,16 @@ public class UI_CharacterCreation : MonoBehaviour
 
     public void Init()
     {
-        sections.Add(playerNameSetting);
         sections.Add(jobSelection);
         sections.Add(statSelection);
+        sections.Add(playerNameSetting);
         sections.Add(gameModeSelection);
 
         jobSelection.Init();
         statSelection.Init();
 
-        //직업별 추가 스탯 존재
-        jobSelection.OnJobSelected += statSelection.SetJobId;
+        //직업별 스탯 존재, 직업을 선택하기 전까지 스탯 조절 못하도록 수정
+        jobSelection.OnJobSelected += statSelection.SetJob;
 
         okButton.onClick.AddListener(OkButton);
         cancelButton.onClick.AddListener(CloseButton);
@@ -52,6 +52,7 @@ public class UI_CharacterCreation : MonoBehaviour
         foreach (ICharacterCreationSection section in sections)
             section.Refresh();
     }
+
 
     private void OkButton()
     {

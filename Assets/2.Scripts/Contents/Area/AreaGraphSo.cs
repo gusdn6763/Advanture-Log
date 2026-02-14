@@ -141,7 +141,7 @@ public class AreaGraphSo : ScriptableObject
 
         // 도달 가능한 것만 반환
         Dictionary<AreaSo, int> result = new Dictionary<AreaSo, int>();
-        foreach (var kv in dist)
+        foreach (KeyValuePair<AreaSo, int> kv in dist)
         {
             if (kv.Value != int.MaxValue)
                 result.Add(kv.Key, kv.Value);

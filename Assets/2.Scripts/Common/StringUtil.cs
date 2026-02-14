@@ -1,4 +1,3 @@
-using AYellowpaper.SerializedCollections.Editor;
 using UnityEngine;
 
 public static class StringUtil

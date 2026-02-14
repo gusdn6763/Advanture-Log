@@ -219,6 +219,10 @@ MonoBehaviour:
     m_Key: UI_AttackPower
     m_Metadata:
       m_Items: []
+  - m_Id: 1382524910809088
+    m_Key: UI_MagicPower
+    m_Metadata:
+      m_Items: []
   - m_Id: 823048021454848
     m_Key: UI_Defense
     m_Metadata:
@@ -239,12 +243,44 @@ MonoBehaviour:
     m_Key: UI_CriticalRate
     m_Metadata:
       m_Items: []
-  - m_Id: 823155395637248
-    m_Key: UI_CriticalDamage
-    m_Metadata:
-      m_Items: []
   - m_Id: 823176497180672
     m_Key: UI_Detection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1512974039887872
+    m_Key: UI_JobDescription_Warrior
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1513123243864064
+    m_Key: UI_JobDescription_Mage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1513317859569664
+    m_Key: UI_JobDescription_Thief
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1714587434201088
+    m_Key: UI_JobInformation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1724886929354752
+    m_Key: UI_IncreaseStat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1732331479216128
+    m_Key: UI_Current Stats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1733997960081408
+    m_Key: UI_BaseStat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1734556540710912
+    m_Key: UI_Skills
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1752094062391296
+    m_Key: UI_JobDescription
     m_Metadata:
       m_Items: []
   m_Metadata:

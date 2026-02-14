@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89440480255b42e4eb2b88a5682087c3, type: 3}
   m_Name: PlayerRuleSo
   m_EditorClassIdentifier: 
-  startStat: 5
-  startPoint: 10
-  levelUpPoint: 5
+  startStat: 3
+  startPoint: 5
+  levelUpPoint: 3
   needRules: []
   rankTiers: []
   references:

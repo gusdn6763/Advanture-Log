@@ -22,12 +22,12 @@ public enum SubStatType
     MaxMana,            //최대 마나
     ManaRecovery,       //마나 회복률
     AttackPower,        //공격력
+    MagicPower,         //마법 공격력
     Defense,            //방어력
     AttackSpeed,        //공격 속도 %로 표현
     Accuracy,           //명중률 %로 표현
     Evasion,            //회피률 %로 표현
     CriticalRate,       //치명율 %로 표현
-    CriticalDamage,     //치명타 데미지 비율 %로 표현
     Detection,          //감지
 }
 

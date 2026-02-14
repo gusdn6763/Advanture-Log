@@ -64,9 +64,6 @@ public class NeedData
 [CreateAssetMenu(menuName = "Game/Rule/PlayerRule", fileName = "PlayerRuleSo")]
 public class PlayerRuleSo : ScriptableObject
 {
-    [Header("초기 시작 스탯")]
-    [SerializeField] private int startStat;
-
     [Header("초기 설정 가능한 스탯 포인트")]
     [SerializeField] private int startPoint;
 
@@ -79,8 +76,6 @@ public class PlayerRuleSo : ScriptableObject
     [Header("등급")]
     [SerializeField] private List<RankTier> rankTiers = new List<RankTier>();
 
-
-    public int StartStat { get => startStat; }
     public int StartPoint { get => startPoint; }
     public int LevelUpPoint { get => levelUpPoint; }
     public IReadOnlyList<NeedData> NeedRules { get => needRules; }

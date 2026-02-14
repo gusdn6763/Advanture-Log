@@ -86,4 +86,26 @@ public class UiManager : MonoBehaviour
         settingUI.Open();
     }
     #endregion
+
+    #region
+    [Header("ÅøÆÁ")]
+    [SerializeField] private UI_Tooltip tooltip;
+
+    private ITooltipProvider currentProvider;
+    public void ShowTooltip(ITooltipProvider provider, string str)
+    {
+        currentProvider = provider;
+
+        tooltip.Show(str);
+    }
+
+    public void HideTooltip(ITooltipProvider provider)
+    {
+        if (currentProvider == null || provider == null)
+            return;
+
+        if (provider == currentProvider)
+            tooltip.Hide();
+    }
+    #endregion
 }

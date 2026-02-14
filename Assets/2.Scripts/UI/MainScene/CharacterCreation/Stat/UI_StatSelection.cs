@@ -1,21 +1,26 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Text;
+using System.Data;
+using System.Runtime.ConstrainedExecution;
 using TMPro;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 
 public class UI_StatSelection : MonoBehaviour, ICharacterCreationSection
 {
     [SerializeField] private List<UI_StatAllocation> statList;
     [SerializeField] private TextMeshProUGUI remainingStatText;
-    [SerializeField] private TextMeshProUGUI mainStatExplanText;
-    [SerializeField] private TextMeshProUGUI subStatExplanText;
+    [SerializeField] private UI_SubStatIntroduce leftSubStatIntroduce;
+    [SerializeField] private UI_SubStatIntroduce rightSubStatIntroduce;
 
-    private Dictionary<MainStatType, int> allocatedStatDic = new Dictionary<MainStatType, int>();           // 분배값 => 직업을 바꿔도 분배한 정보는 유지
-    private IReadOnlyDictionary<MainStatType, int> jobBonusStatDic = new Dictionary<MainStatType, int>();   // 직업 보정
+    private Dictionary<MainStatType, int> allocatedStatDic = new Dictionary<MainStatType, int>();          // 분배값
 
-    private int startPoint;     // 시작 분배 포인트
-    private int startStat;      // 기본 스탯
+    private Dictionary<MainStatType, int> jobBaseMainStatDic = new Dictionary<MainStatType, int>();   // 직업 메인 스탯
+    private Dictionary<SubStatType, float> jobBaseSubStatDic = new Dictionary<SubStatType, float>();  // 직업 서브 스탯
+
+    private int startPoint;      // 시작 분배 포인트
+    private string currentJobId; // 현재 선택된 직업 id 
     private int CurrentPoint { get => startPoint - UsedPoints; }  //남은 포인트
 
     private int UsedPoints
@@ -32,29 +37,22 @@ public class UI_StatSelection : MonoBehaviour, ICharacterCreationSection
 
     public void Init()
     {
-        PlayerRuleSo rule = Managers.Data.PlayerRule;
-
-        startPoint = rule.StartPoint;
-        startStat = rule.StartStat;
-
         for (int i = 0; i < statList.Count; i++)
         {
             UI_StatAllocation statAllocation = statList[i];
+
             statAllocation.Init();
 
-            statAllocation.OnHovered += UpdateMainStatExplan;
             statAllocation.OnClicked += ChangeAllocation;
         }
-    }
 
-    private void UpdateMainStatExplan(string str)
-    {
-        mainStatExplanText.text = str;
+        leftSubStatIntroduce.Init();
+        rightSubStatIntroduce.Init();
     }
 
     public void ChangeAllocation(MainStatType type, int delta)
     {
-        int allocated = GetAllocated(type);
+        int allocated = allocatedStatDic[type];
 
         if (delta > 0)
         {
@@ -86,11 +84,11 @@ public class UI_StatSelection : MonoBehaviour, ICharacterCreationSection
 
         for (int i = 0; i < statList.Count; i++)
         {
-            var stat = statList[i];
-            var type = stat.MainStatType;
+            UI_StatAllocation stat = statList[i];
+            MainStatType type = stat.MainStatType;
 
             int finalValue = GetFinalValue(type);
-            int minValue = GetMinValue(type);
+            int minValue = GetJobBonus(type);
 
             stat.SetValue(finalValue);
             stat.SetInteractableButtons(currentPoint, finalValue, minValue);
@@ -102,7 +100,12 @@ public class UI_StatSelection : MonoBehaviour, ICharacterCreationSection
     #region ICharacterCreationSection
     public void Refresh()
     {
-        allocatedStatDic.Clear();
+        startPoint = 0;
+        currentJobId = string.Empty;
+
+        jobBaseMainStatDic.Clear();
+        jobBaseSubStatDic.Clear();
+
         for (int i = 0; i < statList.Count; i++)
             allocatedStatDic[statList[i].MainStatType] = 0;
 
@@ -127,30 +130,12 @@ public class UI_StatSelection : MonoBehaviour, ICharacterCreationSection
     #region 데이터 얻기
     public int GetFinalValue(MainStatType type)
     {
-        return startStat + GetJobBonus(type) + GetAllocated(type);
-    }
-
-    /// <summary>
-    /// 초기 스탯 및 직업으로 더해진 스탯으로 인한 값
-    /// </summary>
-    /// <param name="type"></param>
-    /// <returns></returns>
-    public int GetMinValue(MainStatType type)
-    {
-        return startStat + GetJobBonus(type);
-    }
-
-    public int GetAllocated(MainStatType type)
-    {
-        if (allocatedStatDic.TryGetValue(type, out int value))
-            return value;
-
-        return 0;
+        return GetJobBonus(type) + allocatedStatDic[type];
     }
 
     private int GetJobBonus(MainStatType type)
     {
-        if (jobBonusStatDic.TryGetValue(type, out int value))
+        if (jobBaseMainStatDic.TryGetValue(type, out int value))
             return value;
 
         return 0;
@@ -160,11 +145,21 @@ public class UI_StatSelection : MonoBehaviour, ICharacterCreationSection
     #region 서브 스탯 보여주기
     private void UpdateSubStatExplan()
     {
-        StatRuleSo statRule = Managers.Data.StatRule;
-        
-        IReadOnlyDictionary<SubStatType, float> totalSubStatDic = CalcuateTotalSubStat(statRule);
+        //선택된 직업이 없으면 보여주기X
+        if (string.IsNullOrEmpty(currentJobId))
+        {
+            leftSubStatIntroduce.Refresh(string.Empty);
+            rightSubStatIntroduce.Refresh(string.Empty);
+        }
+        else
+        {
+            StatRuleSo statRule = Managers.Data.StatRule;
 
-        subStatExplanText.text = DrawAllSubStatState(statRule.SubStatDic, totalSubStatDic);
+            IReadOnlyDictionary<SubStatType, float> totalSubStatDic = CalcuateTotalSubStat(statRule);
+
+            leftSubStatIntroduce.Refresh(statRule.SubStatDic, totalSubStatDic);
+            rightSubStatIntroduce.Refresh(statRule.SubStatDic, totalSubStatDic);
+        }
     }
 
     private IReadOnlyDictionary<SubStatType, float> CalcuateTotalSubStat(StatRuleSo statRule)
@@ -181,6 +176,7 @@ public class UI_StatSelection : MonoBehaviour, ICharacterCreationSection
 
             int finalValue = GetFinalValue(mainStat);
 
+            //메인 스탯에 따른 서브 스탯 증가
             foreach (KeyValuePair<SubStatType, float> kv in MainStatRule.SubStatPerPointDic)
             {
                 SubStatType sub = kv.Key;
@@ -194,47 +190,34 @@ public class UI_StatSelection : MonoBehaviour, ICharacterCreationSection
                     resultDic[sub] = add;
             }
         }
+
+        //직업 기본 스탯 증가
+        foreach (KeyValuePair<SubStatType, float> kv in jobBaseSubStatDic)
+        {
+            SubStatType sub = kv.Key;
+            float value = kv.Value;
+
+            resultDic[sub] += value;
+        }
+
         return resultDic;
     }
-    private string DrawAllSubStatState(IReadOnlyDictionary<SubStatType, SubStatRule> subStatRule, IReadOnlyDictionary<SubStatType, float> totalSubStatDic)
+    #endregion
+
+    #region 외부 호출
+    public void SetJob(PlayerSo playerSo)
     {
-        StringBuilder sb = new StringBuilder(256);
+        PlayerRuleSo rule = Managers.Data.PlayerRule;
+        startPoint = rule.StartPoint;
 
-        int idx = 0;
-        foreach (var kv in subStatRule)
-        {
-            SubStatType type = kv.Key;
-            SubStatRule rule = kv.Value;
+        currentJobId = playerSo.Id;
 
-            totalSubStatDic.TryGetValue(type, out float value);
+        foreach (KeyValuePair<MainStatType, int> kv in playerSo.BaseMainStatDic)
+            jobBaseMainStatDic[kv.Key] = kv.Value;
 
-            string name = rule.StatName != null ? rule.StatName.GetLocalizedString() : type.ToString();
-
-            sb.Append(name);
-            sb.Append(": ");
-            sb.Append(StringUtil.FormatValueForDisplay(value, rule.DisplayType));
-
-            if (idx < subStatRule.Count - 1)
-                sb.Append('\n');
-
-            idx++;
-        }
-
-        return sb.ToString();
-    }
-#endregion
-
-#region 외부 호출
-public void SetJobId(string id)
-    {
-        if (!Managers.Data.TryGetEntity(id, out PlayerSo so))
-        {
-            Debug.LogError($"플레이어 Id오류: {id}");
-            return;
-        }
-
-        jobBonusStatDic = so.BaseMainStat;
-
+        foreach (KeyValuePair<SubStatType, float> kv in playerSo.BaseSubStatDic)
+            jobBaseSubStatDic[kv.Key] = kv.Value;
+       
         UpdateUi();
     }
     #endregion

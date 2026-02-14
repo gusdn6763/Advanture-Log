@@ -1,5 +1,4 @@
 using AYellowpaper.SerializedCollections;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,16 +14,21 @@ public class StatRuleSo : ScriptableObject
 
     public bool TryGet(MainStatType type, out MainStatRule mainStatRule)
     {
-        if (mainStatDic.TryGetValue(type, out mainStatRule))
-            return true;
-
-        return false;
+        if (!mainStatDic.TryGetValue(type, out mainStatRule))
+        {
+            Debug.LogError("할당되지 않은 메인 스탯 데이터 존재");
+            return false;
+        }
+        return true;
     }
+
     public bool TryGet(SubStatType type, out SubStatRule subStatRule)
     {
-        if (subStatDic.TryGetValue(type, out subStatRule))
-            return true;
-
-        return false;
+        if (!subStatDic.TryGetValue(type, out subStatRule))
+        {
+            Debug.LogError("할당되지 않은 서브 스탯 데이터 존재");
+            return false;
+        }
+        return true;
     }
 }
