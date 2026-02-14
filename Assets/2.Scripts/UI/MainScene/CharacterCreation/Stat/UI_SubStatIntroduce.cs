@@ -5,8 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class UI_SubStatIntroduce : MonoBehaviour
 {
-    [Tooltip("보여줄 서브 스탯 순서")]
+    [Header("보여줄 서브 스탯 순서")]
     [SerializeField] private List<SubStatType> order = new List<SubStatType>();
+
+    [Header("0인 값도 보여줄 것인지")]
+    [SerializeField] private bool showZero;
 
     private TextMeshProUGUI text;
 
@@ -20,7 +23,7 @@ public class UI_SubStatIntroduce : MonoBehaviour
         text.text = str;
     }
 
-    public void Refresh(IReadOnlyDictionary<SubStatType, SubStatRule> subStatRuleDic, IReadOnlyDictionary<SubStatType, float> totalSubStatDic, bool showZero = true)
+    public void Refresh(IReadOnlyDictionary<SubStatType, float> totalSubStatDic)
     {
         string result = string.Empty;
 
@@ -28,25 +31,18 @@ public class UI_SubStatIntroduce : MonoBehaviour
         {
             SubStatType type = order[i];
 
-            if (!subStatRuleDic.TryGetValue(type, out SubStatRule rule))
-            {
-                Debug.LogError($"존재하지 않는 서브 데이터 규칙: {type}");
-                continue;
-            }
-
             totalSubStatDic.TryGetValue(type, out float value);
 
             // showZero=false 이고 0이면 스킵
-            if (!showZero && value == 0f)
+            if (showZero && value == 0f)
                 continue;
 
-            string name = rule.StatName.GetLocalizedString();
-            string valStr = StringUtil.FormatValueForDisplay(value, rule.DisplayType);
+            SubStat stat = new SubStat(type, value);
 
             if (!string.IsNullOrEmpty(result))
                     result += "\n";
 
-            result += $"{name}: {valStr}";
+            result += $"{stat.Name}: {stat.DisplayValue}";
         }
 
         text.text = result;

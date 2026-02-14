@@ -20,8 +20,6 @@ public class AreaManager : MonoBehaviour
 
     public IEnumerator CreateAreas(AreaGraphSo areaGraph, Action<string, int, int> callback)
     {
-        Managers.Area.ReleaseAllAreas();
-
         List<AreaSo> areaSos = areaGraph.GetAllAreaSo();
         int areaCount = areaSos.Count;
         for (int i = 0; i < areaCount; i++)
@@ -62,6 +60,8 @@ public class AreaManager : MonoBehaviour
         CurrentArea.gameObject.SetActive(true);
 
         OnAreaChanged?.Invoke(nextArea);
+
+        IsMoving = false;
     }
 
     private void ReleaseAllAreas()

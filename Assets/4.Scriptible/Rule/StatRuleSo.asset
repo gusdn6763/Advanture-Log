@@ -123,7 +123,7 @@ MonoBehaviour:
           m_WaitForCompletion: 0
           m_LocalVariables: []
         displayType: 0
-        maxValue: 0
+        maxValue: 99999
     - Key: 1
       Value:
         statName:
@@ -136,7 +136,7 @@ MonoBehaviour:
           m_WaitForCompletion: 0
           m_LocalVariables: []
         displayType: 0
-        maxValue: 0
+        maxValue: 99999
     - Key: 2
       Value:
         statName:
@@ -149,7 +149,7 @@ MonoBehaviour:
           m_WaitForCompletion: 0
           m_LocalVariables: []
         displayType: 0
-        maxValue: 0
+        maxValue: 99999
     - Key: 3
       Value:
         statName:
@@ -162,7 +162,7 @@ MonoBehaviour:
           m_WaitForCompletion: 0
           m_LocalVariables: []
         displayType: 0
-        maxValue: 0
+        maxValue: 99999
     - Key: 4
       Value:
         statName:
@@ -175,7 +175,7 @@ MonoBehaviour:
           m_WaitForCompletion: 0
           m_LocalVariables: []
         displayType: 0
-        maxValue: 0
+        maxValue: 99999
     - Key: 5
       Value:
         statName:
@@ -188,7 +188,7 @@ MonoBehaviour:
           m_WaitForCompletion: 0
           m_LocalVariables: []
         displayType: 0
-        maxValue: 0
+        maxValue: 99999
     - Key: 6
       Value:
         statName:
@@ -201,7 +201,7 @@ MonoBehaviour:
           m_WaitForCompletion: 0
           m_LocalVariables: []
         displayType: 1
-        maxValue: 0
+        maxValue: 99999
     - Key: 7
       Value:
         statName:
@@ -266,7 +266,7 @@ MonoBehaviour:
           m_WaitForCompletion: 0
           m_LocalVariables: []
         displayType: 0
-        maxValue: 0
+        maxValue: 99999
   references:
     version: 2
     RefIds: []

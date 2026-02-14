@@ -31,7 +31,7 @@ public class UI_JobInfo : MonoBehaviour
     {
         jobDescriptionText.text = playerSo.JobDescription.GetLocalizedString();
 
-        subStatIntroduce.Refresh(Managers.Data.StatRule.SubStatDic, playerSo.BaseSubStatDic, false);
+        subStatIntroduce.Refresh(playerSo.BaseSubStatDic);
 
         skillInfo.ShowSkillInfo(playerSo.BaseSkillList);
     }

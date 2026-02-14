@@ -153,31 +153,28 @@ public class UI_StatSelection : MonoBehaviour, ICharacterCreationSection
         }
         else
         {
-            StatRuleSo statRule = Managers.Data.StatRule;
+            IReadOnlyDictionary<SubStatType, float> totalSubStatDic = CalcuateTotalSubStat();
 
-            IReadOnlyDictionary<SubStatType, float> totalSubStatDic = CalcuateTotalSubStat(statRule);
-
-            leftSubStatIntroduce.Refresh(statRule.SubStatDic, totalSubStatDic);
-            rightSubStatIntroduce.Refresh(statRule.SubStatDic, totalSubStatDic);
+            leftSubStatIntroduce.Refresh(totalSubStatDic);
+            rightSubStatIntroduce.Refresh(totalSubStatDic);
         }
     }
 
-    private IReadOnlyDictionary<SubStatType, float> CalcuateTotalSubStat(StatRuleSo statRule)
+    private IReadOnlyDictionary<SubStatType, float> CalcuateTotalSubStat()
     {
         Dictionary<SubStatType, float> resultDic = new Dictionary<SubStatType, float>();
 
         MainStatType[] mainStats = (MainStatType[])Enum.GetValues(typeof(MainStatType));
         for (int i = 0; i < mainStats.Length; i++)
         {
-            MainStatType mainStat = mainStats[i];
+            MainStatType mainStatType = mainStats[i];
 
-            if (!statRule.TryGet(mainStat, out MainStatRule MainStatRule))
-                continue;
+            int finalValue = GetFinalValue(mainStatType);
 
-            int finalValue = GetFinalValue(mainStat);
+            MainStat mainStat = new MainStat(mainStatType, finalValue);
 
             //메인 스탯에 따른 서브 스탯 증가
-            foreach (KeyValuePair<SubStatType, float> kv in MainStatRule.SubStatPerPointDic)
+            foreach (KeyValuePair<SubStatType, float> kv in mainStat.SubStatPerPointDic)
             {
                 SubStatType sub = kv.Key;
                 float perPoint = kv.Value;

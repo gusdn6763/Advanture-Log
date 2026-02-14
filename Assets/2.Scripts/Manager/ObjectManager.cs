@@ -24,7 +24,7 @@ public class ObjectManager : MonoBehaviour
             return null;
         }
 
-        BaseEntity entity = Instantiate(so.EntityPrefab).GetOrAddComponent<BaseEntity>();
+        BaseEntity entity = Instantiate(so.EntityPrefab);
         entity.name = entity.name + "_" + id;
         entity.transform.position = position;
         entity.SetInfo(so);

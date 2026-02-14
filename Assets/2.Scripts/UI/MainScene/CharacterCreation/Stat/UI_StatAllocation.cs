@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Text;
 using TMPro;
 using UnityEngine;
@@ -16,10 +17,13 @@ public class UI_StatAllocation : MonoBehaviour, ITooltipProvider
     [SerializeField] private Button plusButton;
 
     [SerializeField] private MainStatType mainStatType;
+    private MainStat mainStatModel;
 
     public MainStatType MainStatType { get => mainStatType; }
     public void Init()
     {
+        mainStatModel = new MainStat(mainStatType, 0);
+
         plusButton.interactable = false;
         minusButton.interactable = false;
 
@@ -37,35 +41,28 @@ public class UI_StatAllocation : MonoBehaviour, ITooltipProvider
 
     public string GetTooltipContent()
     {
-        StatRuleSo statRule = Managers.Data.StatRule;
-
-        // 1) 메인 룰 가져오기
-        if (!statRule.TryGet(mainStatType, out MainStatRule mainRule))
+        if (mainStatModel == null)
             return string.Empty;
 
-        // 2) 소개 문구(LocalizedString)
-        // 예: "Per +1 {0}:" 같은 템플릿을 가정
+        // 1) 소개 문구(LocalizedString)
+        // 예: "{0} +1 당 증가량: ", "Per +1 {0}:" 같은 템플릿을 가정, 
         statIntroduceLocalize.Arguments = new object[]
         {
-            mainRule.StatName.GetLocalizedString()
+            mainStatModel.Name
         };
 
         StringBuilder sb = new StringBuilder(128);
         sb.AppendLine(statIntroduceLocalize.GetLocalizedString());
 
         // 3) 서브스탯 증가량 출력
-        foreach (KeyValuePair<SubStatType, float> kv in mainRule.SubStatPerPointDic)
+        foreach (KeyValuePair<SubStatType, float> kv in mainStatModel.SubStatPerPointDic)
         {
-            if (!statRule.SubStatDic.TryGetValue(kv.Key, out SubStatRule subRule))
-                continue;
-
-            string subName = subRule.StatName.GetLocalizedString();
-            string subVal = StringUtil.FormatValueForDisplay(kv.Value, subRule.DisplayType);
+            SubStat sub = new SubStat(kv.Key, kv.Value);
 
             sb.Append("- ");
-            sb.Append(subName);
+            sb.Append(sub.Name);
             sb.Append(": ");
-            sb.AppendLine(subVal);
+            sb.AppendLine(sub.DisplayValue);
         }
 
         return sb.ToString().TrimEnd(); // 마지막 개행 정리
