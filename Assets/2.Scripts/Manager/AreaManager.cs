@@ -11,8 +11,6 @@ public class AreaManager : MonoBehaviour
     public event Action<Area> OnAreaChanged;
 
     private Dictionary<string, Area> areaMap = new Dictionary<string, Area>();
-
-    public AreaGrid AreaGrid { get; private set; }
     public Area CurrentArea { get; private set; } = null;
     public bool IsMoving { get; private set; } = false;
 

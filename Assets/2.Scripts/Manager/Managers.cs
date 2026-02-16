@@ -42,5 +42,6 @@ public class Managers : MonoBehaviour
         Application.targetFrameRate = 60;
 
         Data.Init();
+        UI.Init();
     }
 }

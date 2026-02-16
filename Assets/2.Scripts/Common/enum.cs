@@ -16,19 +16,29 @@ public enum MainStatType
 /// </summary>
 public enum SubStatType
 {
-    // 전투
-    MaxHealth = 0,      //최대 체력
-    HealthRecovery,     //체력 회복률
-    MaxMana,            //최대 마나
-    ManaRecovery,       //마나 회복률
-    AttackPower,        //공격력
-    MagicPower,         //마법 공격력
-    Defense,            //방어력
-    AttackSpeed,        //공격 속도 %로 표현
-    Accuracy,           //명중률 %로 표현
-    Evasion,            //회피률 %로 표현
-    CriticalRate,       //치명율 %로 표현
-    Detection,          //감지
+    MaxHealth = 0,          // 최대 체력
+    HealthRegen,            // 체력 회복
+    MaxMana,                // 최대 마나
+    ManaRegen,              // 마나 회복
+
+    MinPhysicalDamage,      // 최소 물리 피해
+    MaxPhysicalDamage,      // 최대 물리 피해
+    MinMagicDamage,         // 최소 마법 피해
+    MaxMagicDamage,         // 최대 마법 피해
+
+    PhysicalDefense,        // 물리 방어력
+    MagicDefense,           // 마법 방어력
+
+    CriticalChance,         // 치명타 확률
+    CriticalDamage,         // 치명타 피해
+
+    Accuracy,               // 명중
+    Evasion,                // 회피
+    AttackSpeed,            // 공격 속도
+
+    // 탐색/유틸
+    Detection,              // 감지
+    CarryCapacity,          // 소지 한도(최대 무게)
 }
 
 /// <summary>
@@ -49,6 +59,17 @@ public enum StatDisplayType
 {
     Flat, 
     Percent
+}
+
+/// <summary>
+/// 툴팁 타입
+/// </summary>
+public enum TooltipPositionType
+{
+    Left,
+    Right,
+    Up,
+    Down
 }
 
 /// <summary>

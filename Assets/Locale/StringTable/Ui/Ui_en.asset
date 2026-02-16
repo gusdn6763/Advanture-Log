@@ -149,7 +149,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 602586523873280
-    m_Localized: GameMode
+    m_Localized: Game Mode
     m_Metadata:
       m_Items: []
   - m_Id: 16842099931721728
@@ -184,33 +184,8 @@ MonoBehaviour:
     m_Localized: PER
     m_Metadata:
       m_Items: []
-  - m_Id: 751943420194816
-    m_Localized: Represents raw physical power and the ability to exert force. A
-      fundamental attribute for physical actions.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 822120568565760
-    m_Localized: Represents precise control of movement and bodily coordination.
-      Reflects responsiveness and physical finesse.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 822229624664064
-    m_Localized: Represents overall physical health and resilience. Reflects endurance
-      and bodily stability.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 822258552778752
-    m_Localized: Represents reasoning ability and intellectual capacity. Reflects
-      understanding and complex decision-making.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 822300898471936
-    m_Localized: Represents awareness of surroundings and sensitivity to change.
-      Reflects observation and sensory acuity.
-    m_Metadata:
-      m_Items: []
   - m_Id: 822646840471552
-    m_Localized: MaxHealth
+    m_Localized: Max Health
     m_Metadata:
       m_Items: []
   - m_Id: 823176497180672
@@ -218,11 +193,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1382524910809088
-    m_Localized: MagicPower
+    m_Localized: Magic Damage
     m_Metadata:
       m_Items: []
   - m_Id: 823139457282048
-    m_Localized: CriticalRate
+    m_Localized: CriticalChance
     m_Metadata:
       m_Items: []
   - m_Id: 823053989949440
@@ -234,27 +209,27 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 823050470928384
-    m_Localized: AttackSpeed
+    m_Localized: Attack Speed
     m_Metadata:
       m_Items: []
   - m_Id: 823048021454848
-    m_Localized: Defense
+    m_Localized: Physical Defense
     m_Metadata:
       m_Items: []
   - m_Id: 823045165133824
-    m_Localized: AttackPower
+    m_Localized: Min Physical Damage
     m_Metadata:
       m_Items: []
   - m_Id: 822836896968704
-    m_Localized: ManaRecovery
+    m_Localized: Mana Regen
     m_Metadata:
       m_Items: []
   - m_Id: 822834648821760
-    m_Localized: MaxMana
+    m_Localized: Max Mana
     m_Metadata:
       m_Items: []
   - m_Id: 822659293360128
-    m_Localized: HealthRecovery
+    m_Localized: Health Regen
     m_Metadata:
       m_Items: []
   - m_Id: 1512974039887872
@@ -294,7 +269,35 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1752094062391296
-    m_Localized: Job Description
+    m_Localized: 'Job Description:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2821368906493952
+    m_Localized: Max Physical Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2821848260915200
+    m_Localized: Physical Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2822111730315264
+    m_Localized: Min Magic Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2822253464236032
+    m_Localized: Max Magic Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2823299523653632
+    m_Localized: MagicDefense
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2823729523699712
+    m_Localized: CriticalDamage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2823927058640896
+    m_Localized: Carry Capacity
     m_Metadata:
       m_Items: []
   references:

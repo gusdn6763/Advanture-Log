@@ -179,32 +179,12 @@ MonoBehaviour:
     m_Key: UI_GameMode
     m_Metadata:
       m_Items: []
-  - m_Id: 751943420194816
-    m_Key: UI_Strength_Introduce
-    m_Metadata:
-      m_Items: []
-  - m_Id: 822120568565760
-    m_Key: UI_Dexterity_Introduce
-    m_Metadata:
-      m_Items: []
-  - m_Id: 822229624664064
-    m_Key: UI_Constitution_Introduce
-    m_Metadata:
-      m_Items: []
-  - m_Id: 822258552778752
-    m_Key: UI_Intelligence_Introduce
-    m_Metadata:
-      m_Items: []
-  - m_Id: 822300898471936
-    m_Key: UI_Perception_Introduce
-    m_Metadata:
-      m_Items: []
   - m_Id: 822646840471552
     m_Key: UI_MaxHealth
     m_Metadata:
       m_Items: []
   - m_Id: 822659293360128
-    m_Key: UI_HealthRecovery
+    m_Key: UI_HealthRegen
     m_Metadata:
       m_Items: []
   - m_Id: 822834648821760
@@ -212,19 +192,39 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 822836896968704
-    m_Key: UI_ManaRecovery
+    m_Key: UI_ManaRegen
     m_Metadata:
       m_Items: []
   - m_Id: 823045165133824
-    m_Key: UI_AttackPower
+    m_Key: UI_MinPhysicalDamage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2821368906493952
+    m_Key: UI_MaxPhysicalDamage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2821848260915200
+    m_Key: UI_PhysicalDamage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2822111730315264
+    m_Key: UI_MinMagicDamage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2822253464236032
+    m_Key: UI_MaxMagicDamage
     m_Metadata:
       m_Items: []
   - m_Id: 1382524910809088
-    m_Key: UI_MagicPower
+    m_Key: UI_MagicDamage
     m_Metadata:
       m_Items: []
   - m_Id: 823048021454848
-    m_Key: UI_Defense
+    m_Key: UI_PhysicalDefense
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2823299523653632
+    m_Key: UI_MagicDefense
     m_Metadata:
       m_Items: []
   - m_Id: 823050470928384
@@ -240,11 +240,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 823139457282048
-    m_Key: UI_CriticalRate
+    m_Key: UI_CriticalChance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2823729523699712
+    m_Key: UI_CriticalDamage
     m_Metadata:
       m_Items: []
   - m_Id: 823176497180672
     m_Key: UI_Detection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2823927058640896
+    m_Key: UI_CarryCapacity
     m_Metadata:
       m_Items: []
   - m_Id: 1512974039887872

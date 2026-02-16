@@ -15,26 +15,26 @@ MonoBehaviour:
   actionMenus:
   - {fileID: 11400000, guid: d5a86e563d9238b4fbe205ae42ad4b28, type: 2}
   - {fileID: 11400000, guid: 74d794f6c25af5449b3d93b5b37c1e1e, type: 2}
-  objectName:
+  objectNameLocalized:
     m_TableReference:
-      m_TableCollectionName: GUID:2b199c2e3398ff043ba095ba7559c6ad
+      m_TableCollectionName: 
     m_TableEntryReference:
-      m_KeyId: 44442038272
+      m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  description:
+  descriptionLocalized:
     m_TableReference:
-      m_TableCollectionName: GUID:d088b34d2d065084fb5f33ee3efd56e9
+      m_TableCollectionName: 
     m_TableEntryReference:
-      m_KeyId: 71742763008
+      m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   entityImage: {fileID: 21300000, guid: cafc4e77afce97e4d93dc9c3f7a144c4, type: 3}
-  entityPrefab: {fileID: 8546149642418210076, guid: e0bca0a772d3fd842ba05784ad422b22, type: 3}
+  entityPrefab: {fileID: 1511287729674560303, guid: e0bca0a772d3fd842ba05784ad422b22, type: 3}
   references:
     version: 2
     RefIds: []

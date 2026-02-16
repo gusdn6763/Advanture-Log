@@ -7,14 +7,14 @@ public class UI_JobInfo : MonoBehaviour
     [SerializeField] private TextMeshProUGUI jobDescriptionText;
 
     [Header("Base Stat")]
-    [SerializeField] private UI_SubStatIntroduce subStatIntroduce;
+    [SerializeField] private UI_MainStatInfo mainStatInfo;
 
     [Header("Skills")]
     [SerializeField] private UI_SkillInfo skillInfo;
 
     public void Init()
     {
-        subStatIntroduce.Init();
+        mainStatInfo.Init();
         skillInfo.Init();
     }
 
@@ -22,7 +22,7 @@ public class UI_JobInfo : MonoBehaviour
     public void Refresh()
     {
         jobDescriptionText.text = string.Empty;
-        subStatIntroduce.Refresh(string.Empty);
+        mainStatInfo.Refresh(string.Empty);
 
         skillInfo.Refresh();
     }
@@ -31,7 +31,7 @@ public class UI_JobInfo : MonoBehaviour
     {
         jobDescriptionText.text = playerSo.JobDescription.GetLocalizedString();
 
-        subStatIntroduce.Refresh(playerSo.BaseSubStatDic);
+        mainStatInfo.Refresh(playerSo.BaseMainStatDic);
 
         skillInfo.ShowSkillInfo(playerSo.BaseSkillList);
     }

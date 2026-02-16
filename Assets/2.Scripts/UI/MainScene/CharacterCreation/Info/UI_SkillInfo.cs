@@ -4,7 +4,6 @@ using UnityEngine;
 public class UI_SkillInfo : MonoBehaviour
 {
     [SerializeField] private UI_SkillIcon jobSkillPrefab;
-    [SerializeField] private Transform jobSkillTransform;
 
     [SerializeField] private int poolingCount = 3;
 
@@ -18,7 +17,7 @@ public class UI_SkillInfo : MonoBehaviour
 
     public void CreateIcon()
     {
-        UI_SkillIcon icon = Instantiate(jobSkillPrefab, jobSkillTransform);
+        UI_SkillIcon icon = Instantiate(jobSkillPrefab, transform);
 
         icon.gameObject.SetActive(false);
 
@@ -45,7 +44,7 @@ public class UI_SkillInfo : MonoBehaviour
         {
             UI_SkillIcon icon = skillList[i];
 
-            icon.SetInfo(playerSkillList[i]);
+            icon.Init(playerSkillList[i]);
             icon.gameObject.SetActive(true);
         }
     }

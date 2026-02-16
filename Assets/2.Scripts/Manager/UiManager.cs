@@ -7,12 +7,13 @@ using UnityEngine.Localization.Settings;
 
 public class UiManager : MonoBehaviour
 {
-    public bool IsOpenUi { get { return popupList.Count > 0; } }
     public UiController SceneUi { get; private set; }
 
+    public void Init()
+    {
+        tooltip.Init();
+    }
 
-    private List<UI_PopupBase> popupList = new List<UI_PopupBase>();
-    private int sortingOrder = 10;
 
     public void BindSceneUi(UiController ui)
     {
@@ -28,6 +29,11 @@ public class UiManager : MonoBehaviour
     }
 
     #region ÆË¾÷
+
+    private List<UI_PopupBase> popupList = new List<UI_PopupBase>();
+    private int sortingOrder = 10;
+
+
     public void OpenPopupUI(UI_PopupBase popup)
     {
         if (popupList.Contains(popup) == false)
@@ -91,21 +97,14 @@ public class UiManager : MonoBehaviour
     [Header("ÅøÆÁ")]
     [SerializeField] private UI_Tooltip tooltip;
 
-    private ITooltipProvider currentProvider;
-    public void ShowTooltip(ITooltipProvider provider, string str)
+    public void ShowTooltip(TooltipData tooltipData, RectTransform target)
     {
-        currentProvider = provider;
-
-        tooltip.Show(str);
+        tooltip.ShowTooltip(tooltipData, target);
     }
 
-    public void HideTooltip(ITooltipProvider provider)
+    public void HideTooltip()
     {
-        if (currentProvider == null || provider == null)
-            return;
-
-        if (provider == currentProvider)
-            tooltip.Hide();
+        tooltip.Hide();
     }
     #endregion
 }
