@@ -14,7 +14,7 @@ public class UI_SubStatInfo : MonoBehaviour, ITooltipProvider
         mainStatModel = new MainStat(mainStatType, 1);
     }
 
-    public bool TryTooltipData(TooltipData tooltipData)
+    public bool TryGetTooltipData(TooltipData tooltipData)
     {
         if (mainStatModel == null)
             return false;
@@ -26,10 +26,8 @@ public class UI_SubStatInfo : MonoBehaviour, ITooltipProvider
             mainStatModel.Name
         };
 
-        StringBuilder sb = new StringBuilder(128);
-        sb.AppendLine(statIntroduceLocalize.GetLocalizedString());
-
         // 3) 서브스탯 증가량 출력
+        StringBuilder sb = new StringBuilder(128);
         foreach (KeyValuePair<SubStatType, float> kv in mainStatModel.SubStatPerPointDic)
         {
             SubStat sub = new SubStat(kv.Key, kv.Value);
@@ -40,8 +38,12 @@ public class UI_SubStatInfo : MonoBehaviour, ITooltipProvider
             sb.AppendLine(sub.DisplayValue);
         }
 
+        tooltipData.tooltipWidthType = TooltipWidthType.Auto;
+        tooltipData.textType = TooltipTextAlignType.Left;
+        tooltipData.positionType = TooltipPositionType.Right;
+        tooltipData.header = statIntroduceLocalize.GetLocalizedString();
         tooltipData.body = sb.ToString();
-
+        
         return true;
     }
 }

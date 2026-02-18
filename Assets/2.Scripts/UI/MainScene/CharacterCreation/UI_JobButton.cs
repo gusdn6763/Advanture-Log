@@ -28,8 +28,7 @@ public class UI_JobButton : MonoBehaviour, IPointerEnterHandler
 
     public void UpdateName()
     {
-        if (ButtonPlayerSo)
-            jobNameText.text = ButtonPlayerSo.ObjectNameLocalized.GetLocalizedString();
+        jobNameText.text = ButtonPlayerSo.ObjectNameLocalized.GetLocalizedString();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

@@ -9,7 +9,7 @@ public class UI_JobSelection : MonoBehaviour, ICharacterCreationSection
     public event Action<PlayerSo> OnJobSelected;
 
     [SerializeField] private UI_JobButton jobButtonPrefab;
-    [SerializeField] private Transform instantiateTransform;
+    [SerializeField] private Transform jobButtonTransform;
 
     [SerializeField] private UI_JobInfo jobInfo;
 
@@ -24,7 +24,7 @@ public class UI_JobSelection : MonoBehaviour, ICharacterCreationSection
         IEnumerable<PlayerSo> PlayerDatas = Managers.Data.PlayerDatas;
         foreach (PlayerSo so in PlayerDatas)
         {
-            UI_JobButton button = Instantiate(jobButtonPrefab, instantiateTransform);
+            UI_JobButton button = Instantiate(jobButtonPrefab, jobButtonTransform);
             button.Init(so);
 
             button.OnHovered += jobInfo.ShowJobInfo;

@@ -72,6 +72,38 @@ public enum TooltipPositionType
     Down
 }
 
+public enum TooltipWidthType
+{
+    Auto,
+    Fixed,
+}
+
+public enum TooltipTextAlignType
+{
+    Left,
+    Center,
+    Right,
+}
+
+/// <summary>
+/// 아이템 타입
+/// </summary>
+public enum ItemType
+{
+    Misc,       // 기타
+    Consumable, // 소모품
+    Equipment,  // 장비
+}
+
+public enum ItemRarity
+{
+    Common,
+    Uncommon,
+    Rare,
+    Epic,
+    Legendary
+}
+
 /// <summary>
 /// 플레이어 자원
 /// </summary>

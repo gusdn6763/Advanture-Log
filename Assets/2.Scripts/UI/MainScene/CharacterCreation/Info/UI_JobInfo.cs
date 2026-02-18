@@ -18,7 +18,6 @@ public class UI_JobInfo : MonoBehaviour
         skillInfo.Init();
     }
 
-    #region 외부 호출 - UI_JobButton버튼
     public void Refresh()
     {
         jobDescriptionText.text = string.Empty;
@@ -27,6 +26,7 @@ public class UI_JobInfo : MonoBehaviour
         skillInfo.Refresh();
     }
 
+    #region 외부 호출 - UI_JobButton버튼
     public void ShowJobInfo(PlayerSo playerSo)
     {
         jobDescriptionText.text = playerSo.JobDescription.GetLocalizedString();

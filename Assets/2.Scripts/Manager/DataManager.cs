@@ -82,9 +82,15 @@ public class DataManager : MonoBehaviour
     #endregion
 
     #region 스탯 규칙
-    [Header("스탯 관련 데이터")]
+    [Header("스탯 규칙 관련 데이터")]
     [SerializeField] private StatRuleSo statRuleSo;
 
     public StatRuleSo StatRule { get => statRuleSo; }
+    #endregion
+
+    #region 아이템 규칙
+    [Header("아이템 규칙 관련 데이터")]
+    [SerializeField] private ItemRuleSo itemRuleSo;
+    public ItemRuleSo ItemRule => itemRuleSo;
     #endregion
 }

@@ -1,4 +1,4 @@
 public interface ITooltipProvider
 {
-    public bool TryTooltipData(TooltipData tooltipData);
+    public bool TryGetTooltipData(TooltipData tooltipData);
 }

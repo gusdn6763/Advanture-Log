@@ -1,19 +1,17 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class UI_TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private GameObject provierObject;
 
     private ITooltipProvider provider;
-    private TooltipData tooltipData;
     private RectTransform target;
 
     private void Awake()
     {
         provider = provierObject.GetComponent<ITooltipProvider>();
         target = GetComponent<RectTransform>();
-        tooltipData = new TooltipData();
 
         if (provider == null)
             Debug.LogError($"{gameObject.name}: ITooltipProvider¾øÀ½");
@@ -21,27 +19,26 @@ public class UI_TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (provider == null || tooltipData == null)
+        if (provider == null || target == null)
             return;
 
-        if (provider.TryTooltipData(tooltipData))
-            Managers.UI.ShowTooltip(tooltipData, target);
+        Managers.UI.ShowTooltip(provider, target);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (provider == null)
+        if (provider == null || target == null)
             return;
 
-        Managers.UI.HideTooltip();
+        Managers.UI.HideTooltip(target);
     }
 
     private void OnDisable()
     {
-        if (provider == null)
+        if (provider == null || target == null)
             return;
 
-        Managers.UI.HideTooltip();
+        Managers.UI.HideTooltip(target);
     }
 
     private void OnApplicationQuit()

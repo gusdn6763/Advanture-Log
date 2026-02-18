@@ -18,14 +18,16 @@ public class UI_SkillIcon : MonoBehaviour, ITooltipProvider
 
     #region ITooltipProvider
 
-    public bool TryTooltipData(TooltipData tooltipData)
+    public bool TryGetTooltipData(TooltipData tooltipData)
     {
         tooltipData = default;
 
         if (!SkillData)
             return false;
 
-        tooltipData.type = TooltipPositionType.Right;
+        tooltipData.tooltipWidthType = TooltipWidthType.Fixed;
+        tooltipData.textType = TooltipTextAlignType.Left;
+        tooltipData.positionType = TooltipPositionType.Right;
         tooltipData.header = SkillData.SkillNameLocalized.GetLocalizedString();
         tooltipData.body = SkillData.SkillDescriptionLocalized.GetLocalizedString();
 

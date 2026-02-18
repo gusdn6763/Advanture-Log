@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 6181845928855304079}
   - component: {fileID: 7339993664155790052}
   m_Layer: 5
-  m_Name: Text_Continue
+  m_Name: Continue_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 8584659909149086954}
   - component: {fileID: 8648904360662218962}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SkillDescription_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -329,8 +329,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 87.5, y: -20}
-  m_SizeDelta: {x: 175, y: 40}
+  m_AnchoredPosition: {x: 87.5, y: -15}
+  m_SizeDelta: {x: 175, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6980294620653828118
 CanvasRenderer:
@@ -482,7 +482,7 @@ GameObject:
   - component: {fileID: 1300308401188315253}
   - component: {fileID: 3564344133260838306}
   m_Layer: 5
-  m_Name: InputField_PlayerName
+  m_Name: PlayerName_InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -662,7 +662,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2898146943602848551
 RectTransform:
   m_ObjectHideFlags: 0
@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 6223375267042427466}
   - component: {fileID: 646097482036179396}
   m_Layer: 5
-  m_Name: Text_Value
+  m_Name: StatValue_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -893,7 +893,7 @@ GameObject:
   - component: {fileID: 1788562221878612026}
   - component: {fileID: 7758464152900452910}
   m_Layer: 5
-  m_Name: Text_Stat
+  m_Name: Stat_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1090,8 +1090,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 87.5, y: -20}
-  m_SizeDelta: {x: 175, y: 40}
+  m_AnchoredPosition: {x: 87.5, y: -47.5}
+  m_SizeDelta: {x: 175, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6013234356297341792
 MonoBehaviour:
@@ -1111,7 +1111,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 15
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
@@ -1195,7 +1195,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1221689790560760839}
   toggleTransition: 1
   graphic: {fileID: 7871037196139580294}
@@ -1214,7 +1214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4293481961335459936}
   m_Layer: 5
-  m_Name: Normal (1)
+  m_Name: Hard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1236,10 +1236,10 @@ RectTransform:
   - {fileID: 4894471832478942956}
   m_Father: {fileID: 6177191558667355010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 291.59998, y: -77.759995}
-  m_SizeDelta: {x: 194.4, y: 155.51999}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &983954132229083382
 GameObject:
@@ -1254,7 +1254,7 @@ GameObject:
   - component: {fileID: 5265993818164418867}
   - component: {fileID: 42968155148255355}
   m_Layer: 5
-  m_Name: Text_AdvantureName
+  m_Name: AdvantureName_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1449,7 +1449,7 @@ RectTransform:
   m_Father: {fileID: 8577019015120415384}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1502,7 +1502,7 @@ GameObject:
   - component: {fileID: 3547031745633352324}
   - component: {fileID: 3658465843852334733}
   m_Layer: 5
-  m_Name: Text Area
+  m_Name: TextArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1555,7 +1555,7 @@ GameObject:
   - component: {fileID: 39134908312031093}
   - component: {fileID: 5072841986208518717}
   m_Layer: 5
-  m_Name: Text_RemainingPoint
+  m_Name: RemainingPoint_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1982,10 +1982,10 @@ RectTransform:
   - {fileID: 2785369945282739077}
   m_Father: {fileID: 5265863256621084454}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 332, y: -41.799988}
-  m_SizeDelta: {x: 100, y: 35}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &4653811125067854617
 CanvasRenderer:
@@ -2169,7 +2169,7 @@ GameObject:
   - component: {fileID: 3009703216780536749}
   - component: {fileID: 7423719358931367343}
   m_Layer: 5
-  m_Name: Text_Job
+  m_Name: Job_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2531,7 +2531,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 6240228328835147829}
   toggleTransition: 1
   graphic: {fileID: 1184741188232255022}
@@ -2668,7 +2668,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 5, y: 0}
-  m_SizeDelta: {x: 345, y: 70}
+  m_SizeDelta: {x: 345, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1558379314831056090
 CanvasRenderer:
@@ -2730,7 +2730,7 @@ GameObject:
   - component: {fileID: 7810094816811353167}
   - component: {fileID: 2602581386050332436}
   m_Layer: 5
-  m_Name: Text_Value
+  m_Name: StatValue_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2863,7 +2863,7 @@ GameObject:
   - component: {fileID: 4329345934380481266}
   - component: {fileID: 4855037844491964936}
   m_Layer: 5
-  m_Name: Panel_Perception
+  m_Name: Perception_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2888,10 +2888,10 @@ RectTransform:
   - {fileID: 2607805343445602370}
   m_Father: {fileID: 4100976857076212387}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 194.4, y: -281.936}
-  m_SizeDelta: {x: 348.8, y: 58.208}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4855037844491964936
 MonoBehaviour:
@@ -3077,10 +3077,10 @@ RectTransform:
   - {fileID: 6558922759052015635}
   m_Father: {fileID: 5265863256621084454}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 217, y: -41.799988}
-  m_SizeDelta: {x: 100, y: 35}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &3817083331403915474
 CanvasRenderer:
@@ -3189,7 +3189,7 @@ GameObject:
   - component: {fileID: 3452859416148051919}
   - component: {fileID: 7467632764205048672}
   m_Layer: 5
-  m_Name: Text_Stat
+  m_Name: Stat_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3533,7 +3533,7 @@ MonoBehaviour:
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 8074548813374596333}
   m_HorizontalScrollbarVisibility: 2
-  m_VerticalScrollbarVisibility: 0
+  m_VerticalScrollbarVisibility: 1
   m_HorizontalScrollbarSpacing: -3
   m_VerticalScrollbarSpacing: 0
   m_OnValueChanged:
@@ -3553,7 +3553,7 @@ GameObject:
   - component: {fileID: 7113592364630336924}
   - component: {fileID: 1275267649181805057}
   m_Layer: 5
-  m_Name: Image_Info
+  m_Name: Info_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3765,8 +3765,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -50}
-  m_SizeDelta: {x: 350, y: 40}
+  m_AnchoredPosition: {x: 175, y: -90.009995}
+  m_SizeDelta: {x: 350, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9165352547586765565
 CanvasRenderer:
@@ -3791,7 +3791,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
+    m_Top: 25
     m_Bottom: 0
   m_ChildAlignment: 0
   m_Spacing: 0
@@ -3959,7 +3959,7 @@ GameObject:
   - component: {fileID: 4529714608877915798}
   - component: {fileID: 3586262163181463598}
   m_Layer: 5
-  m_Name: Text_JobDescription
+  m_Name: JobDescription_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3982,7 +3982,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 345, y: 30}
+  m_SizeDelta: {x: 345, y: 40.01}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &2715301946328121074
 CanvasRenderer:
@@ -4039,8 +4039,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4318,7 +4318,7 @@ GameObject:
   - component: {fileID: 3761416208943906558}
   - component: {fileID: 3563914363435048930}
   m_Layer: 5
-  m_Name: Image_Info
+  m_Name: Info_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4455,8 +4455,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.08, y: 0.1}
   m_AnchorMax: {x: 0.92, y: 0.9}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 7.5, y: 0}
+  m_SizeDelta: {x: 15, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3544172110165077858
 CanvasRenderer:
@@ -4490,7 +4490,7 @@ MonoBehaviour:
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 7962515903914289883}
   m_HorizontalScrollbarVisibility: 2
-  m_VerticalScrollbarVisibility: 0
+  m_VerticalScrollbarVisibility: 1
   m_HorizontalScrollbarSpacing: -3
   m_VerticalScrollbarSpacing: -3
   m_OnValueChanged:
@@ -4529,7 +4529,7 @@ RectTransform:
   m_Father: {fileID: 8823180633526936865}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4584,7 +4584,7 @@ GameObject:
   - component: {fileID: 9085482088678081703}
   - component: {fileID: 2274603311755716106}
   m_Layer: 5
-  m_Name: Text_Stat
+  m_Name: Stat_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4824,7 +4824,7 @@ GameObject:
   - component: {fileID: 536017367379134188}
   - component: {fileID: 3942720019153951476}
   m_Layer: 5
-  m_Name: Text_Setting
+  m_Name: Setting_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5305,7 +5305,7 @@ GameObject:
   - component: {fileID: 5369329810051894695}
   - component: {fileID: 1052499155871553921}
   m_Layer: 5
-  m_Name: Button_Minus
+  m_Name: Minus_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5425,7 +5425,7 @@ GameObject:
   - component: {fileID: 7365564680138081969}
   - component: {fileID: 6855045772745179155}
   m_Layer: 5
-  m_Name: Button_Plus
+  m_Name: Plus_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5545,7 +5545,7 @@ GameObject:
   - component: {fileID: 5850621023610491416}
   - component: {fileID: 6452766302641724074}
   m_Layer: 5
-  m_Name: Button_Minus
+  m_Name: Minus_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5665,7 +5665,7 @@ GameObject:
   - component: {fileID: 2065695055564351258}
   - component: {fileID: 3759241494864594966}
   m_Layer: 5
-  m_Name: SubStaLeft
+  m_Name: SubStat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5685,10 +5685,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 9016471591333469861}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 170, y: 0}
-  m_SizeDelta: {x: 340, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2492361758968742863
 CanvasRenderer:
@@ -5745,8 +5745,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33
-  m_fontSizeBase: 33
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5799,7 +5799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f05bd964edf61247842c8ddc76755f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  order: 00000000020000000400000006000000080000000a0000000c0000000e00000010000000
+  order: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000
   showZero: 1
 --- !u!1 &3811769856093287692
 GameObject:
@@ -5813,7 +5813,7 @@ GameObject:
   - component: {fileID: 5187242532231808895}
   - component: {fileID: 5003325658059051515}
   m_Layer: 5
-  m_Name: Text_Job
+  m_Name: Description_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5835,7 +5835,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -30}
+  m_AnchoredPosition: {x: 0, y: -55.01}
   m_SizeDelta: {x: 345, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &5187242532231808895
@@ -5893,8 +5893,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 33
+  m_fontSizeBase: 33
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5947,7 +5947,7 @@ GameObject:
   - component: {fileID: 8275724452689790430}
   - component: {fileID: 715606844956130478}
   m_Layer: 5
-  m_Name: Text_Value
+  m_Name: StatValue_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6160,7 +6160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jobButtonPrefab: {fileID: 6991527863466467293, guid: 43d99fca1316821428965e69af7ac0a5, type: 3}
-  instantiateTransform: {fileID: 7955990213222176741}
+  jobButtonTransform: {fileID: 7955990213222176741}
   jobInfo: {fileID: 8963226752394203556}
   selectedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -6278,8 +6278,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0}
+  m_AnchoredPosition: {x: 0, y: 8}
+  m_SizeDelta: {x: 20, y: 16}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &8906023555523100153
 CanvasRenderer:
@@ -6296,20 +6296,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3982346645755717529}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5568628, g: 0.28235295, b: 0.09019608, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: a3dfbd98d6b8f4c4eaa39a9c2124fb9c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6381,7 +6381,7 @@ GameObject:
   - component: {fileID: 2374198709476305941}
   - component: {fileID: 5892323111105809749}
   m_Layer: 5
-  m_Name: Text_GameType
+  m_Name: GameType_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6556,7 +6556,7 @@ GameObject:
   - component: {fileID: 4344906242660285455}
   - component: {fileID: 8131412583502387216}
   m_Layer: 5
-  m_Name: Button_Minus
+  m_Name: Minus_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6676,7 +6676,7 @@ GameObject:
   - component: {fileID: 816705524926264863}
   - component: {fileID: 4530158746004851458}
   m_Layer: 5
-  m_Name: Text_MainStatDescription
+  m_Name: MainStatDescription_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6852,7 +6852,7 @@ GameObject:
   - component: {fileID: 405871631637776699}
   - component: {fileID: 7146536740259449652}
   m_Layer: 5
-  m_Name: Text_Diary
+  m_Name: Diary_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7160,7 +7160,7 @@ GameObject:
   - component: {fileID: 4501263639039467805}
   - component: {fileID: 4674491031207685089}
   m_Layer: 5
-  m_Name: Text_Stat
+  m_Name: Stat_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7411,7 +7411,7 @@ GameObject:
   - component: {fileID: 3935252874257984819}
   - component: {fileID: 8592796305940237003}
   m_Layer: 5
-  m_Name: Panel_Intelligence
+  m_Name: Intelligence_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7436,10 +7436,10 @@ RectTransform:
   - {fileID: 8039908832991154412}
   m_Father: {fileID: 4100976857076212387}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 194.4, y: -218.728}
-  m_SizeDelta: {x: 348.8, y: 58.208}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8592796305940237003
 MonoBehaviour:
@@ -7489,10 +7489,10 @@ RectTransform:
   - {fileID: 1597138495767691001}
   m_Father: {fileID: 6177191558667355010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 97.2, y: -77.759995}
-  m_SizeDelta: {x: 194.4, y: 155.51999}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4521640505615316403
 GameObject:
@@ -7508,7 +7508,7 @@ GameObject:
   - component: {fileID: 4920811248435803451}
   - component: {fileID: 2274535481294853031}
   m_Layer: 5
-  m_Name: Image_Info
+  m_Name: Info_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7622,7 +7622,7 @@ GameObject:
   - component: {fileID: 2698664832260720691}
   - component: {fileID: 1666272652198702786}
   m_Layer: 5
-  m_Name: Button_Plus
+  m_Name: Plus_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7903,7 +7903,7 @@ GameObject:
   - component: {fileID: 7672379546360960348}
   - component: {fileID: 7138870675920926151}
   m_Layer: 5
-  m_Name: Text_LoadText
+  m_Name: LoadText_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8151,8 +8151,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 172.5, y: -15}
-  m_SizeDelta: {x: 345, y: 30}
+  m_AnchoredPosition: {x: 172.5, y: -27.504997}
+  m_SizeDelta: {x: 345, y: 55.009995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &104023327342798415
 CanvasRenderer:
@@ -8180,7 +8180,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 15
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -8525,7 +8525,7 @@ GameObject:
   - component: {fileID: 624840792157485704}
   - component: {fileID: 3218028461195100461}
   m_Layer: 5
-  m_Name: Panel_Menu
+  m_Name: Menu_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8594,7 +8594,7 @@ GameObject:
   - component: {fileID: 6744366038994258409}
   - component: {fileID: 7860119236132675102}
   m_Layer: 5
-  m_Name: Text_CurrentStat
+  m_Name: CurrentStat_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8615,7 +8615,7 @@ RectTransform:
   m_Father: {fileID: 8168013011910337658}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1.2}
+  m_AnchorMax: {x: 1, y: 1.1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8769,7 +8769,7 @@ GameObject:
   - component: {fileID: 4419348797684161401}
   - component: {fileID: 7268628669107369584}
   m_Layer: 5
-  m_Name: Button_Plus
+  m_Name: Plus_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8890,7 +8890,7 @@ GameObject:
   - component: {fileID: 1826633141667108737}
   - component: {fileID: 5136415815202401097}
   m_Layer: 5
-  m_Name: Text_Exit
+  m_Name: Exit_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9496,7 +9496,7 @@ GameObject:
   - component: {fileID: 1427730783744112986}
   - component: {fileID: 4296310716854743311}
   m_Layer: 5
-  m_Name: Panel_Dexterity
+  m_Name: Dexterity_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9521,10 +9521,10 @@ RectTransform:
   - {fileID: 4209987733041280020}
   m_Father: {fileID: 4100976857076212387}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 194.4, y: -92.312}
-  m_SizeDelta: {x: 348.8, y: 58.208}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4296310716854743311
 MonoBehaviour:
@@ -9720,7 +9720,7 @@ GameObject:
   - component: {fileID: 3558221943288309258}
   - component: {fileID: 5679637119175301580}
   m_Layer: 5
-  m_Name: Text_Stat
+  m_Name: Stat_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9915,9 +9915,9 @@ RectTransform:
   m_Father: {fileID: 3724950244970768732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 25}
-  m_SizeDelta: {x: 0, y: -50}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6575990581374074280
 CanvasRenderer:
@@ -9934,20 +9934,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6427551523639101264}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.93725497, g: 0.48627454, b: 0.22352943, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 2dc093e1a5ea5ac46abf647d531a941a, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9968,7 +9968,7 @@ GameObject:
   - component: {fileID: 5346969735817341161}
   - component: {fileID: 7318772797731283991}
   m_Layer: 5
-  m_Name: Panel_Constitution
+  m_Name: Constitution_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9993,10 +9993,10 @@ RectTransform:
   - {fileID: 8450391726190840224}
   m_Father: {fileID: 4100976857076212387}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 194.4, y: -155.52}
-  m_SizeDelta: {x: 348.8, y: 58.208}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7318772797731283991
 MonoBehaviour:
@@ -10028,7 +10028,7 @@ GameObject:
   - component: {fileID: 4921671612105373457}
   - component: {fileID: 4535373177743102141}
   m_Layer: 5
-  m_Name: Text_Start
+  m_Name: Start_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10260,7 +10260,7 @@ GameObject:
   - component: {fileID: 3764704137439811677}
   - component: {fileID: 7201108205098877627}
   m_Layer: 5
-  m_Name: Image_Info
+  m_Name: Info_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10431,7 +10431,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -10488,7 +10488,7 @@ GameObject:
   - component: {fileID: 6635389050032503092}
   - component: {fileID: 3317552543297532116}
   m_Layer: 5
-  m_Name: Image_Info
+  m_Name: Info_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10602,7 +10602,7 @@ GameObject:
   - component: {fileID: 3922981002472623691}
   - component: {fileID: 5523491086970920110}
   m_Layer: 5
-  m_Name: Button_Minus
+  m_Name: Minus_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10722,7 +10722,7 @@ GameObject:
   - component: {fileID: 5097468696879901891}
   - component: {fileID: 3458386308105345890}
   m_Layer: 5
-  m_Name: Text_Stat
+  m_Name: Stat_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10920,10 +10920,10 @@ RectTransform:
   - {fileID: 4164732321057562445}
   m_Father: {fileID: 4100976857076212387}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 194.4, y: -29.104}
-  m_SizeDelta: {x: 348.8, y: 58.208}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6005342726027520595
 MonoBehaviour:
@@ -10954,7 +10954,7 @@ GameObject:
   - component: {fileID: 4977324499714612220}
   - component: {fileID: 6200758397563844419}
   m_Layer: 5
-  m_Name: Button_Plus
+  m_Name: Plus_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11074,7 +11074,7 @@ GameObject:
   - component: {fileID: 1123320890075579140}
   - component: {fileID: 8669074700355641755}
   m_Layer: 5
-  m_Name: Button_Minus
+  m_Name: Minus_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11193,7 +11193,7 @@ GameObject:
   - component: {fileID: 4325084452835846762}
   - component: {fileID: 8484264457909906316}
   m_Layer: 5
-  m_Name: Text_Value
+  m_Name: StatValue_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11381,7 +11381,7 @@ GameObject:
   - component: {fileID: 2426993911467164393}
   - component: {fileID: 3975099630182234013}
   m_Layer: 5
-  m_Name: Text_MainStat
+  m_Name: Description_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11403,7 +11403,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 87.5, y: -30}
+  m_AnchoredPosition: {x: 87.5, y: -45}
   m_SizeDelta: {x: 175, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5791734993449567016
@@ -11461,8 +11461,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11516,7 +11516,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0000000001000000020000000300000004000000
-  showZero: 1
 --- !u!1 &8188590953009294642
 GameObject:
   m_ObjectHideFlags: 0
@@ -11568,14 +11567,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding:
     m_Left: 10
-    m_Right: 10
-    m_Top: 10
-    m_Bottom: 10
+    m_Right: 5
+    m_Top: 15
+    m_Bottom: 5
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 15, y: 55}
+  m_Spacing: {x: 15, y: 15}
   m_Constraint: 1
   m_ConstraintCount: 3
 --- !u!114 &505490775059483284
@@ -11761,8 +11760,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 262.5, y: -20}
-  m_SizeDelta: {x: 175, y: 40}
+  m_AnchoredPosition: {x: 262.5, y: -47.5}
+  m_SizeDelta: {x: 175, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6231455634805241283
 MonoBehaviour:
@@ -11782,9 +11781,9 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 10
+  m_Spacing: 15
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 0
+  m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -12066,7 +12065,7 @@ GameObject:
   - component: {fileID: 2793832886199691432}
   - component: {fileID: 1510033972738928748}
   m_Layer: 5
-  m_Name: Text_JobInformation
+  m_Name: JobInformation_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12240,7 +12239,7 @@ GameObject:
   - component: {fileID: 8360009590410872760}
   - component: {fileID: 2452842559360795988}
   m_Layer: 5
-  m_Name: Text_Value
+  m_Name: StatValue_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12411,7 +12410,7 @@ GameObject:
   - component: {fileID: 4599370166945847491}
   - component: {fileID: 1649671167736624779}
   m_Layer: 5
-  m_Name: Text_ModName
+  m_Name: ModName_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12574,7 +12573,7 @@ GameObject:
   - component: {fileID: 1368387707231271656}
   - component: {fileID: 8127568162053311346}
   m_Layer: 5
-  m_Name: Button_Plus
+  m_Name: Plus_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12796,7 +12795,7 @@ GameObject:
   - component: {fileID: 828251275438324933}
   - component: {fileID: 4178696053718502725}
   m_Layer: 5
-  m_Name: Text_MainName
+  m_Name: TitleName_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13047,7 +13046,7 @@ GameObject:
   - component: {fileID: 4727906507912389502}
   - component: {fileID: 7978093277221575735}
   m_Layer: 5
-  m_Name: Text_Point
+  m_Name: Point_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

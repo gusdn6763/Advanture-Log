@@ -6,7 +6,7 @@ public class TooltipTester : MonoBehaviour, ITooltipProvider
 {
     [SerializeField] TooltipData tooltipData;
 
-    public bool TryTooltipData(TooltipData data)
+    public bool TryGetTooltipData(TooltipData data)
     {
         data = tooltipData;
         return true;

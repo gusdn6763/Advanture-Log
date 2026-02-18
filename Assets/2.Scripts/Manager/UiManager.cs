@@ -1,9 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using TMPro;
-using System.Collections;
-using System;
-using UnityEngine.Localization.Settings;
 
 public class UiManager : MonoBehaviour
 {
@@ -11,7 +7,7 @@ public class UiManager : MonoBehaviour
 
     public void Init()
     {
-        tooltip.Init();
+        tooltipController.Init();
     }
 
 
@@ -93,18 +89,22 @@ public class UiManager : MonoBehaviour
     }
     #endregion
 
-    #region
+    #region ≈¯∆¡√¢
     [Header("≈¯∆¡")]
-    [SerializeField] private UI_Tooltip tooltip;
+    [SerializeField] private TooltipController tooltipController;
 
-    public void ShowTooltip(TooltipData tooltipData, RectTransform target)
+    public void ShowTooltip(ITooltipProvider provider, RectTransform target)
     {
-        tooltip.ShowTooltip(tooltipData, target);
+        tooltipController.ShowTooltip(provider, target);
     }
 
-    public void HideTooltip()
+    public void HideTooltip(RectTransform target)
     {
-        tooltip.Hide();
+        tooltipController.HideTooltip(target);
     }
+    #endregion
+
+    #region ∆‰¿ÃµÂ √¢
+
     #endregion
 }

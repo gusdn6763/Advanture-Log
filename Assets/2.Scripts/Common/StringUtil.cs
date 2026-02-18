@@ -13,4 +13,10 @@ public static class StringUtil
         string number = intLike ? ((int)r).ToString() : value.ToString("0.#");
         return isPercent ? $"{number}%" : number;
     }
+
+    public static string Colorize(string text, Color color)
+    {
+        string hex = ColorUtility.ToHtmlStringRGB(color);
+        return $"<color=#{hex}>{text}</color>";
+    }
 }
