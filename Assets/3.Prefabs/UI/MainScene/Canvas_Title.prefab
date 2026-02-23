@@ -327,9 +327,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4807346330779761659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 87.5, y: -15}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 175, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6980294620653828118
@@ -1029,9 +1029,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+      m_TableCollectionName: GUID:f0dddf1de1440f440a3970aa3f9372dc
     m_TableEntryReference:
-      m_KeyId: 20457077511270400
+      m_KeyId: 15316791296
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -1088,10 +1088,10 @@ RectTransform:
   - {fileID: 4719971451379396577}
   m_Father: {fileID: 1560248099918651595}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 87.5, y: -47.5}
-  m_SizeDelta: {x: 175, y: 45}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 175, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6013234356297341792
 MonoBehaviour:
@@ -3325,9 +3325,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+      m_TableCollectionName: GUID:f0dddf1de1440f440a3970aa3f9372dc
     m_TableEntryReference:
-      m_KeyId: 20457088655536128
+      m_KeyId: 15316791297
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -3630,9 +3630,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statIntroduceLocalize:
     m_TableReference:
-      m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+      m_TableCollectionName: GUID:f0dddf1de1440f440a3970aa3f9372dc
     m_TableEntryReference:
-      m_KeyId: 1724886929354752
+      m_KeyId: 15320985609
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -3763,10 +3763,10 @@ RectTransform:
   - {fileID: 4807346330779761659}
   m_Father: {fileID: 4468734576099490995}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -90.009995}
-  m_SizeDelta: {x: 350, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9165352547586765565
 CanvasRenderer:
@@ -3979,10 +3979,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1006929632082271078}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 345, y: 40.01}
+  m_SizeDelta: {x: 345, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &2715301946328121074
 CanvasRenderer:
@@ -4720,9 +4720,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+      m_TableCollectionName: GUID:f0dddf1de1440f440a3970aa3f9372dc
     m_TableEntryReference:
-      m_KeyId: 20457101771124736
+      m_KeyId: 15316791298
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -5833,9 +5833,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1006929632082271078}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -55.01}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 345, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &5187242532231808895
@@ -6517,9 +6517,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+      m_TableCollectionName: GUID:f0dddf1de1440f440a3970aa3f9372dc
     m_TableEntryReference:
-      m_KeyId: 602586523873280
+      m_KeyId: 15316791301
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -6696,10 +6696,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2327774636713135689}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 87.5, y: -15}
-  m_SizeDelta: {x: 175, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2489272397225256857
 CanvasRenderer:
@@ -6812,9 +6812,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+      m_TableCollectionName: GUID:f0dddf1de1440f440a3970aa3f9372dc
     m_TableEntryReference:
-      m_KeyId: 1733997960081408
+      m_KeyId: 15320985611
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -7296,9 +7296,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+      m_TableCollectionName: GUID:f0dddf1de1440f440a3970aa3f9372dc
     m_TableEntryReference:
-      m_KeyId: 18601952081588224
+      m_KeyId: 15262265344
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -8149,10 +8149,10 @@ RectTransform:
   - {fileID: 1686727015813414015}
   m_Father: {fileID: 4468734576099490995}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 172.5, y: -27.504997}
-  m_SizeDelta: {x: 345, y: 55.009995}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &104023327342798415
 CanvasRenderer:
@@ -8317,6 +8317,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameInputText: {fileID: 3564344133260838306}
   warningText: {fileID: 7923127504717392620}
+  nameEmpty:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  nameTooShort:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  invalidCharacters:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &5208249799998402127
 GameObject:
   m_ObjectHideFlags: 0
@@ -8730,9 +8760,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+      m_TableCollectionName: GUID:f0dddf1de1440f440a3970aa3f9372dc
     m_TableEntryReference:
-      m_KeyId: 1732331479216128
+      m_KeyId: 15320985610
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -9856,9 +9886,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+      m_TableCollectionName: GUID:f0dddf1de1440f440a3970aa3f9372dc
     m_TableEntryReference:
-      m_KeyId: 20466380108443648
+      m_KeyId: 15316791300
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -10858,9 +10888,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:4ff06e9b9fe26ae47b1442d447868869
+      m_TableCollectionName: GUID:f0dddf1de1440f440a3970aa3f9372dc
     m_TableEntryReference:
-      m_KeyId: 20457111929729024
+      m_KeyId: 15316791299
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -11401,10 +11431,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2327774636713135689}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 87.5, y: -45}
-  m_SizeDelta: {x: 175, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5791734993449567016
 CanvasRenderer:
@@ -11758,10 +11788,10 @@ RectTransform:
   - {fileID: 5490065221737887}
   m_Father: {fileID: 1560248099918651595}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 262.5, y: -47.5}
-  m_SizeDelta: {x: 175, y: 45}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 175, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6231455634805241283
 MonoBehaviour:

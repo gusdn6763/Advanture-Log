@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 using UnityEngine.Localization;
 
 [Serializable]
@@ -19,32 +18,45 @@ public class ExploreSpawnEntry
     public float spawnPercent;
 }
 
-
 [CreateAssetMenu(menuName = "Game/Area/Area", fileName = "Area")]
 public class AreaSo : ScriptableObject
 {
     public string Id { get; private set; } = string.Empty;
 
+    [Header("배경 텍스트")]
+    [SerializeField] private List<LocalizedString> backgroundText = new List<LocalizedString>();
+
+    [Header("고정 스폰")]
+    [SerializeField] private List<FixedSpawnEntry> fixedSpawnEntry = new List<FixedSpawnEntry>();
+
+    [Header("탐색 스폰")]
+    [SerializeField] private List<ExploreSpawnEntry> exploreSpawnEntry = new List<ExploreSpawnEntry>();
+
+    [Header("프리팹")]
     [SerializeField] private Area areaPrefab;
+
+    [Header("지역 이름")]
     [SerializeField] private LocalizedString areaName;
+
+    [Header("배경 스프라이트")]
     [SerializeField] private Sprite backgroundSprite;
-    [SerializeField] private List<LocalizedString> backgroundText;
-    [SerializeField] private List<FixedSpawnEntry> fixedSpawnEntry;
-    [SerializeField] private List<ExploreSpawnEntry> exploreSpawnEntry;
-    [SerializeField] private bool resetArea = true;
+
+    [Header("지역 리셋 여부")]
+    [SerializeField] private bool resetArea;
+
+    public IReadOnlyList<LocalizedString> BackgroundText => backgroundText;
+    public IReadOnlyList<FixedSpawnEntry> FixedSpawnEntry => fixedSpawnEntry;
+    public IReadOnlyList<ExploreSpawnEntry> ExploreSpawnEntry => exploreSpawnEntry;
     public Area AreaPrefab => areaPrefab;
     public LocalizedString AreaName => areaName;
-    public List<LocalizedString> BackgroundText => backgroundText;
     public Sprite BackgroundSprite => backgroundSprite;
-    public List<FixedSpawnEntry> FixedSpawnEntry => fixedSpawnEntry;
-    public List<ExploreSpawnEntry> ExploreSpawnEntry => exploreSpawnEntry;
     public bool ResetArea => resetArea;
 
     public void SetId(string id)
     {
         if (string.IsNullOrEmpty(Id))
             Id = id;
-        else
-            Debug.LogError($"Id 중복 할당:{Id} -> {id}");
+        else if (Id != id)
+            Debug.LogError($"Id 중복 할당: {Id} -> {id}");
     }
-} 
+}

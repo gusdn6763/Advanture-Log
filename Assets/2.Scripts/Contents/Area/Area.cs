@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -8,9 +6,10 @@ public class Area : MonoBehaviour
 {
     private AreaSo areaSo;
 
+    public List<BaseEntity> fixedEntities = new List<BaseEntity>();
+    public List<BaseEntity> extraEntities = new List<BaseEntity>();
+
     public Sprite BackgroundSprite { get; private set; }
-    public List<BaseEntity> FixedEntities { get; private set; } = new List<BaseEntity>();
-    public List<BaseEntity> ExtraEntities { get; private set; } = new List<BaseEntity>();
     public void SetInfo(AreaSo data)
     {
         areaSo = data;
@@ -24,7 +23,7 @@ public class Area : MonoBehaviour
 
             BaseEntity entity = Managers.Object.Spawn<BaseEntity>(entry.localPos, entry.entitySo.Id);
 
-            FixedEntities.Add(entity);
+            fixedEntities.Add(entity);
         }
     }
 
@@ -34,9 +33,9 @@ public class Area : MonoBehaviour
 
     public void ExitArea()
     {
-        for(int i = ExtraEntities.Count; i > 0; i--)
+        for(int i = extraEntities.Count; i > 0; i--)
         {
-            BaseEntity entity = ExtraEntities[i];
+            BaseEntity entity = extraEntities[i];
 
             Destroy(entity.gameObject);
             entity = null;
@@ -48,7 +47,7 @@ public class Area : MonoBehaviour
     private void OnDestroy()
     {
         BackgroundSprite = null;
-        FixedEntities.Clear();
-        ExtraEntities.Clear();
+        fixedEntities.Clear();
+        extraEntities.Clear();
     }
 }

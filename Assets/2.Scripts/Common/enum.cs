@@ -85,6 +85,20 @@ public enum TooltipTextAlignType
     Right,
 }
 
+public enum InputCategory
+{
+    Interaction, // 상호작용
+    Move,        // 이동
+    QuickSlot,   // 빠른 슬롯
+    Interface,   // 인터페이스
+}
+
+public enum SoundType
+{
+    Bgm,
+    Sound
+}
+
 /// <summary>
 /// 아이템 타입
 /// </summary>
@@ -152,6 +166,10 @@ public enum UiType
 public enum InputAction
 {
     None,
+    LeftMove,
+    RightMove,
+    UpMove,
+    DownMove,
     Select,          //기본값-엔터키, 선택 확정
     Cancel,          //기본값-Esc, 취소
     ItemQuickSlot1,
@@ -170,9 +188,6 @@ public enum InputAction
 /// </summary>
 public enum LocalizeKey
 {
-    UI_NameEmpty,
-    UI_InvalidCharacters,
-    UI_NameTooShort,
     MissionFailed,          // 임무 실패
     MissionCompleted,       // 임무 완료
     NotEnoughMoney,         // 돈 부족

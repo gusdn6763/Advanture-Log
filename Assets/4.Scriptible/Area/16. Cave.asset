@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d6bd13fb24e1248be6f5b99c990677, type: 3}
   m_Name: 16. Cave
   m_EditorClassIdentifier: 
-  areaId: Cave
+  areaPrefab: {fileID: 6661381638717531320, guid: 6150d8fe94006724a9ad0f580d89dc65, type: 3}
   areaName:
     m_TableReference:
       m_TableCollectionName: GUID:4a88df30e19e16c43a9af25bcf999dd5
@@ -22,24 +22,11 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  backgroundSprite: {fileID: 0}
   backgroundText: []
-  backgroundSpriteRef:
-    m_AssetGUID: 74dc2e862f0ec3f4d9e98d52dbff3192
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
-  createObjectRefs:
-  - m_AssetGUID: bc67001fc3dd7634da5b6d2ddf015782
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: f6167e61b06f276449eb44e527e2ae15
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 1
+  fixedSpawnEntry: []
+  exploreSpawnEntry: []
+  resetArea: 1
   references:
     version: 2
     RefIds: []

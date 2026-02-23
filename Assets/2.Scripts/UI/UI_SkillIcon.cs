@@ -20,8 +20,6 @@ public class UI_SkillIcon : MonoBehaviour, ITooltipProvider
 
     public bool TryGetTooltipData(TooltipData tooltipData)
     {
-        tooltipData = default;
-
         if (!SkillData)
             return false;
 

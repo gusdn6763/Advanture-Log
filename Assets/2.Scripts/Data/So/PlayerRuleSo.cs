@@ -64,16 +64,16 @@ public class NeedData
 [CreateAssetMenu(menuName = "Game/Rule/PlayerRule", fileName = "PlayerRuleSo")]
 public class PlayerRuleSo : ScriptableObject
 {
-    [Header("·¹º§¾÷ ½ºÅÈ")]
-    [SerializeField] private int levelUpPoint;
-
     [Header("¿å±¸")]
     [SerializeField] private List<NeedData> needRules = new List<NeedData>();
 
     [Header("µî±Þ")]
     [SerializeField] private List<RankTier> rankTiers = new List<RankTier>();
 
-    public int LevelUpPoint { get => levelUpPoint; }
+    [Header("·¹º§¾÷ ½ºÅÈ")]
+    [SerializeField] private int levelUpPoint;
+
     public IReadOnlyList<NeedData> NeedRules { get => needRules; }
     public IReadOnlyList<RankTier> RankTiers { get => rankTiers; }
+    public int LevelUpPoint { get => levelUpPoint; }
 }

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: DefaultSettingSo
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultSettingSo
+  <ResolutionW>k__BackingField: 671
+  <ResolutionH>k__BackingField: 0
+  <IsFullscreen>k__BackingField: 0
+  <GridOn>k__BackingField: 0
+  <EffectIntensity>k__BackingField: 0
+  <Brightness>k__BackingField: 0
+  <StartBgm>k__BackingField: {fileID: 0}
+  <SoundVolume>k__BackingField: 0
+  <BgmVolume>k__BackingField: 0
+  <SoundIsOn>k__BackingField: 0
+  <BgmIsOn>k__BackingField: 0
+  <LocaleIndex>k__BackingField: 0
+  <AutoSavePeriod>k__BackingField: 0
+  <InputActionDic>k__BackingField:
+    _serializedList:
+    - Key: 1
+      Value:
+        keyCode: 276
+        <DisplayName>k__BackingField:
+          m_TableReference:
+            m_TableCollectionName: 
+          m_TableEntryReference:
+            m_KeyId: 0
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        <Category>k__BackingField: 0
+  references:
+    version: 2
+    RefIds: []

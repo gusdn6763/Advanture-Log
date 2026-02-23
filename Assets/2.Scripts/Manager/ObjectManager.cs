@@ -16,7 +16,7 @@ public class ObjectManager : MonoBehaviour
 
     public T Spawn<T>(Vector2 position, string id) where T : BaseEntity
     {
-        if (!Managers.Data.TryGetEntity(id, out BaseEntitySo so) || so == null)
+        if (!Managers.Data.TryGetEntity(id, out BaseEntitySo so))
         {
             Debug.LogError($"[Spawner] Entity id not found: '{id}'");
             return null;

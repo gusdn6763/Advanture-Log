@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d6bd13fb24e1248be6f5b99c990677, type: 3}
   m_Name: "2. Adventurers\u2019 Guild"
   m_EditorClassIdentifier: 
-  areaId: "Adventurers\u2019 Guild"
+  areaPrefab: {fileID: 6661381638717531320, guid: 6150d8fe94006724a9ad0f580d89dc65, type: 3}
   areaName:
     m_TableReference:
       m_TableCollectionName: GUID:4a88df30e19e16c43a9af25bcf999dd5
@@ -22,19 +22,11 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  backgroundSprite: {fileID: 0}
   backgroundText: []
-  backgroundSpriteRef:
-    m_AssetGUID: 99aea010875e1f94193a833a87c0145f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
-  createObjectRefs:
-  - m_AssetGUID: e0bca0a772d3fd842ba05784ad422b22
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
+  fixedSpawnEntry: []
+  exploreSpawnEntry: []
+  resetArea: 1
   references:
     version: 2
     RefIds: []

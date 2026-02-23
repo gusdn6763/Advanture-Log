@@ -359,10 +359,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltipData:
-    type: 0
+    tooltipWidthType: 0
+    textType: 1
+    positionType: 0
     header: Header
-    headerLeft: HeaderLeft
-    headerRight: HeaderRight
     body: Body-Text~~~~
     bottom: Bottom
 --- !u!114 &8747824058592409380
@@ -469,10 +469,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltipData:
-    type: 2
+    tooltipWidthType: 0
+    textType: 0
+    positionType: 0
     header: Header
-    headerLeft: HeaderLeft
-    headerRight: HeaderRight
     body: Body-Text~~~~
     bottom: Bottom
 --- !u!114 &5759454141871147974
@@ -847,10 +847,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltipData:
-    type: 1
+    tooltipWidthType: 0
+    textType: 0
+    positionType: 0
     header: Header
-    headerLeft: HeaderLeft
-    headerRight: HeaderRight
     body: Body-Text~~~~
     bottom: Bottom
 --- !u!114 &7783497709626499116
@@ -1333,10 +1333,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltipData:
-    type: 2
+    tooltipWidthType: 0
+    textType: 0
+    positionType: 0
     header: Header
-    headerLeft: HeaderLeft
-    headerRight: HeaderRight
     body: Body-Text~~~~
     bottom: Bottom
 --- !u!114 &2626207627164551359
@@ -1443,10 +1443,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltipData:
-    type: 3
+    tooltipWidthType: 0
+    textType: 0
+    positionType: 0
     header: Header
-    headerLeft: HeaderLeft
-    headerRight: HeaderRight
     body: Body-Text~~~~
     bottom: Bottom
 --- !u!114 &8559783514080258130
@@ -1687,10 +1687,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltipData:
-    type: 1
+    tooltipWidthType: 0
+    textType: 0
+    positionType: 0
     header: Header
-    headerLeft: HeaderLeft
-    headerRight: HeaderRight
     body: Body-Text~~~~
     bottom: Bottom
 --- !u!114 &4944359974667780616
@@ -1797,10 +1797,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltipData:
-    type: 2
+    tooltipWidthType: 1
+    textType: 0
+    positionType: 0
     header: Header
-    headerLeft: HeaderLeft
-    headerRight: HeaderRight
     body: Body-Text~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     bottom: Bottom
 --- !u!114 &352304019587875228

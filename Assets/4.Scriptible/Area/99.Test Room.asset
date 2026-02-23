@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d6bd13fb24e1248be6f5b99c990677, type: 3}
   m_Name: 99.Test Room
   m_EditorClassIdentifier: 
-  areaId: Test Room
+  areaPrefab: {fileID: 6661381638717531320, guid: 6150d8fe94006724a9ad0f580d89dc65, type: 3}
   areaName:
     m_TableReference:
       m_TableCollectionName: GUID:4a88df30e19e16c43a9af25bcf999dd5
@@ -22,21 +22,17 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  backgroundSpriteRef:
-    m_AssetGUID: b51cd91922390eb4a91739d16ea587c1
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
+  backgroundSprite: {fileID: 0}
   backgroundText: []
   fixedSpawnEntry:
-  - entitySo: {fileID: 11400000, guid: 69e271ef890fa3449a92b56730cf7a3f, type: 2}
+  - entitySo: {fileID: 11400000, guid: 9c033486df1fe5149bf0e309f8714958, type: 2}
     localPos: {x: -5, y: 4, z: 0}
-  - entitySo: {fileID: 11400000, guid: 7f749f2cb81a0a443a6d41baf37b5c80, type: 2}
+  - entitySo: {fileID: 11400000, guid: 9c033486df1fe5149bf0e309f8714958, type: 2}
     localPos: {x: -5, y: 1, z: 0}
-  - entitySo: {fileID: 11400000, guid: e22bb605058f472438c490a8ffc2881c, type: 2}
+  - entitySo: {fileID: 11400000, guid: 9c033486df1fe5149bf0e309f8714958, type: 2}
     localPos: {x: -2, y: 3, z: 0}
   exploreSpawnEntry: []
+  resetArea: 1
   references:
     version: 2
     RefIds: []

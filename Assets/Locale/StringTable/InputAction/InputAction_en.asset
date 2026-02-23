@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: InputAction_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: ad10df724a2094b4bacc3c7b9563e50a, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 17074204672
+    m_Localized: Move North
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17111953408
+    m_Localized: Move Northeast
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17111953409
+    m_Localized: Move East
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17111953410
+    m_Localized: Move Southeast
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17111953411
+    m_Localized: Move South
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17111953412
+    m_Localized: Move Southwest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17111953413
+    m_Localized: Move West
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17111953414
+    m_Localized: Move Northwest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147712
+    m_Localized: Wait
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147713
+    m_Localized: Slot1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147714
+    m_Localized: Slot2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147715
+    m_Localized: Slot3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147716
+    m_Localized: Slot4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147717
+    m_Localized: Slot5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147718
+    m_Localized: Slot6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147719
+    m_Localized: Slot7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147720
+    m_Localized: Slot8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147721
+    m_Localized: Slot9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147722
+    m_Localized: Status
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147723
+    m_Localized: Inventory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147724
+    m_Localized: Log
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147725
+    m_Localized: Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147726
+    m_Localized: Skill Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147727
+    m_Localized: Quest Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147728
+    m_Localized: Move
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147729
+    m_Localized: Attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147730
+    m_Localized: Skills
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147731
+    m_Localized: Quests
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147732
+    m_Localized: Show Info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147733
+    m_Localized: Eat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147734
+    m_Localized: Equip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147735
+    m_Localized: Unequip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147736
+    m_Localized: Show
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147737
+    m_Localized: Throw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147738
+    m_Localized: Drop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147739
+    m_Localized: Pick Up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147740
+    m_Localized: Use
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147741
+    m_Localized: Open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147742
+    m_Localized: Loot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17116147743
+    m_Localized: Trade
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

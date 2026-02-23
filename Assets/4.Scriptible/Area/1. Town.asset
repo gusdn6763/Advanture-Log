@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d6bd13fb24e1248be6f5b99c990677, type: 3}
   m_Name: 1. Town
   m_EditorClassIdentifier: 
-  areaId: Town
+  areaPrefab: {fileID: 6661381638717531320, guid: 6150d8fe94006724a9ad0f580d89dc65, type: 3}
   areaName:
     m_TableReference:
       m_TableCollectionName: GUID:4a88df30e19e16c43a9af25bcf999dd5
@@ -22,15 +22,11 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  backgroundSpriteRef:
-    m_AssetGUID: a448363d477303342bfc3309f6146e45
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
+  backgroundSprite: {fileID: 0}
   backgroundText: []
   fixedSpawnEntry: []
   exploreSpawnEntry: []
+  resetArea: 1
   references:
     version: 2
     RefIds: []

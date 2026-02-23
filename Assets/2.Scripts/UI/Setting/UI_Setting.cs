@@ -1,65 +1,80 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
-public struct TabItem
+public class TabItem
 {
-	public UI_TabPage tabPage;
-	public GameObject page;
+    public UI_TabPage tabPage;
+    public GameObject page;
 }
 
 public class UI_Setting : MonoBehaviour
 {
-	[SerializeField] private List<TabItem> tabs = new();
+    [SerializeField] private List<TabItem> tabList = new List<TabItem>();
 
-	[Header("Visuals")]
-	[SerializeField] private Sprite activeButtonSprite;
-	[SerializeField] private Sprite defaultButtonSprite;
+    [SerializeField] private Sprite activeButtonSprite;
+    [SerializeField] private Sprite defaultButtonSprite;
 
-	private int currentIndex = -1;
+    [SerializeField] private Button closeButton;
+    [SerializeField] private Button resetButton;
 
-	private void Start()
-	{
-		for (int i = 0; i < tabs.Count; i++)
-		{
-            UI_TabPage tabPage = tabs[i].tabPage;
+    private int currentIndex = -1;
 
-			tabPage.ButtonImage.sprite = defaultButtonSprite;
-			tabPage.Button.onClick.RemoveAllListeners();
-			int idx = i;
-			tabPage.Button.onClick.AddListener(() => Select(idx));
-		}
-	}
+    public void Init()
+    {
+        for (int i = 0; i < tabList.Count; i++)
+        {
+            UI_TabPage tabPage = tabList[i].tabPage;
 
+            int idx = i;
 
-	public void Open()
-	{
-		gameObject.SetActive(true);
+            tabPage.Init();
+            tabPage.SetSprite(defaultButtonSprite);
+            tabPage.BindClick(() => Select(idx));
+        }
 
-		if (tabs.Count > 0)
-			Select(0);
-	}
+        closeButton.onClick.AddListener(OnClose);
+        resetButton.onClick.AddListener(OnResetSetting);
+    }
 
-	public void Select(int index)
-	{
-		if (index == currentIndex)
-			return;
+    public void Open()
+    {
+        gameObject.SetActive(true);
 
-		for (int i = 0; i < tabs.Count; i++)
-		{
-			if (i == index)
-			{
-				tabs[i].page.gameObject.SetActive(true);
-				tabs[i].tabPage.ButtonImage.sprite = activeButtonSprite;
-			}
-			else
-			{
-				tabs[i].page.gameObject.SetActive(false);
-				tabs[i].tabPage.ButtonImage.sprite = defaultButtonSprite;
-			}
-		}
+        if (tabList.Count > 0)
+            Select(0);
+    }
 
-		currentIndex = index;
-	}
+    private void Select(int index)
+    {
+        if (index == currentIndex) 
+            return;
+
+        for (int i = 0; i < tabList.Count; i++)
+        {
+            TabItem tabItem = tabList[i];
+
+            bool isActive = (i == index);
+
+            if (tabItem.page != null)
+                tabItem.page.SetActive(isActive);
+
+            if (tabItem.tabPage != null)
+                tabItem.tabPage.SetSprite(isActive ? activeButtonSprite : defaultButtonSprite);
+        }
+
+        currentIndex = index;
+    }
+
+    private void OnClose()
+    {
+        Managers.Setting.SaveSetting();
+        gameObject.SetActive(false);
+    }
+
+    private void OnResetSetting()
+    {
+        Managers.Setting.ResetSettingData();
+    }
 }

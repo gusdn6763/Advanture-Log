@@ -40,74 +40,6 @@ MonoBehaviour:
     m_Localized: Diary
     m_Metadata:
       m_Items: []
-  - m_Id: 16779676155621381
-    m_Localized: Graphics
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676155621382
-    m_Localized: Gameplay
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676155621383
-    m_Localized: Exit
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676155621384
-    m_Localized: Controls
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676155621385
-    m_Localized: Continue
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676155621386
-    m_Localized: Background Music
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676155621387
-    m_Localized: Audio
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676155621388
-    m_Localized: Language
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676155621389
-    m_Localized: Mute
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676155621390
-    m_Localized: Window Mode
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676155621391
-    m_Localized: keyBindings
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676155621392
-    m_Localized: Slot1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676155621393
-    m_Localized: Slot2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676155621394
-    m_Localized: Slot3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676155621395
-    m_Localized: Slot4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676155621396
-    m_Localized: Fullscreen
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16779676159815680
-    m_Localized: Windowed Mode
-    m_Metadata:
-      m_Items: []
   - m_Id: 16779676159815681
     m_Localized: Ok
     m_Metadata:
@@ -144,122 +76,16 @@ MonoBehaviour:
     m_Localized: 'RemainingPoints: '
     m_Metadata:
       m_Items: []
-  - m_Id: 16779676159815697
-    m_Localized: Select Sleep Duration
-    m_Metadata:
-      m_Items: []
-  - m_Id: 602586523873280
-    m_Localized: Game Mode
-    m_Metadata:
-      m_Items: []
   - m_Id: 16842099931721728
     m_Localized: Enter Name
-    m_Metadata:
-      m_Items: []
-  - m_Id: 18601952081588224
-    m_Localized: Stat
     m_Metadata:
       m_Items: []
   - m_Id: 20456919516033024
     m_Localized: Difficulty
     m_Metadata:
       m_Items: []
-  - m_Id: 20457077511270400
-    m_Localized: STR
-    m_Metadata:
-      m_Items: []
-  - m_Id: 20457088655536128
-    m_Localized: DEX
-    m_Metadata:
-      m_Items: []
-  - m_Id: 20457101771124736
-    m_Localized: CON
-    m_Metadata:
-      m_Items: []
-  - m_Id: 20457111929729024
-    m_Localized: INT
-    m_Metadata:
-      m_Items: []
-  - m_Id: 20466380108443648
-    m_Localized: PER
-    m_Metadata:
-      m_Items: []
-  - m_Id: 822646840471552
-    m_Localized: Max Health
-    m_Metadata:
-      m_Items: []
-  - m_Id: 823176497180672
-    m_Localized: Detection
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1382524910809088
-    m_Localized: Magic Damage
-    m_Metadata:
-      m_Items: []
-  - m_Id: 823139457282048
-    m_Localized: CriticalChance
-    m_Metadata:
-      m_Items: []
-  - m_Id: 823053989949440
-    m_Localized: Evasion
-    m_Metadata:
-      m_Items: []
-  - m_Id: 823052215758848
-    m_Localized: Accuracy
-    m_Metadata:
-      m_Items: []
-  - m_Id: 823050470928384
-    m_Localized: Attack Speed
-    m_Metadata:
-      m_Items: []
-  - m_Id: 823048021454848
-    m_Localized: Physical Defense
-    m_Metadata:
-      m_Items: []
-  - m_Id: 823045165133824
-    m_Localized: Min Physical Damage
-    m_Metadata:
-      m_Items: []
-  - m_Id: 822836896968704
-    m_Localized: Mana Regen
-    m_Metadata:
-      m_Items: []
-  - m_Id: 822834648821760
-    m_Localized: Max Mana
-    m_Metadata:
-      m_Items: []
-  - m_Id: 822659293360128
-    m_Localized: Health Regen
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1512974039887872
-    m_Localized: This is Warrior.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1513123243864064
-    m_Localized: This is Mage.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1513317859569664
-    m_Localized: This is Thief.
-    m_Metadata:
-      m_Items: []
   - m_Id: 1714587434201088
     m_Localized: Job Information
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1724886929354752
-    m_Localized: 'Per +1 {0}:'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1732331479216128
-    m_Localized: Current Stats
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1733997960081408
-    m_Localized: 'Base Stat:
-
-'
     m_Metadata:
       m_Items: []
   - m_Id: 1734556540710912
@@ -272,32 +98,12 @@ MonoBehaviour:
     m_Localized: 'Job Description:'
     m_Metadata:
       m_Items: []
-  - m_Id: 2821368906493952
-    m_Localized: Max Physical Damage
+  - m_Id: 4317507304534016
+    m_Localized: GameMode
     m_Metadata:
       m_Items: []
-  - m_Id: 2821848260915200
-    m_Localized: Physical Damage
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2822111730315264
-    m_Localized: Min Magic Damage
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2822253464236032
-    m_Localized: Max Magic Damage
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2823299523653632
-    m_Localized: MagicDefense
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2823729523699712
-    m_Localized: CriticalDamage
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2823927058640896
-    m_Localized: Carry Capacity
+  - m_Id: 5733006911451136
+    m_Localized: Close
     m_Metadata:
       m_Items: []
   references:

@@ -22,8 +22,8 @@ public class UI_StatAllocation : MonoBehaviour
         minusButton.onClick.RemoveAllListeners();
         plusButton.onClick.RemoveAllListeners();
 
-        minusButton.onClick.AddListener(() => OnClick(-1));
-        plusButton.onClick.AddListener(() => OnClick(+1));
+        minusButton.SetClick(() => OnClick(-1));
+        plusButton.SetClick(() => OnClick(+1));
     }
 
     public void OnClick(int delta)

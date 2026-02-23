@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Stat_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: f0dddf1de1440f440a3970aa3f9372dc, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 15262265344
+    m_Localized: Stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791296
+    m_Localized: STR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791297
+    m_Localized: DEX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791298
+    m_Localized: CON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791299
+    m_Localized: INT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791300
+    m_Localized: PER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791302
+    m_Localized: Max Health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791303
+    m_Localized: Health Regen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791304
+    m_Localized: Max Mana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791305
+    m_Localized: Mana Regen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791306
+    m_Localized: Min Physical Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791307
+    m_Localized: Max Physical Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791308
+    m_Localized: Physical Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791309
+    m_Localized: Min Magic Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791310
+    m_Localized: Max Magic Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791311
+    m_Localized: Magic Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985600
+    m_Localized: Physical Defense
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985601
+    m_Localized: MagicDefense
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985602
+    m_Localized: Attack Speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985603
+    m_Localized: Accuracy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985604
+    m_Localized: Evasion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985605
+    m_Localized: CriticalChance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985606
+    m_Localized: CriticalDamage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985607
+    m_Localized: Detection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985608
+    m_Localized: Carry Capacity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985609
+    m_Localized: Per +1 {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985610
+    m_Localized: Current Stats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985611
+    m_Localized: Base Stat
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -19,6 +19,8 @@ public class TooltipController : MonoBehaviour
 
     public void ShowTooltip(ITooltipProvider provider, RectTransform target)
     {
+        tooltipData.Clear();
+
         if (!provider.TryGetTooltipData(tooltipData))
             return;
 

@@ -22,8 +22,7 @@ public class UI_JobButton : MonoBehaviour, IPointerEnterHandler
         UpdateName();
         image.sprite = playerSo.EntityImage;
 
-        button.onClick.RemoveAllListeners();
-        button.onClick.AddListener(OnClick);
+        button.SetClick(OnClick);
     }
 
     public void UpdateName()

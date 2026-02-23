@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Localization;
 
 [CreateAssetMenu(menuName = "Game/Action/InfoActionMenuSo", fileName = "InfoActionMenuSo")]
 public class InfoActionMenuSo : ActionMenuSo

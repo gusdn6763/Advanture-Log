@@ -8,8 +8,8 @@ public class UiManager : MonoBehaviour
     public void Init()
     {
         tooltipController.Init();
+        settingUI.Init();
     }
-
 
     public void BindSceneUi(UiController ui)
     {
@@ -102,9 +102,5 @@ public class UiManager : MonoBehaviour
     {
         tooltipController.HideTooltip(target);
     }
-    #endregion
-
-    #region 페이드 창
-
     #endregion
 }

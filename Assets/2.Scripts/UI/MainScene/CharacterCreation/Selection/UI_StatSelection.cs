@@ -186,7 +186,7 @@ public class UI_StatSelection : MonoBehaviour, ICharacterCreationSection
     #region 외부 호출
     public void SetJob(PlayerSo playerSo)
     {
-        startPoint = Define.StartPoint;
+        startPoint = Managers.Game.StartPoint;
         currentJobId = playerSo.Id;
 
         foreach (KeyValuePair<MainStatType, int> kv in playerSo.BaseMainStatDic)

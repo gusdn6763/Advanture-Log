@@ -1,20 +1,23 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Text;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
-    #region GameSaveData
-    GameSaveData saveData = new GameSaveData();
-    public GameSaveData SaveData { get { return saveData; } set { saveData = value; } }
-    #endregion
+    public void Init()
+    {
+        OnDayChanged += HandleDayChanged_AutoSave;
+    }
 
     #region 시간
-    public event Action<int> OnTimeAdvanced;           // 지나간 시간
+    public event Action<int> OnTimeAdvanced;          // 지나간 시간
     public event Action<int> OnDayChanged;            // 날짜 변경시
     public event Action<int, int> OnClockChanged;     // 현재 시간
 
+    public int LastAutoSaveDay { get; set; }
     public int Day { get; private set; }
     public int Hour { get; private set; }
     public int Minute { get; private set; }
@@ -47,5 +50,50 @@ public class GameManager : MonoBehaviour
     {
         return (Day - 1) * 1440 + (Hour * 60) + (Minute);
     }
+    public void HandleDayChanged_AutoSave(int newDay)
+    {
+        int interval = Managers.Setting.GameplaySetting.AutoSavePeriod;
+
+        if (interval <= 0)
+            return;
+
+        // lastAutoSaveDay 초기화 정책:
+        // - 로드게임이면 ApplySaveData에서 복원하는 게 최선
+        // - 새 게임이면 1일 시작 기준으로 잡는 게 보통
+        if (LastAutoSaveDay <= 0)
+            LastAutoSaveDay = newDay;
+
+        int passed = newDay - LastAutoSaveDay;
+        if (passed < interval)
+            return;
+
+        // 실제 저장은 SaveManager(IO) 호출
+        bool ok = SaveGame(currentGameSlot); // 아래 SaveGame 구현 참고
+        if (ok)
+            LastAutoSaveDay = newDay;
+    }
+
+    public void AutoSavePeriodChanged()
+    {
+        LastAutoSaveDay = Day;
+    }
+
+    #endregion
+
+    #region 기타
+    public int StartPoint { get; set; } = 5;        //초기 설정 가능한 스탯 포인트
+    public int DefaultAccuracy { get; set; } = 50;  //기본 맞을 확률
+    #endregion
+
+    #region 저장
+    private int currentGameSlot;
+
+    public bool SaveGame(int slot)
+    {
+        GameSaveData data = new GameSaveData();
+        return Managers.Save.SaveGame(slot, data);
+    }
+
     #endregion
 }
+

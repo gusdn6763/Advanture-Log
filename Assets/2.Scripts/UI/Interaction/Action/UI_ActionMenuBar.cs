@@ -8,12 +8,16 @@ public class UI_ActionMenuBar : UI_PopupBase
     [SerializeField] private int createCount = 5;
 
     private List<UI_ActionMenuButton> actionMenuButtons = new List<UI_ActionMenuButton>();
+    private KeySetting keySetting;
     private RectTransform rect;
 
     public override bool Init()
     {
         if (!base.Init())
             return false;
+
+        // 미리 캐싱
+        keySetting = Managers.Setting.KeySetting;
 
         rect = GetComponent<RectTransform>();
 
@@ -32,7 +36,7 @@ public class UI_ActionMenuBar : UI_PopupBase
         return button;
     }
 
-    public void OpenMenu(BaseEntity target, List<ActionMenuSo> targetMenus)
+    public void OpenMenu(BaseEntity target, IReadOnlyList<ActionMenuSo> targetMenus)
     {
         //원래 메뉴보다 많으면 생성
         while (actionMenuButtons.Count < targetMenus.Count)
@@ -45,7 +49,14 @@ public class UI_ActionMenuBar : UI_PopupBase
             ActionMenuSo targetMenu = targetMenus[i];
 
             actionMenuButton.gameObject.SetActive(true);
-            actionMenuButton.SetText(targetMenu.ActionName.GetLocalizedString());
+
+            InputActionData inputActionData = keySetting.GetInputActionData(targetMenu.InputAction);
+
+            if (inputActionData != null)
+                actionMenuButton.SetText($"{inputActionData.DisplayName.GetLocalizedString()} {inputActionData.keyCode}");
+            else
+                actionMenuButton.SetText(string.Empty);
+
             actionMenuButton.Setup(targetMenu, target);
         }
 

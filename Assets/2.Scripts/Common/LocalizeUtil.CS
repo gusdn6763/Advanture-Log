@@ -24,9 +24,4 @@ public static class LocalizeUtil
     {
         return Get("UI", key, args);
     }
-
-    public static string UI<TEnum>(TEnum value, params object[] args) where TEnum : struct, Enum
-    {
-        return Get("UI", value.ToString(), args);
-    }
 }

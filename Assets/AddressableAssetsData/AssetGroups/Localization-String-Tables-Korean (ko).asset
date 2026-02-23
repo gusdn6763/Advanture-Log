@@ -23,6 +23,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ko
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 35beae165514db249a9a0ce46125e87e
+    m_Address: Stat_ko
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ko
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4cdfff0c3b5074248af24afcebe95a6d
+    m_Address: InputAction_ko
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ko
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 607ebccbf90eeb3419ec8400327398b2
     m_Address: Entity Description_ko
     m_ReadOnly: 1
@@ -41,6 +53,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ko
     - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1a4c3f9b3028544191ae1f9977c582d
+    m_Address: Setting_ko
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ko
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f9f6c6661afc1544c94729bf3f3d3449
     m_Address: Area_ko

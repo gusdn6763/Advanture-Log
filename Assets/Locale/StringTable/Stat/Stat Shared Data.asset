@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Stat Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Stat
+  m_TableCollectionNameGuidString: f0dddf1de1440f440a3970aa3f9372dc
+  m_Entries:
+  - m_Id: 15262265344
+    m_Key: Stat_Stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791296
+    m_Key: Stat_Strength
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791297
+    m_Key: Stat_Dexterity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791298
+    m_Key: Stat_Constitution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791299
+    m_Key: Stat_Intelligence
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791300
+    m_Key: Stat_Perception
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791302
+    m_Key: Stat_MaxHealth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791303
+    m_Key: Stat_HealthRegen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791304
+    m_Key: Stat_MaxMana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791305
+    m_Key: Stat_ManaRegen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791306
+    m_Key: Stat_MinPhysicalDamage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791307
+    m_Key: Stat_MaxPhysicalDamage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791308
+    m_Key: Stat_PhysicalDamage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791309
+    m_Key: Stat_MinMagicDamage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791310
+    m_Key: Stat_MaxMagicDamage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15316791311
+    m_Key: Stat_MagicDamage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985600
+    m_Key: Stat_PhysicalDefense
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985601
+    m_Key: Stat_MagicDefense
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985602
+    m_Key: Stat_AttackSpeed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985603
+    m_Key: Stat_Accuracy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985604
+    m_Key: Stat_Evasion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985605
+    m_Key: Stat_CriticalChance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985606
+    m_Key: Stat_CriticalDamage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985607
+    m_Key: Stat_Detection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985608
+    m_Key: Stat_CarryCapacity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985609
+    m_Key: Stat_IncreaseStat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985610
+    m_Key: Stat_Current Stats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15320985611
+    m_Key: Stat_BaseStat
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3427041838228570119
+  references:
+    version: 2
+    RefIds:
+    - rid: 3427041838228570119
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1771485971354

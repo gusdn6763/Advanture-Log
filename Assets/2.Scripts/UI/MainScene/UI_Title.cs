@@ -35,8 +35,7 @@ public class UI_Title : MonoBehaviour
         if (button == null)
             return;
 
-        button.onClick.RemoveAllListeners();
-        button.onClick.AddListener(() => action?.Invoke());
+        button.SetClick(() => action?.Invoke());
     }
 
 

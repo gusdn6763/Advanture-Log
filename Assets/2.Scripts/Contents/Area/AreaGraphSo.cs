@@ -27,7 +27,7 @@ public class AreaGraphSo : ScriptableObject
 {
     [SerializeField] private List<AreaVertex> vertices = new List<AreaVertex>();
 
-    public Dictionary<AreaSo, List<AreaNeighbor>> AreaGraph { get; private set; }   //vertices를 쉽게 풀어쓴 변수
+    private Dictionary<AreaSo, List<AreaNeighbor>> areaGraph = new Dictionary<AreaSo, List<AreaNeighbor>>();  //vertices를 쉽게 풀어쓴 변수
 
     private void OnEnable()
     {
@@ -36,15 +36,15 @@ public class AreaGraphSo : ScriptableObject
 
     private void CreateAreaGraph()
     {
-        AreaGraph = new Dictionary<AreaSo, List<AreaNeighbor>>();
+        areaGraph.Clear();
 
         //정점 등록, new List<AreaNeighbor>()를 넣는 이유는 원본 데이터와 분리하기 위함
         int vCount = vertices.Count;
         for (int i = 0; i < vCount; i++)
         {
             AreaSo area = vertices[i].area;
-            if (!AreaGraph.ContainsKey(area))
-                AreaGraph.Add(area, new List<AreaNeighbor>());
+            if (!areaGraph.ContainsKey(area))
+                areaGraph.Add(area, new List<AreaNeighbor>());
         }
 
         //간선 등록
@@ -57,7 +57,7 @@ public class AreaGraphSo : ScriptableObject
             {
                 AreaNeighbor n = vertex.neighbors[j];
 
-                AreaGraph[vertex.area].Add(new AreaNeighbor { to = n.to, cost = n.cost });
+                areaGraph[vertex.area].Add(new AreaNeighbor { to = n.to, cost = n.cost });
             }
         }
     }
@@ -81,7 +81,7 @@ public class AreaGraphSo : ScriptableObject
             AreaSo cur = q.Dequeue();
             result.Add(cur);
 
-            List<AreaNeighbor> neighbors = AreaGraph[cur];
+            List<AreaNeighbor> neighbors = areaGraph[cur];
             for (int i = 0; i < neighbors.Count; i++)
             {
                 AreaSo next = neighbors[i].to;
@@ -97,7 +97,7 @@ public class AreaGraphSo : ScriptableObject
     public Dictionary<AreaSo, int> GetMinCostsFrom(AreaSo start)
     {
         Dictionary<AreaSo, int> dist = new Dictionary<AreaSo, int>();
-        foreach (KeyValuePair<AreaSo, List<AreaNeighbor>> kv in AreaGraph)
+        foreach (KeyValuePair<AreaSo, List<AreaNeighbor>> kv in areaGraph)
             dist[kv.Key] = int.MaxValue;
 
         dist[start] = 0;
@@ -126,7 +126,7 @@ public class AreaGraphSo : ScriptableObject
 
             done.Add(current);
 
-            List<AreaNeighbor> neighbors = AreaGraph[current];
+            List<AreaNeighbor> neighbors = areaGraph[current];
             for (int i = 0; i < neighbors.Count; i++)
             {
                 AreaNeighbor edge = neighbors[i];

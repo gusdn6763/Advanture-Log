@@ -29,13 +29,12 @@ public class UI_ActionMenuButton : MonoBehaviour
         this.action = action;
         this.target = target;
 
-        button.onClick.RemoveAllListeners();
-        button.onClick.AddListener(InvokeAction);
+        button.SetClick(InvokeAction);
     }
 
     private void OnDisable()
     {
-        button.onClick.RemoveAllListeners();
+        button.ClearClick();
     }
 
     private void InvokeAction()
@@ -45,7 +44,7 @@ public class UI_ActionMenuButton : MonoBehaviour
 
     public void SetText(string str)
     {
-        if (text != null) 
+        if (text != null)
             text.text = str;
     }
 }

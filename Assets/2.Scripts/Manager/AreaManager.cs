@@ -2,17 +2,34 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 
 public class AreaManager : MonoBehaviour
 {
     public event Action<Area> OnAreaChanged;
 
+    [SerializeField] private SerializedDictionary<string, AreaSo> areas = new SerializedDictionary<string, AreaSo>();
+
     private Dictionary<string, Area> areaMap = new Dictionary<string, Area>();
     public Area CurrentArea { get; private set; } = null;
     public bool IsMoving { get; private set; } = false;
+
+    public void Init()
+    {
+        foreach (KeyValuePair<string, AreaSo> area in areas)
+            area.Value.SetId(area.Key);
+    }
+
+    public bool TryGetArea(string id, out AreaSo so)
+    {
+        if (areas.TryGetValue(id, out AreaSo baseSo))
+        {
+            so = baseSo;
+            return true;
+        }
+        so = null;
+        return false;
+    }
 
     public Vector2 Cell2World(Vector2Int cellPos) { return Vector2.zero; }
 

@@ -11,7 +11,7 @@ public abstract class BaseEntity : InitBase
     protected BoxCollider2D box;
     protected SpriteRenderer sp;
 
-    public List<ActionMenuSo> ActionMenuList { get => BaseData.ActionMenus; }
+    public IReadOnlyList<ActionMenuSo> ActionMenuList { get => BaseData.ActionMenus; }
     public Vector2 Position { get => transform.position; }
     public Vector2 Size { get => box.size; }
 

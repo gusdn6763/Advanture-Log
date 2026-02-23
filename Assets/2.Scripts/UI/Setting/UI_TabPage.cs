@@ -1,12 +1,27 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
+[DisallowMultipleComponent]
 [RequireComponent(typeof(Button), typeof(Image))]
 public class UI_TabPage : MonoBehaviour
 {
-    [SerializeField] private Button button;
-    [SerializeField] private Image buttonImage;
+    private Button button;
+    private Image buttonImage;
 
-    public Button Button => button;
-    public Image ButtonImage => buttonImage;
+    public void Init()
+    {
+        button = GetComponent<Button>();
+        buttonImage = GetComponent<Image>();
+    }
+
+    public void SetSprite(Sprite sprite)
+    {
+        buttonImage.sprite = sprite;
+    }
+
+    public void BindClick(Action onClick)
+    {
+        button.SetClick(onClick);
+    }
 }

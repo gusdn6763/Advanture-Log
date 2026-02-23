@@ -21,7 +21,7 @@ public class UI_JobSelection : MonoBehaviour, ICharacterCreationSection
 
     public void Init()
     {
-        IEnumerable<PlayerSo> PlayerDatas = Managers.Data.PlayerDatas;
+        IEnumerable<PlayerSo> PlayerDatas = Managers.Data.GetPlayers();
         foreach (PlayerSo so in PlayerDatas)
         {
             UI_JobButton button = Instantiate(jobButtonPrefab, jobButtonTransform);

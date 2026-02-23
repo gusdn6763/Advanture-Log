@@ -16,7 +16,7 @@ public class UI_ActionMenuOverlay : MonoBehaviour, IPointerDownHandler
 
     public void Open(BaseEntity target)
     {
-        List<ActionMenuSo> targetMenus = target.ActionMenuList;
+        IReadOnlyList<ActionMenuSo> targetMenus = target.ActionMenuList;
 
         if (targetMenus.Count == 0)
             return;
