@@ -1,20 +1,16 @@
+using Data;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ObjectManager : MonoBehaviour
 {
     //HashSet = 중복 제거
-    public HashSet<Monster> Monsters { get; } = new HashSet<Monster>();
+    public HashSet<MobEntity> Monsters { get; } = new HashSet<MobEntity>();
 
     public Player CurrentPlayer { get; private set; }
 
-    public T Spawn<T>(Vector2Int cellPos, string id) where T : BaseEntity
-    {
-        Vector2 spawnPos = Managers.Area.Cell2World(cellPos);
-        return Spawn<T>(spawnPos, id);
-    }
-
-    public T Spawn<T>(Vector2 position, string id) where T : BaseEntity
+    public T Spawn<T>(Area area, Vector2 cellPos, string id) where T : BaseEntity
     {
         if (!Managers.Data.TryGetEntity(id, out BaseEntitySo so))
         {
@@ -22,9 +18,9 @@ public class ObjectManager : MonoBehaviour
             return null;
         }
 
-        BaseEntity entity = Instantiate(so.EntityPrefab);
+        BaseEntity entity = Instantiate(so.EntityPrefab, area.transform);
         entity.name = entity.name + "_" + id;
-        entity.transform.position = position;
+        entity.transform.position = area.OriginWorld + cellPos;
         entity.SetInfo(so);
 
         return entity as T;
@@ -36,16 +32,14 @@ public class ObjectManager : MonoBehaviour
         Destroy(obj.gameObject);
     }
 
-    public Player SpawnPlayer(PlayerData data)
+    public Player SpawnPlayer(Area area, GameStartData startData, Vector2 cellPos)
     {
         if (CurrentPlayer != null)
             Despawn(CurrentPlayer);
 
-        Player player = Spawn<Player>(Vector2.zero, data.playerType);
-        if (player == null) 
-            return null;
+        Player player = Spawn<Player>(area, cellPos, startData.jobId);
+        player.SetInfo(startData);
 
-        player.SetUp(data);
         CurrentPlayer = player;
         return player;
     }

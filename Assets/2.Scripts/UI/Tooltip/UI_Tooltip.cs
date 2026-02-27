@@ -5,6 +5,15 @@ using UnityEngine.UI;
 [RequireComponent(typeof(VerticalLayoutGroup), typeof(ContentSizeFitter))]
 public class UI_Tooltip : MonoBehaviour
 {
+    [Header("Texts")]
+    [SerializeField] protected TextMeshProUGUI headerText;
+    [SerializeField] private TooltipLineList headerLineList;
+    [SerializeField] protected Image bodyDivisionImage;
+    [SerializeField] protected TextMeshProUGUI bodyText;
+    [SerializeField] private TooltipLineList bodyLineList;
+    [SerializeField] protected Image bottomDivisionImage;
+    [SerializeField] protected TextMeshProUGUI bottomText;
+
     [Header("스크린 여백 값")]
     [SerializeField] private Vector2 screenMargin = new Vector2(8f, 8f);
 
@@ -15,18 +24,10 @@ public class UI_Tooltip : MonoBehaviour
     [SerializeField] private float minWidth;
     [SerializeField] private float maxWidth;
 
-    [Header("Texts")]
-    [SerializeField] protected TextMeshProUGUI headerText;
-    [SerializeField] private TooltipLineList headerLineList;
-    [SerializeField] protected Image bodyDivisionImage;
-    [SerializeField] protected TextMeshProUGUI bodyText;
-    [SerializeField] private TooltipLineList bodyLineList;
-    [SerializeField] protected Image bottomDivisionImage;
-    [SerializeField] protected TextMeshProUGUI bottomText;
-
     protected RectTransform canvasRect;
     protected RectTransform tooltipRect;
     protected VerticalLayoutGroup verticalLayoutGroup;
+
     public virtual void Init(RectTransform rectTransform)
     {
         canvasRect = rectTransform;

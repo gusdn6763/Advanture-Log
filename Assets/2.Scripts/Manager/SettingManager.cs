@@ -23,12 +23,7 @@ public class SettingManager : MonoBehaviour
         SoundSetting.Init();
         KeySetting.Init(defaultSettingSo);
 
-        if (!Managers.Save.TryLoadSettingData(out settingData))
-        {
-            settingData = new SettingData();
-            settingData.Init(defaultSettingSo);
-            Managers.Save.SaveSettingData(settingData);
-        }
+        SettingData settingData = Managers.Save.LoadSettingData(defaultSettingSo);
 
         // Àû¿ë
         GraphicsSetting.Load(settingData);

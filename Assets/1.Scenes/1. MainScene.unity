@@ -609,7 +609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataManager: {fileID: 2106859095}
-  saveManager: {fileID: 0}
+  saveManager: {fileID: 885106343}
   settingManager: {fileID: 41318306}
   areaManager: {fileID: 1552561535}
   objectManager: {fileID: 1784833422}

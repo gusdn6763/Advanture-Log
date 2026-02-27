@@ -1,3 +1,4 @@
+using Data;
 using Newtonsoft.Json;
 using System;
 using System.IO;
@@ -26,26 +27,24 @@ public class SaveManager : MonoBehaviour
     }
 
     #region 설정창
-    public bool TryLoadSettingData(out SettingData data)
+    public SettingData LoadSettingData(DefaultSettingSo defaultSettingData)
     {
-        data = null;
-
         try
         {
+            SettingData settingData = new SettingData();
             if (!File.Exists(settingPath))
-                return false;
-
-            string json = File.ReadAllText(settingPath, Encoding.UTF8);
-            data = JsonConvert.DeserializeObject<SettingData>(json);
-
-            // 역직렬화 실패(파일 손상 등)
-            return data != null;
+                settingData.Init(defaultSettingData);
+            else
+            {
+                string json = File.ReadAllText(settingPath, Encoding.UTF8);
+                settingData = JsonConvert.DeserializeObject<SettingData>(json);
+            }
+            return settingData;
         }
         catch (Exception e)
         {
             Debug.LogError($"[SaveManager] OptionData 로드 실패: {e}");
-            data = null;
-            return false;
+            return null;
         }
     }
 
@@ -57,7 +56,9 @@ public class SaveManager : MonoBehaviour
         try
         {
             string json = JsonConvert.SerializeObject(data, Formatting.Indented);
-            return WriteAtomic(settingPath, json);
+            File.WriteAllText(settingPath, json);
+            Debug.Log(settingPath + "의 위치에 저장했습니다.");
+            return true;
         }
         catch (Exception e)
         {
@@ -78,46 +79,13 @@ public class SaveManager : MonoBehaviour
         try
         {
             string json = JsonConvert.SerializeObject(data, Formatting.Indented);
-            return WriteAtomic(path, json);
-        }
-        catch (Exception e)
-        {
-            Debug.LogError($"[SaveManager] GameSave 저장 실패(slot {slot}): {e}");
-            return false;
-        }
-    }
-    #endregion
-
-    #region 공통 유틸 - 안전 저장
-    private bool WriteAtomic(string path, string contents)
-    {
-        // tmp에 쓰고 → 교체
-        string tmpPath = path + ".tmp";
-
-        try
-        {
-            File.WriteAllText(tmpPath, contents, Encoding.UTF8);
-
-            if (File.Exists(path))
-                File.Delete(path);
-
-            File.Move(tmpPath, path);
+            File.WriteAllText(path, json);
+            Debug.Log(path + "의 위치에 저장했습니다.");
             return true;
         }
         catch (Exception e)
         {
-            Debug.LogError($"[SaveManager] WriteAtomic 실패: {e}");
-
-            // tmp가 남았으면 정리 시도
-            try
-            {
-                if (File.Exists(tmpPath)) 
-                    File.Delete(tmpPath);
-            }
-            catch
-            {
-            }
-
+            Debug.LogError($"[SaveManager] GameSave 저장 실패(slot {slot}): {e}");
             return false;
         }
     }

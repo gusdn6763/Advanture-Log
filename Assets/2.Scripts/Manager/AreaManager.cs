@@ -9,6 +9,7 @@ public class AreaManager : MonoBehaviour
     public event Action<Area> OnAreaChanged;
 
     [SerializeField] private SerializedDictionary<string, AreaSo> areas = new SerializedDictionary<string, AreaSo>();
+    [SerializeField] private SpriteRenderer gridImage;
 
     private Dictionary<string, Area> areaMap = new Dictionary<string, Area>();
     public Area CurrentArea { get; private set; } = null;
@@ -18,20 +19,11 @@ public class AreaManager : MonoBehaviour
     {
         foreach (KeyValuePair<string, AreaSo> area in areas)
             area.Value.SetId(area.Key);
-    }
 
-    public bool TryGetArea(string id, out AreaSo so)
-    {
-        if (areas.TryGetValue(id, out AreaSo baseSo))
-        {
-            so = baseSo;
-            return true;
-        }
-        so = null;
-        return false;
+        gridImage = GetComponent<SpriteRenderer>();
+        gridImage.drawMode = SpriteDrawMode.Tiled;
+        gridImage.size = Vector2.zero;
     }
-
-    public Vector2 Cell2World(Vector2Int cellPos) { return Vector2.zero; }
 
     public IEnumerator CreateAreas(AreaGraphSo areaGraph, Action<string, int, int> callback)
     {
@@ -44,8 +36,7 @@ public class AreaManager : MonoBehaviour
             callback?.Invoke("Loading Area", i + 1, areaCount);
 
             Area area = Instantiate(areaData.AreaPrefab, transform);
-            area.SetInfo(areaData);
-            area.SpawnFixedEntities();
+            area.Init(areaData);
             area.name = $"Area_{areaData.Id}";
             area.gameObject.SetActive(false);
 
@@ -62,12 +53,15 @@ public class AreaManager : MonoBehaviour
 
         IsMoving = true;
 
+        //특정 효과
+        
+
         if (CurrentArea != null)
             CurrentArea.ExitArea();
 
         if (!areaMap.TryGetValue(areaId, out Area nextArea))
         {
-            Debug.LogError($"[Area] Not found: {areaId}");
+            IsMoving = false;
             yield break;
         }
 
@@ -78,18 +72,5 @@ public class AreaManager : MonoBehaviour
 
         IsMoving = false;
     }
-
-    private void ReleaseAllAreas()
-    {
-        areaMap.Clear();
-        CurrentArea = null;
-    }
-
-    #region Load
-    public void LoadAreas(string str)
-    {
-        //지역 데이터를 받은 후 추가 오브젝트 불러오기.
-    }
-    #endregion
 }
 

@@ -44,7 +44,7 @@ public enum SubStatType
 /// <summary>
 /// 스탯 계산 타입
 /// </summary>
-public enum StatCalculateType
+public enum CalculateType
 {
     Flat,           // 고정 증감
     PercentAdd,     // 퍼센트 합산
@@ -59,6 +59,15 @@ public enum StatDisplayType
 {
     Flat, 
     Percent
+}
+
+/// <summary>
+/// 플레이어 자원
+/// </summary>
+public enum NeedType
+{
+    Hunger,
+    Sleep,
 }
 
 /// <summary>
@@ -119,15 +128,6 @@ public enum ItemRarity
 }
 
 /// <summary>
-/// 플레이어 자원
-/// </summary>
-public enum NeedType
-{
-    Hunger,
-    Sleep,
-}
-
-/// <summary>
 /// 플레이어 상태
 /// </summary>
 public enum NeedTier
@@ -136,6 +136,28 @@ public enum NeedTier
     Normal,
     Tired,
     Exhausted
+}
+
+/// <summary>
+/// 버프/디버프 적용 규칙
+/// </summary>
+public enum ApplyRule
+{
+    None,
+    RefreshDuration,    //재적용 
+    Stack,              //스택
+}
+
+/// <summary>
+/// 몹의 상태
+/// </summary>
+public enum EnemyState
+{
+    None,
+    Idle,
+    Alert,
+    Combat,
+    Dead
 }
 
 /// <summary>
@@ -158,6 +180,14 @@ public enum UiType
     Inventory,
     Quest,
     Info,
+}
+
+/// <summary>
+/// 장착 부위
+/// </summary>
+public enum EquipmentSlotType
+{
+    Helmet, Chest, Gloves, Boots, Ring, Amulet, Belt, Cloak, Accessory
 }
 
 /// <summary>

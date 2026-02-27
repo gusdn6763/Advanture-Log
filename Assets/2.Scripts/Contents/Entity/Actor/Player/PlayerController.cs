@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveTime = 0.5f; // 1칸 이동에 소요되는 시간
 
     KeySetting keySetting;
-    private bool isMoving;
+    private bool isMoving = false;
 
     private void Awake()
     {
@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
         if (isMoving)
             return;
 
-        if (Input.GetKeyDown(keySetting.GetKeyCode(InputAction.LeftMove)))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             StartCoroutine(MoveCoroutine(Vector3.left));
         }
@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(MoveCoroutine(Vector3.right));
         }
-        else if (Input.GetKeyDown(keySetting.GetKeyCode(InputAction.UpMove)))
+        else if (Input.GetKey(KeyCode.UpArrow))
         {
             StartCoroutine(MoveCoroutine(Vector3.up));
         }
@@ -34,6 +34,22 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(MoveCoroutine(Vector3.down));
         }
+        //if (Input.GetKeyDown(keySetting.GetKeyCode(InputAction.LeftMove)))
+        //{
+        //    StartCoroutine(MoveCoroutine(Vector3.left));
+        //}
+        //else if (Input.GetKey(KeyCode.RightArrow))
+        //{
+        //    StartCoroutine(MoveCoroutine(Vector3.right));
+        //}
+        //else if (Input.GetKeyDown(keySetting.GetKeyCode(InputAction.UpMove)))
+        //{
+        //    StartCoroutine(MoveCoroutine(Vector3.up));
+        //}
+        //else if (Input.GetKey(KeyCode.DownArrow))
+        //{
+        //    StartCoroutine(MoveCoroutine(Vector3.down));
+        //}
 
 
     }

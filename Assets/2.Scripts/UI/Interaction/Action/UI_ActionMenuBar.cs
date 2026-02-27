@@ -64,7 +64,7 @@ public class UI_ActionMenuBar : UI_PopupBase
         for (int i = actionMenuButtons.Count - 1; i >= targetMenus.Count; i--)
             actionMenuButtons[i].gameObject.SetActive(false);
 
-        SetMenuPosition(target.Position);
+        SetMenuPosition(target.transform.position);
     }
 
     /// <summary>

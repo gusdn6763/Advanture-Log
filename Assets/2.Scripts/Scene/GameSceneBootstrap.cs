@@ -10,9 +10,9 @@ public interface IBootstraper
 public class GameSceneBootstrap : MonoBehaviour, IBootstraper
 {
     [SerializeField] private AreaGraphSo areaGraph;
-
     [SerializeField] private InteractionController interactionController;
     [SerializeField] private UiController uiController;
+    [SerializeField] private AreaSo startArea;
 
     public IEnumerator Initialize(ILoadProgress progress, GameStartData data)
     {
@@ -22,17 +22,12 @@ public class GameSceneBootstrap : MonoBehaviour, IBootstraper
             progress.UpdateMessage($"Loading Area: {key} {count}/{totalCount}");
         });
 
-        progress.UpdateMessage("Create Player...");
-        Player player = null;
-        if (data.load)
-        {
-            //player = Managers.Object.SpawnPlayer(data);
-        }
-        else
-        {
-            //player = Managers.Object.SpawnPlayer(data);
-        }
-        progress.UpdateMessage("Init UI...");
+        yield return Managers.Area.EnterArea(startArea.Id);
+
+        progress.UpdateMessage("Setting Data...");
+        Player player = Managers.Object.SpawnPlayer(Managers.Area.CurrentArea, data, Vector2.zero);
+
+        interactionController.Init(player);
         uiController.Init(player);
 
         progress.UpdateMessage("Complete");

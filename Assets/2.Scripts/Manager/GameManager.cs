@@ -1,3 +1,4 @@
+using Data;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -68,11 +69,25 @@ public class GameManager : MonoBehaviour
             return;
 
         // 실제 저장은 SaveManager(IO) 호출
-        bool ok = SaveGame(currentGameSlot); // 아래 SaveGame 구현 참고
+        bool ok = SaveGame(); // 아래 SaveGame 구현 참고
         if (ok)
             LastAutoSaveDay = newDay;
     }
-
+    /// <summary>
+    /// 총 분 -> (일, 시, 분)
+    /// </summary>
+    /// <param name="totalMinutes"></param>
+    /// <param name="days"></param>
+    /// <param name="hours"></param>
+    /// <param name="minutes"></param>
+    public static void SplitMinutesDHM(int totalMinutes, out int days, out int hours, out int minutes)
+    {
+        totalMinutes = Mathf.Max(0, totalMinutes);
+        days = totalMinutes / 1440;
+        int rem = totalMinutes % 1440;
+        hours = rem / 60;
+        minutes = rem % 60;
+    }
     public void AutoSavePeriodChanged()
     {
         LastAutoSaveDay = Day;
@@ -86,12 +101,14 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region 저장
-    private int currentGameSlot;
+    public int CurrentGameSlot { get; private set; }
 
-    public bool SaveGame(int slot)
+    public bool SaveGame()
     {
         GameSaveData data = new GameSaveData();
-        return Managers.Save.SaveGame(slot, data);
+        //data.TimeData = 0;
+
+        return Managers.Save.SaveGame(CurrentGameSlot, data);
     }
 
     #endregion

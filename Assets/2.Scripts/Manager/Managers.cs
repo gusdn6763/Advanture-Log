@@ -12,6 +12,7 @@ public class Managers : MonoBehaviour
     [SerializeField] private ObjectManager objectManager;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private UiManager uiManager;
+    [SerializeField] private QuestManager questManager;
 
     public static DataManager Data => Instance?.dataManager;
     public static SaveManager Save => Instance?.saveManager;
@@ -20,6 +21,7 @@ public class Managers : MonoBehaviour
     public static ObjectManager Object => Instance?.objectManager;
     public static GameManager Game => Instance?.gameManager;
     public static UiManager UI => Instance?.uiManager;
+    public static QuestManager Quest => Instance?.questManager;
 
     public static void Init()
     {

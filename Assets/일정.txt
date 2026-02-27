@@ -195,11 +195,16 @@ B안. 상호작용 가능 행동들을
 2. 캐릭터 생성창 설명 기능 추가
 
 02-19~02-23
-1. 설정창 구현
+1. Setting폴더, GamePlaySetting, GraphicSetting, KeySetting, SoundSetting 설정창 구현
 2. 설정창 SaveManager 기초 구축
 3. ActionMenuSo 수정
 - 사유: 키설정창에서 중복되는 데이터 존재. -> 키설정창의 행동 텍스트와 상호작용 리스트의 텍스트는 동일시 하겠다고 결정.
 
+
+02-24 ~ 02-27
+1. 보충역 관련 게임 개발자 전무로 인한 커리어 고민
+2. 이전 프로젝트 병합.
+3. Astar 알고리즘 및 InteractionController 기반 구축
 
 SRP (Single Responsibility Principle, 단일 책임 원칙): 
 클래스는 단 하나의 책임(기능)만 가져야 하며, 변경해야 할 이유는 오직 하나여야 합니다.

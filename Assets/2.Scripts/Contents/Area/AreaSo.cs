@@ -7,15 +7,16 @@ using UnityEngine.Localization;
 public class FixedSpawnEntry
 {
     public BaseEntitySo entitySo;
-    public Vector3 localPos;
+    public Vector2Int cellPos;
 }
 
 [Serializable]
 public class ExploreSpawnEntry
 {
     public BaseEntitySo entitySo;
-    public int spawnCount;
-    public float spawnPercent;
+
+    [Header("스폰 갯수 가중치")]
+    public WeightedTable countWeights = new WeightedTable();
 }
 
 [CreateAssetMenu(menuName = "Game/Area/Area", fileName = "Area")]
@@ -27,10 +28,10 @@ public class AreaSo : ScriptableObject
     [SerializeField] private List<LocalizedString> backgroundText = new List<LocalizedString>();
 
     [Header("고정 스폰")]
-    [SerializeField] private List<FixedSpawnEntry> fixedSpawnEntry = new List<FixedSpawnEntry>();
+    [SerializeField] private List<FixedSpawnEntry> fixedSpawnList = new List<FixedSpawnEntry>();
 
     [Header("탐색 스폰")]
-    [SerializeField] private List<ExploreSpawnEntry> exploreSpawnEntry = new List<ExploreSpawnEntry>();
+    [SerializeField] private List<ExploreSpawnEntry> exploreSpawnList = new List<ExploreSpawnEntry>();
 
     [Header("프리팹")]
     [SerializeField] private Area areaPrefab;
@@ -44,14 +45,17 @@ public class AreaSo : ScriptableObject
     [Header("지역 리셋 여부")]
     [SerializeField] private bool resetArea;
 
+    [Header("크기")]
+    [SerializeField] private Vector2Int size;
+
     public IReadOnlyList<LocalizedString> BackgroundText => backgroundText;
-    public IReadOnlyList<FixedSpawnEntry> FixedSpawnEntry => fixedSpawnEntry;
-    public IReadOnlyList<ExploreSpawnEntry> ExploreSpawnEntry => exploreSpawnEntry;
+    public IReadOnlyList<FixedSpawnEntry> FixedSpawnList => fixedSpawnList;
+    public IReadOnlyList<ExploreSpawnEntry> ExploreSpawnList => exploreSpawnList;
     public Area AreaPrefab => areaPrefab;
     public LocalizedString AreaName => areaName;
     public Sprite BackgroundSprite => backgroundSprite;
     public bool ResetArea => resetArea;
-
+    public Vector2Int Size => size;
     public void SetId(string id)
     {
         if (string.IsNullOrEmpty(Id))

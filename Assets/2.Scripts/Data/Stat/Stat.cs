@@ -4,39 +4,25 @@ using UnityEngine.Localization;
 
 public abstract class Stat
 {
-    protected List<StatModifier> modifiers = new List<StatModifier>();
+    public event Action<Stat> OnChanged;
 
+    protected List<StatModifier> modifiers = new List<StatModifier>();
     protected LocalizedString name;
     protected float baseValue;
     protected float finalValue;
 
     public string Name { get => name.GetLocalizedString(); }
-    public virtual float BaseValue { get => baseValue; set { baseValue = value; CalculateFinalValue(); } }
-    public virtual float FinalValue { get => finalValue; }
-
-    #region 계산 로직
-    private float GetModifierSums(StatCalculateType StatCalculateType)
+    public virtual float BaseValue
     {
-        float sum = 0;
-        foreach (StatModifier modifier in modifiers)
+        get => baseValue;
+        set
         {
-            if (StatCalculateType == modifier.Type)
-                sum += modifier.Value;
+            baseValue = value; 
+            CalculateFinalValue();
         }
-
-        return sum;
     }
 
-    private void CalculateFinalValue()
-    {
-        float sumFlat = GetModifierSums(StatCalculateType.Flat);
-        float sumAdd = GetModifierSums(StatCalculateType.PercentAdd);
-        float sumMult = GetModifierSums(StatCalculateType.PercentMult);
-
-        float adjustedBase = baseValue * (1f + sumAdd);
-        finalValue = (adjustedBase + sumFlat) * (1f + sumMult);
-    }
-    #endregion
+    public virtual float FinalValue { get => finalValue; }
 
     public void AddModifier(StatModifier mod)
     {
@@ -72,4 +58,29 @@ public abstract class Stat
 
         return removed;
     }
+
+    #region 계산 로직
+    protected void CalculateFinalValue()
+    {
+        float sumFlat = GetModifierSums(CalculateType.Flat);
+        float sumAdd = GetModifierSums(CalculateType.PercentAdd);
+        float sumMult = GetModifierSums(CalculateType.PercentMult);
+
+        float adjustedBase = baseValue * (1f + sumAdd);
+        finalValue = (adjustedBase + sumFlat) * (1f + sumMult);
+        OnChanged?.Invoke(this);
+    }
+
+    private float GetModifierSums(CalculateType CalculateType)
+    {
+        float sum = 0;
+        foreach (StatModifier modifier in modifiers)
+        {
+            if (CalculateType == modifier.Type)
+                sum += modifier.Value;
+        }
+
+        return sum;
+    }
+    #endregion
 }

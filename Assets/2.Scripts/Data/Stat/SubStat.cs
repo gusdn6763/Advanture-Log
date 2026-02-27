@@ -4,8 +4,6 @@ using UnityEngine;
 [Serializable]
 public class SubStat : Stat
 {
-    public SubStatType Type { get; }
-
     private StatDisplayType displayType;
     private float maxValue = float.MaxValue;
 
@@ -15,8 +13,6 @@ public class SubStat : Stat
 
     public SubStat(SubStatType type, float value)
     {
-        Type = type;
-
         StatRuleSo statRuleSo = Managers.Data.StatRule;
 
         if (!statRuleSo.TryGet(type, out SubStatRule rule))
@@ -30,5 +26,15 @@ public class SubStat : Stat
         maxValue = rule.MaxValue;
 
         BaseValue = Mathf.Clamp(value, 0f, maxValue);
+    }
+
+    public void ReplaceMainStatValue(MainStatType mainType, float value)
+    {
+        //이벤트를 여러 번 불러오지 않기 위해 따로 할당
+        modifiers.RemoveAll(m => m != null && Equals(m.Source, mainType));
+
+        modifiers.Add(new StatModifier(value, CalculateType.Flat, mainType));
+
+        CalculateFinalValue();
     }
 }

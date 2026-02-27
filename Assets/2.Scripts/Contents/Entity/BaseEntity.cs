@@ -1,19 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using Data;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.ResourceManagement.AsyncOperations;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(BoxCollider2D), typeof(SpriteRenderer))]
 public abstract class BaseEntity : InitBase
 {
-    public BaseEntitySo BaseData { get; private set; }
+    protected BaseEntitySo baseData;
 
     protected BoxCollider2D box;
     protected SpriteRenderer sp;
 
-    public IReadOnlyList<ActionMenuSo> ActionMenuList { get => BaseData.ActionMenus; }
-    public Vector2 Position { get => transform.position; }
-    public Vector2 Size { get => box.size; }
+    public IReadOnlyList<ActionMenuSo> ActionMenuList { get => baseData.ActionMenus; }
+    public bool Block { get => baseData.IsBlock; }
 
     public override bool Init()
     {
@@ -28,10 +27,29 @@ public abstract class BaseEntity : InitBase
 
     public virtual void SetInfo(BaseEntitySo data)
     {
-        BaseData = data;
+        baseData = data;
 
-        sp.sprite = BaseData.EntityImage;
+        sp.sprite = baseData.EntityImage;
         box.size = sp.sprite.bounds.size;
         box.offset = Vector2.zero;
+    }
+
+    public virtual BaseSaveData SaveData()
+    {
+        BaseSaveData data = new BaseSaveData();
+
+        data.Id = baseData.Id;
+
+        return data;
+    }
+
+    public virtual bool LoadData(BaseSaveData BaseSaveData)
+    {
+        if (BaseSaveData is ActorSaveData actorSaveData)
+        {
+            return true;
+        }
+        else
+            return false;
     }
 }
