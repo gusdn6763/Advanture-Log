@@ -98,3 +98,10 @@ InitTestScene*.unity*
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 /[Aa]ssets/[Pp]lugins/
+
+# 아래 플러그인은 추적 허용
+!/Assets/Plugins/SerializedCollections/
+!/Assets/Plugins/SerializedCollections/**
+
+!/Assets/TextMesh Pro/
+!/Assets/TextMesh Pro/**
