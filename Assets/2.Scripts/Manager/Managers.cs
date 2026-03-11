@@ -3,7 +3,7 @@
 public class Managers : MonoBehaviour
 {
     private static Managers instance;
-    private static Managers Instance { get { Init(); return instance; } }
+    private static Managers Instance { get { EnsureInit(); return instance; } }
 
     [SerializeField] private DataManager dataManager;
     [SerializeField] private SaveManager saveManager;
@@ -23,7 +23,13 @@ public class Managers : MonoBehaviour
     public static UiManager UI => Instance?.uiManager;
     public static QuestManager Quest => Instance?.questManager;
 
-    public static void Init()
+    public void Init()
+    {
+        EnsureInit();
+    }
+
+
+    public static void EnsureInit()
     {
         if (instance != null)
             return;

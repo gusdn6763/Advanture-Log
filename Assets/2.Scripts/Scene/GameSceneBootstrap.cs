@@ -10,8 +10,8 @@ public interface IBootstraper
 public class GameSceneBootstrap : MonoBehaviour, IBootstraper
 {
     [SerializeField] private AreaGraphSo areaGraph;
-    [SerializeField] private InteractionController interactionController;
-    [SerializeField] private UiController uiController;
+    [SerializeField] private InteractionController interactionControllerPrefab;
+    [SerializeField] private UiController uiControllerPrefab;
     [SerializeField] private AreaSo startArea;
 
     public IEnumerator Initialize(ILoadProgress progress, GameStartData data)
@@ -27,8 +27,8 @@ public class GameSceneBootstrap : MonoBehaviour, IBootstraper
         progress.UpdateMessage("Setting Data...");
         Player player = Managers.Object.SpawnPlayer(Managers.Area.CurrentArea, data, Vector2.zero);
 
-        interactionController.Init(player);
-        uiController.Init(player);
+        Instantiate(interactionControllerPrefab).Init(player);
+        Instantiate(uiControllerPrefab).Init(player);
 
         progress.UpdateMessage("Complete");
     }
