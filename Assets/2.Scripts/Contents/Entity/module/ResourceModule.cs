@@ -19,7 +19,7 @@ public class ResourceModule
 
     public ResourceModule(ActorEntitySo so)
     {
-        foreach (KeyValuePair<MainStatType, float> kv in so.MainStatDic)
+        foreach (KeyValuePair<MainStatType, int> kv in so.MainStatDic)
         {
             MainStat main = new MainStat(kv.Key, kv.Value);
 

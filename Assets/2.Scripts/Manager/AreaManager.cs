@@ -9,9 +9,10 @@ public class AreaManager : MonoBehaviour
     public event Action<Area> OnAreaChanged;
 
     [SerializeField] private SerializedDictionary<string, AreaSo> areas = new SerializedDictionary<string, AreaSo>();
-    [SerializeField] private SpriteRenderer gridImage;
 
     private Dictionary<string, Area> areaMap = new Dictionary<string, Area>();
+    private SpriteRenderer gridImage;
+
     public Area CurrentArea { get; private set; } = null;
     public bool IsMoving { get; private set; } = false;
 

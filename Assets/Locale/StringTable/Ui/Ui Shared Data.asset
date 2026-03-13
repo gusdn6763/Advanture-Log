@@ -99,6 +99,14 @@ MonoBehaviour:
     m_Key: UI_Close
     m_Metadata:
       m_Items: []
+  - m_Id: 12221558633508864
+    m_Key: UI_Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12221627449454592
+    m_Key: UI_Quit
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

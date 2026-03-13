@@ -38,7 +38,7 @@ public class SettingData
     public int autoSavePeriod;
 
     // ---------- Control ----------
-    public List<KeyData> keyData;
+    public List<KeyData> keyData = new List<KeyData>();
 
     public void Init(DefaultSettingSo settingData)
     {

@@ -189,10 +189,10 @@ public class UI_StatSelection : MonoBehaviour, ICharacterCreationSection
         startPoint = Managers.Game.StartPoint;
         currentJobId = playerSo.Id;
 
-        foreach (KeyValuePair<MainStatType, int> kv in playerSo.BaseMainStatDic)
+        foreach (KeyValuePair<MainStatType, int> kv in playerSo.MainStatDic)
             jobBaseMainStatDic[kv.Key] = kv.Value;
 
-        foreach (KeyValuePair<SubStatType, float> kv in playerSo.BaseSubStatDic)
+        foreach (KeyValuePair<SubStatType, float> kv in playerSo.SubStatDic)
             jobBaseSubStatDic[kv.Key] = kv.Value;
        
         UpdateUi();

@@ -1345,6 +1345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1703817599888342120}
   - component: {fileID: 9113034320619931839}
+  - component: {fileID: 4825394077403909486}
   m_Layer: 0
   m_Name: AreaManager
   m_TagString: Untagged
@@ -1381,7 +1382,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areas:
     _serializedList: []
-  gridImage: {fileID: 0}
+--- !u!212 &4825394077403909486
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049462178317428067}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: cb77611b89a29ba48ac0e365fba012bb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 2
+  m_Size: {x: 0, y: 0}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1171143498435430279
 GameObject:
   m_ObjectHideFlags: 0
@@ -2065,7 +2117,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
+  m_fontSize: 31.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8728,6 +8780,55 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
+--- !u!1 &4956980260866069877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6169526726106386254}
+  - component: {fileID: 4348349989304626053}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6169526726106386254
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4956980260866069877}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6128971762728719933}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4348349989304626053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4956980260866069877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: fb241492ebc497549a14cf6510343edc, type: 2}
 --- !u!1 &5021895281571878884
 GameObject:
   m_ObjectHideFlags: 0
@@ -8906,7 +9007,7 @@ MonoBehaviour:
       Value: {fileID: 11400000, guid: 4de88f7ef273fcd419833f30c6b85d60, type: 2}
     - Key: Thief
       Value: {fileID: 11400000, guid: 0b5297e269fc76a4c91ef478a9e87c78, type: 2}
-  <StatRule>k__BackingField: {fileID: 0}
+  <StatRule>k__BackingField: {fileID: 11400000, guid: 454dc108c4be6bd439e27f76ce4dc205, type: 2}
   <ItemRule>k__BackingField: {fileID: 0}
 --- !u!1 &5119663573729627776
 GameObject:
@@ -9282,7 +9383,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 10
@@ -9350,7 +9451,7 @@ MonoBehaviour:
     page: {fileID: 3084366763116421315}
   activeButtonSprite: {fileID: -1723809052, guid: b7736da56b8273444b2809aab37bbc79, type: 3}
   defaultButtonSprite: {fileID: -781274340, guid: b7736da56b8273444b2809aab37bbc79, type: 3}
-  closeButton: {fileID: 0}
+  closeButton: {fileID: 7572556437445683480}
   resetButton: {fileID: 6680099428171109374}
 --- !u!1 &5197455800199144176
 GameObject:
@@ -13138,6 +13239,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6128971762728719933}
+  - component: {fileID: 6311734554427239040}
   m_Layer: 0
   m_Name: GrapihcsSetting
   m_TagString: Untagged
@@ -13157,9 +13259,25 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6169526726106386254}
   m_Father: {fileID: 5390785219317167002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6311734554427239040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8188378241768035501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1c44896bc28cc942877ed825aa657c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalVolume: {fileID: 4348349989304626053}
+  exposureMin: -2
+  exposureMax: 2
 --- !u!1 &8243874710496422839
 GameObject:
   m_ObjectHideFlags: 0
@@ -14036,11 +14154,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe8de244380adb4f963879d1fef1687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSettingSo: {fileID: 0}
-  graphicsSetting: {fileID: 0}
-  soundSetting: {fileID: 0}
-  gamePlaySetting: {fileID: 0}
-  keySetting: {fileID: 0}
+  defaultSettingSo: {fileID: 11400000, guid: 5ae243372c7bbaf47a5f89c47940c3a6, type: 2}
+  graphicsSetting: {fileID: 6311734554427239040}
+  soundSetting: {fileID: 1490113419084217612}
+  gamePlaySetting: {fileID: 2468260076733972074}
+  keySetting: {fileID: 2059917165764625418}
 --- !u!1 &8843155972722271512
 GameObject:
   m_ObjectHideFlags: 0

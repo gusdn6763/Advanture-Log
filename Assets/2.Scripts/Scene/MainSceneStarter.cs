@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 
 public class MainSceneStarter : MonoBehaviour
 {
@@ -7,7 +8,10 @@ public class MainSceneStarter : MonoBehaviour
 
     private void Awake()
     {
-        Instantiate(managerPrefab).Init();
-        Instantiate(titlePrefab).Init();
+        LocalizationSettings.InitializationOperation.Completed += _ =>
+        {
+            Instantiate(managerPrefab).Init();
+            Instantiate(titlePrefab).Init();
+        };
     }
 }

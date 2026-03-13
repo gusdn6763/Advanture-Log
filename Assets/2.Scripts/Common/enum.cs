@@ -42,6 +42,33 @@ public enum SubStatType
 }
 
 /// <summary>
+/// 보여주기 타입 - 물리 및 마법의 최소와 최대를 중복해서 보여주기 위함
+/// </summary>
+public enum SubStatViewType
+{
+    MaxHealth = 0,
+    HealthRegen,
+    MaxMana,
+    ManaRegen,
+
+    PhysicalDamage,
+    MagicDamage,
+
+    PhysicalDefense,
+    MagicDefense,
+
+    CriticalChance,
+    CriticalDamage,
+
+    Accuracy,
+    Evasion,
+    AttackSpeed,
+
+    Detection,
+    CarryCapacity,
+}
+
+/// <summary>
 /// 스탯 계산 타입
 /// </summary>
 public enum CalculateType
